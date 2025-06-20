@@ -2,11 +2,14 @@ import json
 import anthropic
 import time # For rate limiting
 import argparse # For command-line arguments
-import os # For checking file existence
+import os # For checking file existence and environment variables
 import sys # For exiting the script on error
+import re   # For regular expressions
 
 # --- Configuration ---
+# Retrieve API key from environment variable
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY") 
+
 CLAUDE_MODEL = "claude-opus-4-20250514"
 AI_LABS = ["OpenAI", "Anthropic", "Google", "xAI", "Meta"]
 # The script will now read from and write to this file
@@ -14,10 +17,10 @@ INPUT_OUTPUT_FILE = "data/compliance-data.json"
 
 # Initialize Anthropic client
 client = None
-if "YOUR_ANTHROPIC_API_KEY" not in ANTHROPIC_API_KEY:
+if ANTHROPIC_API_KEY: # Check if the environment variable is set
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 else:
-    print("WARNING: ANTHROPIC_API_KEY is not set. API calls will be skipped.", file=sys.stderr)
+    print("WARNING: ANTHROPIC_API_KEY environment variable is not set. API calls will be skipped.", file=sys.stderr)
 
 def get_compliance_info(ai_lab: str, control_name: str, sl_level: int) -> dict:
     """
@@ -58,37 +61,41 @@ def get_compliance_info(ai_lab: str, control_name: str, sl_level: int) -> dict:
             }]
         )
 
-        # Default values in case parsing fails
+        # Default values in case parsing fails or no relevant info is found
         score = 0
         justification = "Could not parse response or no relevant text."
         sources = []
+        
+        # Regex to find JSON wrapped in markdown code block (```json...```)
+        json_pattern = re.compile(r"```json\s*(\{.*?\})\s*```", re.DOTALL)
 
         # Iterate through content blocks to find the JSON
         for content_block in response.content:
             if content_block.type == "text":
-                try:
-                    # Attempt to parse the text content as JSON
-                    parsed_json = json.loads(content_block.text)
-                    if "score" in parsed_json and isinstance(parsed_json["score"], int):
-                        # Validate score is within allowed increments
-                        if parsed_json["score"] in [0, 25, 50, 75, 100]:
-                            score = parsed_json["score"]
-                        else:
-                            print(f"Warning: LLM returned invalid score '{parsed_json['score']}' for control '{control_name}'. Defaulting to 0%.", file=sys.stderr)
-                    if "justification" in parsed_json:
-                        justification = parsed_json["justification"]
-                    if "sources" in parsed_json and isinstance(parsed_json["sources"], list):
-                        sources = parsed_json["sources"]
-                except json.JSONDecodeError:
-                    # If it's not a JSON, treat it as raw text justification (and score remains default 0)
+                match = json_pattern.search(content_block.text)
+                if match:
+                    json_str = match.group(1)
+                    try:
+                        parsed_json = json.loads(json_str)
+                        if "score" in parsed_json and isinstance(parsed_json["score"], int):
+                            # Validate score is within allowed increments
+                            if parsed_json["score"] in [0, 25, 50, 75, 100]:
+                                score = parsed_json["score"]
+                            else:
+                                print(f"Warning: LLM returned invalid score '{parsed_json['score']}' for control '{control_name}'. Defaulting to 0%.", file=sys.stderr)
+                        if "justification" in parsed_json:
+                            justification = parsed_json["justification"]
+                        if "sources" in parsed_json and isinstance(parsed_json["sources"], list):
+                            sources = parsed_json["sources"]
+                        break # Found and parsed the JSON, no need to check further text blocks
+                    except json.JSONDecodeError:
+                        print(f"Warning: Failed to parse JSON from LLM response for '{control_name}': {json_str}", file=sys.stderr)
+                else:
+                    # If no JSON block is found, check for "No specific public information found."
                     if "No specific public information found." in content_block.text:
-                         justification = "No specific public information found."
-                    else:
-                         justification = content_block.text.strip()
-            # Note: web_search_tool_result content type does not directly provide the LLM's final parsed answer.
-            # The LLM's final answer, including parsed JSON, is typically in a subsequent 'text' block.
-            # However, if needed, you could extract URLs from 'web_search_tool_result' blocks if they are distinct from the LLM's final JSON output.
-            # For this script, we rely on the LLM to put the sources into the JSON.
+                        justification = "No specific public information found."
+                    # If it's just conversational text, it will fall back to initial justification.
+            # web_search_tool_result content type is handled by the LLM embedding sources in its JSON.
 
         # Deduplicate sources
         sources = list(set(sources))
@@ -125,14 +132,20 @@ if __name__ == "__main__":
         for category in sl_entry["categories"]:
             for subcategory in category["subcategories"]:
                 for control in subcategory["controls"]:
+                    # Check if limit is reached before processing the control
                     if args.limit and controls_processed_count >= args.limit:
                         print(f"Limit of {args.limit} controls reached. Stopping processing.")
-                        break # Exit if limit is reached
+                        break # Exit inner loop
                     
                     control_name = control["name"]
                     for lab in AI_LABS:
                         # Only make API call if client is initialized
                         if client is not None:
+                            # Skip if score is already populated (not 0), assuming it's already processed
+                            if control["compliance"][lab]["score"] != 0 and control["compliance"][lab]["justification"] != "API key not set, skipping API call.":
+                                print(f"Skipping SL{sl_level} - {lab} - '{control_name}' (already processed).")
+                                continue # Skip this specific lab/control if already processed
+
                             print(f"Querying for SL{sl_level} - {lab} - '{control_name}'...")
                             info = get_compliance_info(lab, control_name, sl_level)
                             control["compliance"][lab]["score"] = info["score"]
@@ -141,19 +154,20 @@ if __name__ == "__main__":
                             total_queries_made += 1
                             time.sleep(1) # Small delay to respect API rate limits
                         else:
-                            print(f"Skipping API call for {lab} - '{control_name}' (API key not set). Compliance data for this control/lab will not be updated.")
-                            # Ensure the structure is correct even if skipped
-                            control["compliance"][lab]["score"] = 0
-                            control["compliance"][lab]["justification"] = "API key not set, skipping API call."
-                            control["compliance"][lab]["sources"] = []
+                            print(f"Skipping API call for {lab} - '{control_name}' (API key not set). Compliance data for this control/lab will not be updated from API.")
+                            # Ensure the structure is correct even if skipped, without overwriting existing data if loaded
+                            if not control["compliance"][lab]["justification"]: # Only set if currently empty
+                                control["compliance"][lab]["score"] = 0
+                                control["compliance"][lab]["justification"] = "API key not set, skipping API call."
+                                control["compliance"][lab]["sources"] = []
                     
                     controls_processed_count += 1
                 if args.limit and controls_processed_count >= args.limit:
-                    break
+                    break # Exit subcategory loop
             if args.limit and controls_processed_count >= args.limit:
-                break
+                break # Exit category loop
         if args.limit and controls_processed_count >= args.limit:
-            break
+            break # Exit SL level loop
 
     # Save the updated JSON back to the file
     with open(INPUT_OUTPUT_FILE, "w") as f:
