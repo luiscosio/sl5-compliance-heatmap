@@ -1,0 +1,199 @@
+[
+  {
+    "level": 1,
+    "description": "A system that can likely thwart amateur attempts (OC1). This includes the operations of many hobbyist hackers, as well as more experienced hackers who implement completely untargeted \"spray and pray\" attacks.",
+    "categories": [
+      {
+        "name": "Weight Security",
+        "subcategories": [
+          {
+            "name": "Weight Storage",
+            "controls": [
+              {
+                "name": "Sensitive data remain internal.",
+                "compliance": {
+                  "OpenAI": {
+                    "score": 75,
+                    "sources": ["https://openai.com/security"],
+                    "justification": "OpenAI has implemented internal data protection measures"
+                  },
+                  "Anthropic": {
+                    "score": 80,
+                    "sources": ["https://anthropic.com/security"],
+                    "justification": "Strong internal data controls in place"
+                  },
+                  "Google": {
+                    "score": 90,
+                    "sources": ["https://cloud.google.com/security"],
+                    "justification": "Comprehensive internal data protection"
+                  },
+                  "xAI": {
+                    "score": 50,
+                    "sources": [],
+                    "justification": "Limited public information available"
+                  },
+                  "Meta": {
+                    "score": 85,
+                    "sources": ["https://about.meta.com/security"],
+                    "justification": "Robust internal security measures"
+                  }
+                }
+              },
+              {
+                "name": "Weight encryption (best effort)",
+                "compliance": {
+                  "OpenAI": {
+                    "score": 70,
+                    "sources": ["https://openai.com/security"],
+                    "justification": "Encryption protocols implemented"
+                  },
+                  "Anthropic": {
+                    "score": 75,
+                    "sources": [],
+                    "justification": "Standard encryption practices"
+                  },
+                  "Google": {
+                    "score": 95,
+                    "sources": ["https://cloud.google.com/security"],
+                    "justification": "Advanced encryption at rest and in transit"
+                  },
+                  "xAI": {
+                    "score": 40,
+                    "sources": [],
+                    "justification": "Insufficient public documentation"
+                  },
+                  "Meta": {
+                    "score": 80,
+                    "sources": ["https://about.meta.com/security"],
+                    "justification": "Strong encryption standards"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "Physical Security",
+            "controls": [
+              {
+                "name": "Data centers of cloud providers",
+                "compliance": {
+                  "OpenAI": {
+                    "score": 85,
+                    "sources": ["https://openai.com/infrastructure"],
+                    "justification": "Uses secure cloud infrastructure"
+                  },
+                  "Anthropic": {
+                    "score": 80,
+                    "sources": [],
+                    "justification": "Relies on cloud provider security"
+                  },
+                  "Google": {
+                    "score": 100,
+                    "sources": ["https://cloud.google.com/security/infrastructure"],
+                    "justification": "Owns and operates secure data centers"
+                  },
+                  "xAI": {
+                    "score": 60,
+                    "sources": [],
+                    "justification": "Limited information on infrastructure"
+                  },
+                  "Meta": {
+                    "score": 90,
+                    "sources": ["https://about.meta.com/infrastructure"],
+                    "justification": "Extensive data center security"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Security of Network and Other (Nonweight) Sensitive Assets",
+        "subcategories": [
+          {
+            "name": "Software",
+            "controls": [
+              {
+                "name": "Moderately frequent software update management and compliance monitoring",
+                "compliance": {
+                  "OpenAI": {
+                    "score": 80,
+                    "sources": [],
+                    "justification": "Regular security updates implemented"
+                  },
+                  "Anthropic": {
+                    "score": 75,
+                    "sources": [],
+                    "justification": "Standard update practices"
+                  },
+                  "Google": {
+                    "score": 95,
+                    "sources": ["https://cloud.google.com/security"],
+                    "justification": "Automated security update systems"
+                  },
+                  "xAI": {
+                    "score": 45,
+                    "sources": [],
+                    "justification": "Limited public information"
+                  },
+                  "Meta": {
+                    "score": 85,
+                    "sources": [],
+                    "justification": "Comprehensive update management"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "description": "A system that can likely thwart most professional opportunistic efforts by attackers that execute moderate-effort or nontargeted attacks (OC2).",
+    "categories": [
+      {
+        "name": "Implementation of Previous Security Levels",
+        "subcategories": [
+          {
+            "name": "",
+            "controls": [
+              {
+                "name": "The organization has implemented all the controls from SL1.",
+                "compliance": {
+                  "OpenAI": {
+                    "score": 70,
+                    "sources": [],
+                    "justification": "Most SL1 controls implemented"
+                  },
+                  "Anthropic": {
+                    "score": 75,
+                    "sources": [],
+                    "justification": "Good coverage of SL1 requirements"
+                  },
+                  "Google": {
+                    "score": 90,
+                    "sources": [],
+                    "justification": "Comprehensive SL1 implementation"
+                  },
+                  "xAI": {
+                    "score": 40,
+                    "sources": [],
+                    "justification": "Incomplete SL1 implementation"
+                  },
+                  "Meta": {
+                    "score": 80,
+                    "sources": [],
+                    "justification": "Strong SL1 foundation"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
