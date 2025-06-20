@@ -124,8 +124,16 @@ export default function ComplianceHeatmap() {
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center">SL5 Compliance Heatmap</CardTitle>
           <p className="text-center text-muted-foreground">
-            Track Security Level 5 (SL5) compliance of major AI labs. This data is compiled from public sources, is
-            open-source, and updates daily using advanced Large Language Models to provide the latest insights into
+            Track Security Level 5 (SL5) compliance of major AI labs. This data is compiled from public sources, is{" "}
+            <a 
+              href="https://github.com/luiscosio/sl5" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800 underline"
+            >
+              open-source
+            </a>
+            , and updates daily using advanced Large Language Models to provide the latest insights into
             frontier model security.
           </p>
         </CardHeader>
