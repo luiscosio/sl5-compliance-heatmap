@@ -110,6 +110,7 @@ def get_compliance_info(ai_lab: str, control_name: str, sl_level: int) -> dict:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate AI lab security compliance data.")
     parser.add_argument("--limit", type=int, help="Limit the number of controls to process for testing.")
+    parser.add_argument("--all", action="store_true", help="Process all controls, even those with existing data.")
     args = parser.parse_args()
 
     # Check if the input JSON file exists
@@ -139,13 +140,19 @@ if __name__ == "__main__":
                     
                     control_name = control["name"]
                     for lab in AI_LABS:
+                        # Determine if this control/lab combination should be skipped
+                        should_skip = False
+                        if not args.all: # If --all flag is NOT present, check if already processed
+                            lab_compliance = control["compliance"].get(lab)
+                            if lab_compliance and lab_compliance["score"] != 0 and lab_compliance["justification"] != "API key not set, skipping API call.":
+                                should_skip = True
+
+                        if should_skip:
+                            print(f"Skipping SL{sl_level} - {lab} - '{control_name}' (already processed).")
+                            continue # Skip this specific lab/control if already processed
+
                         # Only make API call if client is initialized
                         if client is not None:
-                            # Skip if score is already populated (not 0), assuming it's already processed
-                            if control["compliance"][lab]["score"] != 0 and control["compliance"][lab]["justification"] != "API key not set, skipping API call.":
-                                print(f"Skipping SL{sl_level} - {lab} - '{control_name}' (already processed).")
-                                continue # Skip this specific lab/control if already processed
-
                             print(f"Querying for SL{sl_level} - {lab} - '{control_name}'...")
                             info = get_compliance_info(lab, control_name, sl_level)
                             control["compliance"][lab]["score"] = info["score"]
@@ -156,7 +163,8 @@ if __name__ == "__main__":
                         else:
                             print(f"Skipping API call for {lab} - '{control_name}' (API key not set). Compliance data for this control/lab will not be updated from API.")
                             # Ensure the structure is correct even if skipped, without overwriting existing data if loaded
-                            if not control["compliance"][lab]["justification"]: # Only set if currently empty
+                            # Only set if currently empty or if --all is true (to reset it)
+                            if not control["compliance"][lab]["justification"] or args.all:
                                 control["compliance"][lab]["score"] = 0
                                 control["compliance"][lab]["justification"] = "API key not set, skipping API call."
                                 control["compliance"][lab]["sources"] = []
