@@ -1,7 +1,6 @@
 # SL5 Compliance Heatmap - AI Lab Security Monitoring
 
 [![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/luiscosios-projects/v0-heatmap)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/AuOGo9un80C)
 
 ## Overview
 
@@ -89,7 +88,7 @@ The compliance data is organized hierarchically:
 
 ## Live Demo
 
-**[https://vercel.com/luiscosios-projects/v0-heatmap](https://vercel.com/luiscosios-projects/v0-heatmap)**
+**[https://sl5.luiscos.io/](https://sl5.luiscos.io/)**
 
 ## Contributing
 
