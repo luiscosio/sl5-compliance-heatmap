@@ -1,53 +1,13 @@
 "use client"
 
 import type React from "react"
-import { useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 
-// Import the JSON data
-const complianceData = [
-  {
-    level: 1,
-    description:
-      'A system that can likely thwart amateur attempts (OC1). This includes the operations of many hobbyist hackers, as well as more experienced hackers who implement completely untargeted "spray and pray" attacks.',
-    categories: [
-      {
-        name: "Weight Security",
-        subcategories: [
-          {
-            name: "Weight Storage",
-            controls: [
-              {
-                name: "Sensitive data remain internal.",
-                compliance: {
-                  OpenAI: { score: 0, sources: [], justification: "" },
-                  Anthropic: { score: 0, sources: [], justification: "" },
-                  Google: { score: 0, sources: [], justification: "" },
-                  xAI: { score: 0, sources: [], justification: "" },
-                  Meta: { score: 0, sources: [], justification: "" },
-                },
-              },
-              {
-                name: "Weight encryption (best effort)",
-                compliance: {
-                  OpenAI: { score: 0, sources: [], justification: "" },
-                  Anthropic: { score: 0, sources: [], justification: "" },
-                  Google: { score: 0, sources: [], justification: "" },
-                  xAI: { score: 0, sources: [], justification: "" },
-                  Meta: { score: 0, sources: [], justification: "" },
-                },
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-]
+import complianceData from "@/data/compliance-data.json"
 
 const companies = ["OpenAI", "Anthropic", "Google", "xAI", "Meta"]
 
@@ -148,7 +108,7 @@ const ComplianceCell: React.FC<ComplianceCellProps> = ({ company, control }) => 
 }
 
 export default function ComplianceHeatmap() {
-  const [data] = useState<ComplianceData[]>(complianceData)
+  const data = complianceData as ComplianceData[]
 
   return (
     <div className="w-full max-w-7xl mx-auto p-4">
