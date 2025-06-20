@@ -220,6 +220,35 @@ export default function ComplianceHeatmap() {
           </div>
         </CardContent>
       </Card>
+      
+      {/* Footer */}
+      <footer className="mt-8 py-6 border-t border-gray-200 text-center text-sm text-gray-600">
+        <div className="space-y-2">
+          <p>
+            Security controls from{" "}
+            <a 
+              href="https://www.rand.org/pubs/research_briefs/RBA2849-1.html" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800 underline"
+            >
+              RAND Corporation - Securing AI Model Weights
+            </a>
+          </p>
+          <p>
+            Built by{" "}
+            <a 
+              href="https://x.com/luiscosio" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800 underline"
+            >
+              @luiscosio
+            </a>
+            {" "}| From Marin ❤️
+          </p>
+        </div>
+      </footer>
     </div>
   )
 }
