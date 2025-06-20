@@ -114,8 +114,8 @@ export default function ComplianceHeatmap() {
     <div className="w-full max-w-7xl mx-auto p-4">
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl font-bold text-center">AI Labs Compliance Heatmap</CardTitle>
-          <p className="text-center text-muted-foreground">Security Level Compliance Across Major AI Laboratories</p>
+          <CardTitle className="text-2xl font-bold text-center">SL5 Compliance Heatmap</CardTitle>
+          <p className="text-center text-muted-foreground">Track Security Level 5 (SL5) compliance of major AI labs. This data is compiled from public sources, is open-source, and updates daily using advanced Large Language Models to provide the latest insights into frontier model security.</p>
         </CardHeader>
         <CardContent>
           <div className="overflow-x-auto">
