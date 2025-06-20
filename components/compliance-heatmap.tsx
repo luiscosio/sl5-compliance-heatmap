@@ -6,6 +6,7 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
+import { useState } from "react"
 
 import complianceData from "@/data/compliance-data.json"
 
@@ -57,21 +58,28 @@ interface ComplianceCellProps {
 }
 
 const ComplianceCell: React.FC<ComplianceCellProps> = ({ company, control }) => {
+  const [isOpen, setIsOpen] = useState(false)
   const compliance = control.compliance[company]
   const score = compliance?.score || 0
   const justification = compliance?.justification || "No information available"
   const sources = compliance?.sources || []
 
+  const handleClick = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
     <TooltipProvider>
-      <Tooltip>
+      <Tooltip open={isOpen} onOpenChange={setIsOpen}>
         <TooltipTrigger asChild>
           <div
+            onClick={handleClick}
             className={`
               w-16 h-12 flex items-center justify-center text-xs font-medium cursor-pointer
               transition-all duration-200 hover:scale-105 hover:shadow-md
               ${getScoreColor(score)} ${getTextColor(score)}
               border border-gray-200
+              ${isOpen ? "ring-2 ring-blue-500" : ""}
             `}
           >
             {score}%
@@ -115,7 +123,11 @@ export default function ComplianceHeatmap() {
       <Card>
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center">SL5 Compliance Heatmap</CardTitle>
-          <p className="text-center text-muted-foreground">Track Security Level 5 (SL5) compliance of major AI labs. This data is compiled from public sources, is open-source, and updates daily using advanced Large Language Models to provide the latest insights into frontier model security.</p>
+          <p className="text-center text-muted-foreground">
+            Track Security Level 5 (SL5) compliance of major AI labs. This data is compiled from public sources, is
+            open-source, and updates daily using advanced Large Language Models to provide the latest insights into
+            frontier model security.
+          </p>
         </CardHeader>
         <CardContent>
           <div className="overflow-x-auto">
