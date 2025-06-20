@@ -15,27 +15,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": "Based on my searches, I can now provide an assessment of OpenAI's compliance with \"Sensitive data remain internal\" related to AI model weights security.\n\n```json\n{\n  \"score\": 75,\n  \"justification\": \"OpenAI has implemented comprehensive multi-layered security controls for model weights including multi-party authorization, private-linked storage, egress controls, and detection systems. They explicitly state model weights are not distributed outside OpenAI and Microsoft, and provide third-party access only via API.\",\n  \"sources\": [\n    \"https://web.swipeinsight.app/posts/openai-unveils-security-architecture-for-frontier-ai-model-training-7065\",\n    \"https://www.helpfulgpts.com/openai-research-infrastructure-security/\",\n    \"https://venturebeat.com/ai/why-anthropic-and-openai-are-obsessed-with-securing-llm-model-weights/\"\n  ]\n}\n```"
+                    "justification": ""
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": "Based on my search results, I can assess Anthropic's compliance with \"Sensitive data remain internal\" related to AI model weights security. Here's my analysis:\n\n```json\n{\n  \"score\": 75,\n  \"justification\": \"Anthropic has implemented ASL-3 security standards with robust internal access controls, multi-party authorization for model weights, and over 100 security controls targeting model weight protection. They have egress bandwidth controls and data flow governance to prevent exfiltration.\",\n  \"sources\": [\n    \"https://www.anthropic.com/news/activating-asl3-protections\",\n    \"https://www.anthropic.com/rsp-updates\",\n    \"https://www.anthropic.com/news/frontier-model-security\",\n    \"https://venturebeat.com/ai/why-anthropic-and-openai-are-obsessed-with-securing-llm-model-weights/\"\n  ]\n}\n```"
+                    "justification": ""
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": "Based on my research, I can now assess Google's compliance with keeping sensitive AI model weights data internal. The RAND report defines Security Level 1 as requiring basic controls to keep model weights internal and prevent unauthorized access.\n\n```json\n{\n  \"score\": 75,\n  \"justification\": \"Google demonstrates strong commitment to keeping AI model weights internal through their Frontier Safety Framework which emphasizes preventing weight exfiltration, security mitigations at multiple levels, and recommendations for high security particularly for ML R&D models. Google also implements automated red teaming, model hardening, and defense-in-depth strategies.\",\n  \"sources\": [\n    \"https://deepmind.google/discover/blog/introducing-the-frontier-safety-framework/\",\n    \"https://deepmind.google/discover/blog/updating-the-frontier-safety-framework/\",\n    \"https://deepmind.google/discover/blog/taking-a-responsible-path-to-agi/\",\n    \"https://cloud.google.com/security/securing-ai\",\n    \"https://deepmind.google/discover/blog/advancing-geminis-security-safeguards/\"\n  ]\n}\n```"
+                    "justification": ""
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": "Based on my research, I can now provide an assessment of xAI's compliance with the \"Sensitive data remain internal\" control as described in the RAND report on Securing AI Model Weights.\n\n```json\n{\n  \"score\": 0,\n  \"justification\": \"xAI publicly released Grok-1's model weights under Apache 2.0 license in March 2024, directly contradicting the principle of keeping sensitive model weights internal. This open-weights approach represents a complete failure to comply with Security Level 1 requirements for internal data retention.\",\n  \"sources\": [\n    \"https://x.ai/news/grok-os\",\n    \"https://research.contrary.com/company/xai\",\n    \"https://www.oracle.com/artificial-intelligence/ai-open-weights-models/\"\n  ]\n}\n```"
+                    "justification": ""
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": "Based on my search findings, I can assess Meta's compliance regarding \"Sensitive data remain internal\" as related to AI model weights security for Security Level 1 from the RAND report.\n\n```json\n{\n  \"score\": 0,\n  \"justification\": \"Meta publicly releases its Llama model weights for open-source use, including to government agencies and commercial partners, which directly contradicts keeping sensitive model weights internal as required by Security Level 1.\",\n  \"sources\": [\n    \"https://en.wikipedia.org/wiki/Llama_(language_model)\",\n    \"https://about.fb.com/news/2024/11/open-source-ai-america-global-security/\",\n    \"https://www.cio.com/article/3599448/meta-offers-llama-ai-to-us-government-for-national-security.html\"\n  ]\n}\n```"
+                    "justification": ""
                   }
                 }
               },
@@ -45,27 +45,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": "Based on my research, I can now provide an assessment of OpenAI's compliance with 'Weight encryption (best effort)' as expected for Security Level 1 in the RAND report.\n\n```json\n{\n  \"score\": 25,\n  \"justification\": \"OpenAI encrypts data at rest (AES-256) and in transit (TLS 1.2+) for enterprise services but has not publicly disclosed specific weight encryption practices for their proprietary models. They maintain model weights as closely guarded IP with limited distribution.\",\n  \"sources\": [\n    \"https://openai.com/enterprise-privacy\",\n    \"https://openai.com/global-affairs/openai-s-comment-to-the-ntia-on-open-model-weights\",\n    \"https://venturebeat.com/ai/why-anthropic-and-openai-are-obsessed-with-securing-llm-model-weights/\"\n  ]\n}\n```"
+                    "justification": ""
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": "Based on my research, I can now assess Anthropic's compliance with \"Weight encryption (best effort)\" as expected for Security Level 1 in the RAND report.\n\n```json\n{\n  \"score\": 75,\n  \"justification\": \"Anthropic has implemented weight encryption as part of their ASL-3 security measures, including storing model weights encrypted and using confidential computing approaches where weights are decrypted only in secure enclaves. Their published research on confidential inference demonstrates active implementation of weight encryption practices.\",\n  \"sources\": [\n    \"https://www.anthropic.com/research/confidential-inference-trusted-vms\",\n    \"https://www.anthropic.com/news/activating-asl3-protections\",\n    \"https://www.anthropic.com/news/frontier-model-security\"\n  ]\n}\n```"
+                    "justification": ""
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": "However, I did not find specific public information about Google implementing weight encryption as a best-effort measure specifically for Security Level 1 as described in the RAND report. While Google has extensive confidential computing capabilities and mentions protecting model weights in confidential environments, there's no explicit documentation about implementing weight encryption as a standalone security control at the basic security level.\n\n```json\n{\n  \"score\": 50,\n  \"justification\": \"Google has extensive confidential computing capabilities that protect AI model weights during processing and offers encryption options, but lacks specific public documentation about implementing weight encryption as a best-effort measure for basic security levels.\",\n  \"sources\": [\n    \"https://cloud.google.com/blog/products/identity-security/introducing-ai-protection-security-for-the-ai-era\",\n    \"https://cloud.google.com/blog/products/identity-security/privacy-preserving-confidential-computing-now-on-even-more-machines\",\n    \"https://cloud.google.com/architecture/confidential-computing-analytics-ai\",\n    \"https://safety.google/cybersecurity-advancements/saif/\"\n  ]\n}\n```"
+                    "justification": ""
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": "3. General data privacy and security measures for user data\n\nThere is no specific mention of weight encryption techniques being applied to protect the model weights themselves during deployment or inference, which would be expected for Security Level 1 compliance as described in the RAND report.\n\n```json\n{\n  \"score\": 0,\n  \"justification\": \"No specific public information found regarding xAI's implementation of weight encryption for AI model weights security.\",\n  \"sources\": []\n}\n```"
+                    "justification": ""
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": "as a best practice, but Meta's public documentation and announcements do not indicate they have implemented such encryption for their model weights.\n\n```json\n{\n  \"score\": 0,\n  \"justification\": \"No specific public information found about Meta implementing weight encryption for AI model weights as described in RAND's Security Level 1 requirements.\",\n  \"sources\": []\n}\n```"
+                    "justification": ""
                   }
                 }
               }
@@ -80,27 +80,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": "Based on my search results, I can now provide an assessment of OpenAI's compliance with data center security requirements for AI model weights as expected for Security Level 1 in the RAND report.\n\n```json\n{\n  \"score\": 75,\n  \"justification\": \"OpenAI uses Microsoft Azure's cloud infrastructure with multi-layered security controls including encryption at rest (AES-256) and in transit (TLS 1.2+), role-based access control, and dedicated secure environments for model weights protection. They have achieved SOC 2 Type 2 compliance and implemented defense-in-depth approaches specifically for model weight security.\",\n  \"sources\": [\n    \"https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy\",\n    \"https://openai.com/enterprise-privacy\",\n    \"https://trust.openai.com/\",\n    \"https://web.swipeinsight.app/posts/openai-unveils-security-architecture-for-frontier-ai-model-training-7065\"\n  ]\n}\n```"
+                    "justification": ""
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": "Given that Anthropic has implemented ASL-3 security measures designed to protect against sophisticated non-state actors (which far exceeds the Security Level 1 requirement of protecting against amateur attempts), and has specific controls for data centers and cloud providers including multi-cloud architecture and enhanced security features, they appear to be fully compliant with and exceed the expectations for Security Level 1.\n\n```json\n{\n  \"score\": 100,\n  \"justification\": \"Anthropic has implemented ASL-3 security standards with over 100 security controls for protecting model weights in cloud environments, including multi-cloud architecture (Google and Amazon), egress bandwidth controls, and two-party authorization - far exceeding Security Level 1 requirements.\",\n  \"sources\": [\n    \"https://www.anthropic.com/news/activating-asl3-protections\",\n    \"https://time.com/7273288/amazon-anthropic-openai-microsoft-stargate-datacenters/\",\n    \"https://www.datacenterknowledge.com/data-center-chips/ai-startup-anthropic-to-use-google-chips-in-expanded-partnership\"\n  ]\n}\n```"
+                    "justification": ""
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": "Based on the search results, I found information about Google's security practices and the RAND report's framework for securing AI model weights. However, I could not find specific public information that directly addresses Google's compliance with the \"Data centers of cloud providers\" control as described in Security Level 1 of the RAND report.\n\nThe search results show that:\n1. Google has implemented various AI security measures including Model Armor, AI Protection features, and the Secure AI Framework (SAIF)\n2. Google Cloud provides security features for AI workloads including data encryption, access controls, and monitoring\n3. The RAND report defines Security Level 1 as protection against amateur attempts\n\nHowever, there is no specific public information found that directly maps Google's data center security practices to the specific requirements of Security Level 1 as described in the RAND report for AI model weights security.\n\n```json\n{\n  \"score\": 0,\n  \"justification\": \"No specific public information found directly addressing Google's compliance with 'Data centers of cloud providers' control for AI model weights security as defined in RAND's Security Level 1.\",\n  \"sources\": []\n}\n```"
+                    "justification": ""
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": "Based on my search results, I can now assess xAI's compliance regarding 'Data centers of cloud providers' related to AI model weights security.\n\n```json\n{\n  \"score\": 75,\n  \"justification\": \"xAI demonstrates strong cloud provider usage with AWS infrastructure supporting enterprise services and extensive Oracle Cloud partnership for Grok models, including enterprise-grade security and governance capabilities. The company utilizes cloud-first architectures with comprehensive security controls including encryption, access management, and monitoring.\",\n  \"sources\": [\n    \"https://x.ai/security\",\n    \"https://www.oracle.com/news/announcement/xais-grok-models-are-now-on-oracle-cloud-infrastructure-2025-06-17/\",\n    \"https://www.techtarget.com/searchenterpriseai/news/366626223/Oracle-adds-xAI-Grok-models-to-OCI\"\n  ]\n}\n```"
+                    "justification": ""
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": "Based on my search results, I'll assess Meta's compliance with the \"Data centers of cloud providers\" control for AI model weights security as described in the RAND report.\n\n```json\n{\n  \"score\": 25,\n  \"justification\": \"Meta primarily builds and operates its own data centers for AI infrastructure rather than relying on cloud providers, investing billions in proprietary facilities. While this provides some security through direct control, there's limited public information about specific security measures for model weights protection aligned with RAND's Security Level 1 requirements.\",\n  \"sources\": [\n    \"https://www.rand.org/pubs/research_reports/RRA2849-1.html\",\n    \"https://engineering.fb.com/2024/03/12/data-center-engineering/building-metas-genai-infrastructure/\",\n    \"https://github.com/meta-llama/llama-models\",\n    \"https://www.nextplatform.com/2025/04/30/with-its-llama-api-service-meta-platforms-finally-becomes-a-cloud/\"\n  ]\n}\n```"
+                    "justification": ""
                   }
                 }
               }
@@ -115,27 +115,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": "Based on my search results, I can now assess OpenAI's compliance with 'Access control for sensitive assets' related to AI model weights security as described in the RAND report's Security Level 1.\n\n```json\n{\n  \"score\": 75,\n  \"justification\": \"OpenAI has implemented multi-layered access controls including RBAC, multi-party approval for sensitive resources, private-linked storage with authentication, and an AccessManager service requiring multi-party approval for model weight access. However, specific Security Level 1 implementation details from the RAND report are not publicly documented.\",\n  \"sources\": [\n    \"https://web.swipeinsight.app/posts/openai-unveils-security-architecture-for-frontier-ai-model-training-7065\",\n    \"https://openai.com/enterprise-privacy\",\n    \"https://openai.com/global-affairs/our-approach-to-frontier-risk\"\n  ]\n}\n```"
+                    "justification": ""
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": "Based on my research of publicly available information, I can assess Anthropic's compliance with access control for sensitive assets related to AI model weights security.\n\n```json\n{\n  \"score\": 75,\n  \"justification\": \"Anthropic has implemented multi-party authorization for model weight access, requiring two-party control, temporary access with justification, hardware authentication, and employee approval. They've also deployed egress bandwidth controls and over 100 security controls under their ASL-3 standards to prevent model weight theft.\",\n  \"sources\": [\n    \"https://www.anthropic.com/news/activating-asl3-protections\",\n    \"https://www.anthropic.com/news/frontier-model-security\",\n    \"https://www.anthropic.com/rsp-updates\",\n    \"https://venturebeat.com/ai/why-anthropic-and-openai-are-obsessed-with-securing-llm-model-weights/\"\n  ]\n}\n```"
+                    "justification": ""
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": "Based on my search results, I can now assess Google's compliance with 'Access control for sensitive assets' related to AI model weights security as described in the RAND report.\n\n```json\n{\n  \"score\": 75,\n  \"justification\": \"Google demonstrates strong access control measures including sophisticated security mechanisms to prevent unauthorized access to model weights, identity and access management systems, and hardened interfaces, though specific implementation details of Security Level 1 controls from RAND are not publicly disclosed.\",\n  \"sources\": [\n    \"https://deepmind.google/discover/blog/taking-a-responsible-path-to-agi/\",\n    \"https://deepmind.google/discover/blog/introducing-the-frontier-safety-framework/\",\n    \"https://www.alignmentforum.org/posts/3ki4mt4BA6eTx56Tc/google-deepmind-an-approach-to-technical-agi-safety-and\",\n    \"https://deepmind.google/discover/blog/updating-the-frontier-safety-framework/\",\n    \"https://blog.google/technology/safety-security/introducing-googles-secure-ai-framework/\"\n  ]\n}\n```"
+                    "justification": ""
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": "Based on my search results, I can now assess xAI's compliance with \"Access control for sensitive assets\" related to AI model weights security.\n\n```json\n{\n  \"score\": 25,\n  \"justification\": \"xAI demonstrates limited access control for model weights by releasing Grok-1 as open source under Apache 2.0 license, making weights publicly available on GitHub/HuggingFace. While xAI's security page mentions least privilege principles and access management for their platform services, they have not implemented access restrictions for their model weights.\",\n  \"sources\": [\n    \"https://x.ai/security\",\n    \"https://x.ai/news/grok-os\",\n    \"https://github.com/xai-org/grok-1\",\n    \"https://huggingface.co/xai-org/grok-1\"\n  ]\n}\n```"
+                    "justification": ""
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": "Based on my research, I'll now assess Meta's compliance with 'Access control for sensitive assets' related to AI model weights security as described for Security Level 1 in the RAND report.\n\n```json\n{\n  \"score\": 25,\n  \"justification\": \"Meta has released Llama models as open-source with minimal access controls on model weights. While they've developed security tools like LlamaFirewall and Prompt Guard, their open distribution model fundamentally conflicts with RAND's recommendations for restricting and monitoring access to AI model weights.\",\n  \"sources\": [\n    \"https://www.rand.org/pubs/research_briefs/RBA2849-1.html\",\n    \"https://ai.meta.com/static-resource/meta-frontier-ai-framework\",\n    \"https://about.fb.com/news/2024/11/open-source-ai-america-global-security/\",\n    \"https://www.theregister.com/2024/11/06/meta_weaponizing_llama_us/\"\n  ]\n}\n```"
+                    "justification": ""
                   }
                 }
               },
@@ -145,27 +145,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": "Based on the publicly available information I found, here is my assessment of OpenAI's compliance with access log or audit trail controls related to AI model weights security:\n\n```json\n{\n  \"score\": 25,\n  \"justification\": \"OpenAI has achieved SOC 2 Type 2 compliance for its API platform and maintains audit logging capabilities, but there is no specific public information about access logs or audit trails specifically for AI model weights protection.\",\n  \"sources\": [\n    \"https://trust.openai.com/\",\n    \"https://openai.com/security/\",\n    \"https://openai.com/enterprise-privacy\",\n    \"https://platform.openai.com/docs/api-reference/audit-logs/list\",\n    \"https://openai.com/policies/supplier-security-measures\"\n  ]\n}\n```"
+                    "justification": ""
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": "Based on my search findings, I can now assess Anthropic's compliance with access log or audit trail requirements related to AI model weights security.\n\n```json\n{\n  \"score\": 75,\n  \"justification\": \"Anthropic demonstrates strong compliance with access logs and audit trails for model weights security through two-party authorization for model weight access, enhanced change management protocols, detection mechanisms, and enterprise audit logs that trace system activities for security and compliance monitoring.\",\n  \"sources\": [\n    \"https://www.anthropic.com/news/activating-asl3-protections\",\n    \"https://support.anthropic.com/en/articles/9970975-how-to-access-audit-logs\",\n    \"https://www.anthropic.com/enterprise\",\n    \"https://www.anthropic.com/voluntary-commitments\"\n  ]\n}\n```"
+                    "justification": ""
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": "However, these references appear to focus on API access logs and general cloud service audit trails rather than specific access controls for AI model weights themselves.\n\n```json\n{\n  \"score\": 0,\n  \"justification\": \"No specific public information found about Google's implementation of access logs or audit trails specifically for AI model weights security as described in the RAND report.\",\n  \"sources\": []\n}\n```"
+                    "justification": ""
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ".\n\nThe RAND report on \"Securing AI Model Weights\" describes Security Level 1 as the foundational level of security practices. While I couldn't find the specific detailed requirements for audit trails at Security Level 1 in my search results, xAI does demonstrate implementation of audit trail capabilities.\n\n```json\n{\n  \"score\": 50,\n  \"justification\": \"xAI provides audit trails for Business Tier accounts (90-day retention) and maintains security logs for 180 days, showing partial implementation of access logging practices, though the extent of compliance with RAND Security Level 1 specifics is unclear.\",\n  \"sources\": [\"https://x.ai/security\"]\n}\n```"
+                    "justification": ""
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ", which suggests potential gaps in access control and monitoring of model weights.\n\n```json\n{\n  \"score\": 0,\n  \"justification\": \"No specific public information found about Meta's implementation of access logs or audit trails for AI model weights security as required by RAND's Security Level 1.\",\n  \"sources\": []\n}\n```"
+                    "justification": ""
                   }
                 }
               }
@@ -3793,7 +3793,7 @@
             "name": "",
             "controls": [
               {
-                "name": "The organization has implemented all the controls from SL1\u00e2\u20ac\u201cSL3.",
+                "name": "The organization has implemented all the controls from SL1–SL3.",
                 "compliance": {
                   "OpenAI": {
                     "score": 0,
@@ -5189,7 +5189,7 @@
             "name": "",
             "controls": [
               {
-                "name": "The organization has implemented all the controls from SL1\u00e2\u20ac\u201cSL4.",
+                "name": "The organization has implemented all the controls from SL1–SL4.",
                 "compliance": {
                   "OpenAI": {
                     "score": 0,
