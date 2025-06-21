@@ -106,6 +106,16 @@ def get_compliance_info(ai_lab: str, control_name: str, sl_level: int) -> dict:
         print(f"Error querying Claude for {ai_lab} - '{control_name}': {e}", file=sys.stderr)
         return {"score": 0, "justification": f"Error during API call: {e}", "sources": []}
 
+# Function to save current progress
+def save_progress(data, filename):
+    try:
+        with open(filename, "w") as f:
+            json.dump(data, f, indent=2)
+        print(f"\nProgress saved to '{filename}'.")
+    except Exception as e:
+        print(f"Error saving progress to '{filename}': {e}", file=sys.stderr)
+
+
 # --- Main script execution ---
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate AI lab security compliance data.")
@@ -128,61 +138,65 @@ if __name__ == "__main__":
     total_queries_made = 0
     controls_processed_count = 0
 
-    for sl_entry in compliance_data:
-        sl_level = sl_entry["level"]
-        for category in sl_entry["categories"]:
-            for subcategory in category["subcategories"]:
-                for control in subcategory["controls"]:
-                    # Check if limit is reached before processing the control
-                    if args.limit and controls_processed_count >= args.limit:
-                        print(f"Limit of {args.limit} controls reached. Stopping processing.")
-                        break # Exit inner loop
-                    
-                    control_name = control["name"]
-                    for lab in AI_LABS:
-                        # Determine if this control/lab combination should be skipped
-                        should_skip = False
-                        if not args.all: # If --all flag is NOT present, check if already processed
-                            lab_compliance = control["compliance"].get(lab)
-                            if lab_compliance and lab_compliance["score"] != 0 and lab_compliance["justification"] != "API key not set, skipping API call.":
-                                should_skip = True
+    try: # Wrap the main processing loop in a try-except for KeyboardInterrupt
+        for sl_entry in compliance_data:
+            sl_level = sl_entry["level"]
+            for category in sl_entry["categories"]:
+                for subcategory in category["subcategories"]:
+                    for control in subcategory["controls"]:
+                        # Check if limit is reached before processing the control
+                        if args.limit and controls_processed_count >= args.limit:
+                            print(f"Limit of {args.limit} controls reached. Stopping processing.")
+                            raise KeyboardInterrupt # Use KeyboardInterrupt to trigger final save and exit
+                        
+                        control_name = control["name"]
+                        for lab in AI_LABS:
+                            # Determine if this control/lab combination should be skipped
+                            should_skip = False
+                            if not args.all: # If --all flag is NOT present, check if already processed
+                                lab_compliance = control["compliance"].get(lab)
+                                # Skip if justification is not empty AND not the 'API key not set' message
+                                if lab_compliance and lab_compliance["justification"] and \
+                                   lab_compliance["justification"] != "API key not set, skipping API call.":
+                                    should_skip = True
 
-                        if should_skip:
-                            print(f"Skipping SL{sl_level} - {lab} - '{control_name}' (already processed).")
-                            continue # Skip this specific lab/control if already processed
+                            if should_skip:
+                                print(f"Skipping SL{sl_level} - {lab} - '{control_name}' (already processed).")
+                                continue # Skip this specific lab/control if already processed
 
-                        # Only make API call if client is initialized
-                        if client is not None:
-                            print(f"Querying for SL{sl_level} - {lab} - '{control_name}'...")
-                            info = get_compliance_info(lab, control_name, sl_level)
-                            control["compliance"][lab]["score"] = info["score"]
-                            control["compliance"][lab]["justification"] = info["justification"]
-                            control["compliance"][lab]["sources"] = info["sources"]
-                            total_queries_made += 1
-                            time.sleep(1) # Small delay to respect API rate limits
-                        else:
-                            print(f"Skipping API call for {lab} - '{control_name}' (API key not set). Compliance data for this control/lab will not be updated from API.")
-                            # Ensure the structure is correct even if skipped, without overwriting existing data if loaded
-                            # Only set if currently empty or if --all is true (to reset it)
-                            if not control["compliance"][lab]["justification"] or args.all:
-                                control["compliance"][lab]["score"] = 0
-                                control["compliance"][lab]["justification"] = "API key not set, skipping API call."
-                                control["compliance"][lab]["sources"] = []
-                    
-                    controls_processed_count += 1
-                if args.limit and controls_processed_count >= args.limit:
-                    break # Exit subcategory loop
-            if args.limit and controls_processed_count >= args.limit:
-                break # Exit category loop
-        if args.limit and controls_processed_count >= args.limit:
-            break # Exit SL level loop
+                            # Only make API call if client is initialized
+                            if client is not None:
+                                print(f"Querying for SL{sl_level} - {lab} - '{control_name}'...")
+                                info = get_compliance_info(lab, control_name, sl_level)
+                                control["compliance"][lab]["score"] = info["score"]
+                                control["compliance"][lab]["justification"] = info["justification"]
+                                control["compliance"][lab]["sources"] = info["sources"]
+                                total_queries_made += 1
+                                # Save after each API call for a specific lab/control
+                                save_progress(compliance_data, INPUT_OUTPUT_FILE)
+                                time.sleep(1) # Small delay to respect API rate limits
+                            else:
+                                print(f"Skipping API call for {lab} - '{control_name}' (API key not set). Compliance data for this control/lab will not be updated from API.")
+                                # Ensure the structure is correct even if skipped, without overwriting existing data if loaded
+                                # Only set if currently empty or if --all is true (to reset it)
+                                if not control["compliance"][lab]["justification"] or args.all:
+                                    control["compliance"][lab]["score"] = 0
+                                    control["compliance"][lab]["justification"] = "API key not set, skipping API call."
+                                    control["compliance"][lab]["sources"] = []
+                        
+                        controls_processed_count += 1
+    except KeyboardInterrupt:
+        print("\nProcess interrupted by user (Ctrl+C). Saving current progress...")
+        # Progress is already saved after each call, so this just ensures a final message.
+    except Exception as e:
+        print(f"\nAn unexpected error occurred: {e}", file=sys.stderr)
+    finally:
+        # Final save in case any last updates before interruption/error (though per-call save is primary)
+        save_progress(compliance_data, INPUT_OUTPUT_FILE) 
 
-    # Save the updated JSON back to the file
-    with open(INPUT_OUTPUT_FILE, "w") as f:
-        json.dump(compliance_data, f, indent=2)
-
-    print(f"\nUpdated compliance data saved to '{INPUT_OUTPUT_FILE}'.")
+    print(f"\nProcessing complete.")
     print(f"Total API queries made: {total_queries_made}")
     if args.limit:
         print(f"Processed {controls_processed_count} controls (limited by --limit {args.limit}).")
+    print(f"Final updated compliance data saved to '{INPUT_OUTPUT_FILE}'.")
     print("Remember to review the 'score', 'justification', and 'sources' fields as LLM-generated content may vary and require manual verification.")
