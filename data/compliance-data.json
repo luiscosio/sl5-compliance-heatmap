@@ -3443,12 +3443,12 @@
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding xAI's implementation of hourly premise sweeps or their physical security practices related to AI model weights security."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found addressing Meta's implementation of hourly physical security sweeps for AI model weights security as described in RAND's Security Level 3."
                   }
                 }
               },
@@ -3458,27 +3458,36 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding OpenAI conducting routine physical sweeps for unauthorized devices as required by Security Level 3."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://www.webpronews.com/anthropic-announces-security-measures-to-combat-corporate-espionage/",
+                      "https://www.anthropic.com/rsp-updates",
+                      "https://www.cnbc.com/2025/03/31/anthropic-begin-sweeping-offices-for-hidden-devices-amps-up-security.html"
+                    ],
+                    "justification": "Anthropic publicly states they conduct 'regular' TSCM sweeps using advanced detection equipment and techniques, and tailor sweeps to specific events or threats, but does not specify monthly frequency as required by this control."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://cloud.google.com/docs/security/physical-to-logical-space",
+                      "https://blog.google/inside-google/infrastructure/how-data-center-security-works/",
+                      "https://cloud.google.com/docs/security/overview/whitepaper",
+                      "https://cloud.google.com/docs/security/infrastructure/design"
+                    ],
+                    "justification": "Google documents extensive physical security measures including 24/7 monitoring, metal detectors, and anomalous event detection systems, but does not explicitly confirm routine monthly sweeps for unauthorized devices as specified in the RAND report."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding xAI's implementation of routine physical security sweeps for unauthorized devices."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found about Meta conducting routine physical sweeps for unauthorized devices in relation to AI model weights security."
                   }
                 }
               }
@@ -3491,29 +3500,47 @@
                 "name": "Authorized users who interact with the weights do so only through a software interface that reduces risk of the weights being illegitimately copied.",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 100,
+                    "sources": [
+                      "https://web.swipeinsight.app/posts/openai-unveils-security-architecture-for-frontier-ai-model-training-7065",
+                      "https://openai.com/index/openai-api/",
+                      "https://venturebeat.com/ai/why-anthropic-and-openai-are-obsessed-with-securing-llm-model-weights/",
+                      "https://openai.com/enterprise-privacy"
+                    ],
+                    "justification": "OpenAI provides access to its models exclusively through API interfaces rather than distributing model weights directly. The company explicitly states they do not distribute weights outside of OpenAI and Microsoft, and third-party access is provided only via API where 'model weights, source code, and other sensitive information remain controlled.'"
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.anthropic.com/news/frontier-model-security",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://venturebeat.com/ai/why-anthropic-and-openai-are-obsessed-with-securing-llm-model-weights/"
+                    ],
+                    "justification": "Anthropic has implemented multiple controls including two-party authorization for weight access, API-only external access (no direct weight distribution), egress bandwidth controls, and time-limited access systems, though some measures are described as preliminary or in development."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html",
+                      "https://cloud.google.com/vertex-ai/docs/general/access-control",
+                      "https://blog.google/technology/safety-security/introducing-googles-secure-ai-framework/"
+                    ],
+                    "justification": "Google has published frameworks (SAIF) and security guidance mentioning model weights protection, but no specific public documentation confirms implementation of software interfaces that restrict weight copying for authorized users. The RAND report cites this as a recommended security measure."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found about xAI implementing software interfaces that reduce risk of model weights being illegitimately copied."
                   },
                   "Meta": {
                     "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "sources": [
+                      "https://www.lawfaremedia.org/article/open-access-ai--lessons-from-open-source-software",
+                      "https://en.wikipedia.org/wiki/Llama_(language_model)",
+                      "https://github.com/meta-llama/llama-models",
+                      "https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct"
+                    ],
+                    "justification": "Meta openly distributes Llama model weights for download without restrictive software interfaces, allowing direct access to weights rather than limiting interaction through controlled interfaces that prevent copying."
                   }
                 }
               },
@@ -3521,29 +3548,50 @@
                 "name": "Any code accessing the weights minimizes attack surface, provides only simple forms of access, and uses the minimal amount of (highly trusted and well-established) external code necessary.",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://web.swipeinsight.app/posts/openai-unveils-security-architecture-for-frontier-ai-model-training-7065",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html",
+                      "https://openai.com/enterprise-privacy"
+                    ],
+                    "justification": "OpenAI implements multi-layered controls including private-linked storage, authentication/authorization requirements, and role-based access control for model weights. However, no specific public information was found directly addressing their use of minimal external code or simple access forms as specified in the RAND report's Security Level 3 requirements."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.anthropic.com/news/frontier-model-security",
+                      "https://www.anthropic.com/research/confidential-inference-trusted-vms",
+                      "https://www.anthropic.com/rsp-updates",
+                      "https://www.anthropic.com/news/activating-asl3-protections"
+                    ],
+                    "justification": "Anthropic has implemented ASL-3 security standards including two-party authorization for model weight access, enhanced change management protocols, endpoint software controls through binary allowlisting, egress bandwidth controls, and access management with multi-tier compartmentalization controls to minimize attack surface and limit access to model weights."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://deepmind.google/discover/blog/introducing-the-frontier-safety-framework/",
+                      "https://deepmind.google/discover/blog/updating-the-frontier-safety-framework/",
+                      "https://www.alignmentforum.org/posts/3ki4mt4BA6eTx56Tc/google-deepmind-an-approach-to-technical-agi-safety-and",
+                      "https://blog.google/technology/safety-security/introducing-googles-secure-ai-framework/",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html"
+                    ],
+                    "justification": "Google has published frameworks (SAIF, FSF) emphasizing security principles and mentions access controls, but lacks specific public documentation about minimizing attack surface, providing only simple forms of access, or using minimal external code for model weights security as required by RAND Security Level 3."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding xAI's implementation of controls to minimize attack surface when accessing model weights, use minimal external code, or provide only simple forms of access."
                   },
                   "Meta": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://github.com/meta-llama/llama-models",
+                      "https://en.wikipedia.org/wiki/Llama_(language_model)",
+                      "https://www.infosecurity-magazine.com/news/meta-new-advances-ai-security/",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html",
+                      "https://github.com/meta-llama/llama3"
+                    ],
+                    "justification": "Meta releases model weights openly for download with basic scripts, allowing unrestricted access and modification without implementing controlled interfaces or minimal code requirements. While Meta has developed security tools like LlamaFirewall and Prompt Guard, their open-weights approach fundamentally contradicts the principle of minimizing attack surface for weight access."
                   }
                 }
               },
@@ -3551,29 +3599,50 @@
                 "name": "Avoiding model interactions that bypass monitoring or constraints",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://www.analyticsvidhya.com/blog/2024/05/openai-security-measures/",
+                      "https://www.livescience.com/technology/artificial-intelligence/openais-smartest-ai-model-was-explicitly-told-to-shut-down-and-it-refused",
+                      "https://www.transformernews.ai/p/openais-new-model-tried-to-avoid",
+                      "https://learn.microsoft.com/en-us/azure/ai-services/openai/whats-new",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html",
+                      "https://openai.com/index/chain-of-thought-monitoring/"
+                    ],
+                    "justification": "While OpenAI has implemented real-time monitoring and filtering systems, recent evaluations show their models attempting to bypass shutdown mechanisms and deactivate oversight, directly contradicting the goal of preventing interactions that bypass monitoring or constraints."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.anthropic.com/news/frontier-model-security",
+                      "https://www.anthropic.com/rsp-updates",
+                      "https://www.anthropic.com/news/activating-asl3-protections"
+                    ],
+                    "justification": "Anthropic has implemented ASL-3 security measures including over 100 security controls, two-party authorization for model weight access, egress bandwidth controls, centralized log management with SIEM/SOAR, access monitoring for critical assets with automated detections, and deception technology with honeypots including fake model weights for unauthorized access detection."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://blog.google/technology/safety-security/introducing-googles-secure-ai-framework/",
+                      "https://safety.google/cybersecurity-advancements/saif/",
+                      "https://cloud.google.com/blog/products/identity-security/introducing-ai-protection-security-for-the-ai-era",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html"
+                    ],
+                    "justification": "Google has implemented SAIF framework with monitoring controls and AI Protection capabilities, but lacks specific public documentation demonstrating comprehensive Security Level 3 implementation for preventing bypass of monitoring constraints on model weights as outlined in RAND report."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found addressing xAI's compliance with avoiding model interactions that bypass monitoring or constraints related to AI model weights security."
                   },
                   "Meta": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://arxiv.org/html/2505.03574v1",
+                      "https://www.unite.ai/from-jailbreaks-to-injections-how-meta-is-strengthening-ai-security-with-llama-firewall/",
+                      "https://github.com/meta-llama/PurpleLlama",
+                      "https://blogs.cisco.com/security/bypassing-metas-llama-classifier-a-simple-jailbreak"
+                    ],
+                    "justification": "Meta has demonstrated substantial efforts in preventing bypass of monitoring/constraints through Purple Llama's security tools (including Llama Guard and Prompt Guard), LlamaFirewall framework with real-time monitoring, and multiple detection layers. However, documented vulnerabilities show some bypass methods exist."
                   }
                 }
               }
@@ -3586,29 +3655,45 @@
                 "name": "Protocols and policies for sensitive interactions (e.g., access to the various permitted interfaces to the weights is stringently controlled, multiparty authorization, security reviews, etc.)",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://venturebeat.com/ai/why-anthropic-and-openai-are-obsessed-with-securing-llm-model-weights/",
+                      "https://www.analyticsvidhya.com/blog/2024/05/openai-security-measures/",
+                      "https://openai.com/enterprise-privacy"
+                    ],
+                    "justification": "OpenAI demonstrates partial compliance through encryption (AES-256), access controls, and API-based model access rather than weight distribution. However, no public evidence of multiparty authorization or detailed security review processes for weight access was found."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 100,
+                    "sources": [
+                      "https://www.anthropic.com/rsp-updates",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.anthropic.com/news/reflections-on-our-responsible-scaling-policy"
+                    ],
+                    "justification": "Anthropic has implemented comprehensive protocols including multi-party authorization for model weight access, enhanced change management protocols, mandatory code review, hardware authentication requirements, and over 100 security controls specifically for ASL-3 Security Standard."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://deepmind.google/discover/blog/introducing-the-frontier-safety-framework/",
+                      "https://deepmind.google/discover/blog/updating-the-frontier-safety-framework/",
+                      "https://deepmind.google/discover/blog/taking-a-responsible-path-to-agi/"
+                    ],
+                    "justification": "Google DeepMind has published security frameworks and mentions sophisticated security mechanisms to prevent unauthorized access to model weights, but lacks specific public documentation about multiparty authorization, stringent access controls, or security review processes for weight access interfaces."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding xAI's multiparty authorization, stringent access controls, or security reviews for model weights access as required for Security Level 3."
                   },
                   "Meta": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://about.fb.com/news/2025/02/meta-approach-frontier-ai/",
+                      "https://metr.org/blog/2025-03-26-common-elements-of-frontier-ai-safety-policies/",
+                      "https://thehackernews.com/2025/04/meta-launches-llamafirewall-framework.html"
+                    ],
+                    "justification": "Meta has published frontier AI safety frameworks and uses security tools like LlamaFirewall, but lacks specific public documentation about multiparty authorization, stringent access controls, or security reviews for model weights access as described in Security Level 3 requirements."
                   }
                 }
               }
@@ -3621,29 +3706,42 @@
                 "name": "Ongoing manual monitoring of sensitive interactions",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html",
+                      "https://model-spec.openai.com/2025-02-12.html",
+                      "https://www.rand.org/pubs/research_reports/RRA2849-1.html"
+                    ],
+                    "justification": "OpenAI mentions monitoring for abuse and unusual activity in their Model Spec and security practices, but there is no specific public documentation of ongoing manual monitoring of sensitive interactions related to model weights security as outlined in RAND's Security Level 3 requirements."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://alignment.anthropic.com/2024/safety-cases/",
+                      "https://www.anthropic.com/rsp-updates",
+                      "https://www.anthropic.com/news/activating-asl3-protections"
+                    ],
+                    "justification": "Anthropic has implemented comprehensive monitoring systems including real-time and asynchronous monitoring classifiers, bug bounty programs, offline classification systems, and threat intelligence partnerships as part of their ASL-3 deployment standards for sensitive AI interactions."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://cloud.google.com/vertex-ai/docs/model-monitoring/overview",
+                      "https://safety.google/cybersecurity-advancements/saif/",
+                      "https://blog.google/technology/safety-security/introducing-googles-secure-ai-framework/",
+                      "https://cloud.google.com/security-command-center/docs/model-armor-overview"
+                    ],
+                    "justification": "While Google has automated monitoring systems (Vertex AI Model Monitoring, Model Armor) and the SAIF framework emphasizing detection/response, no specific public information confirms ongoing manual monitoring of sensitive interactions for model weights security at the Security Level 3 standard."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found addressing xAI's implementation of ongoing manual monitoring of sensitive interactions related to AI model weights security."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding Meta's implementation of ongoing manual monitoring of sensitive interactions related to AI model weights security as defined in RAND's Security Level 3."
                   }
                 }
               },
@@ -3651,29 +3749,42 @@
                 "name": "Ongoing automated anomaly detection",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html",
+                      "https://www.analyticsvidhya.com/blog/2024/05/openai-security-measures/",
+                      "https://openai.com/enterprise-privacy"
+                    ],
+                    "justification": "OpenAI demonstrates some security monitoring capabilities including 24/7 security team coverage and automated content classifiers, but no specific public information confirms implementation of ongoing automated anomaly detection systems specifically for model weights protection as required by RAND Security Level 3."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.anthropic.com/rsp-updates",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy"
+                    ],
+                    "justification": "Anthropic has implemented multiple detection mechanisms including egress bandwidth monitoring that detects unusual traffic patterns, deception technology with honeypots and fake model weights for high-precision detection, and multi-layered monitoring systems with real-time and asynchronous classifiers as part of their ASL-3 security measures."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://cloud.google.com/blog/products/identity-security/google-cloud-and-swift-pioneer-advanced-ai-and-federated-learning-tech",
+                      "https://cloud.google.com/blog/products/data-analytics/anomaly-detection-using-streaming-analytics-and-ai",
+                      "https://safety.google/cybersecurity-advancements/saif/",
+                      "https://www.rand.org/pubs/research_reports/RRA2849-1.html"
+                    ],
+                    "justification": "Google has demonstrated sophisticated anomaly detection capabilities for various AI/ML applications and cloud infrastructure, but no specific public information confirms implementation of automated anomaly detection systems specifically for AI model weights security as outlined in the RAND report's Security Level 3 requirements."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found about xAI implementing ongoing automated anomaly detection for AI model weights security."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found about Meta's implementation of ongoing automated anomaly detection for AI model weights security as required for RAND Security Level 3."
                   }
                 }
               },
@@ -3681,29 +3792,52 @@
                 "name": "Automated and manual monitoring/blocking of potentially malicious queries",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://openai.com/index/disrupting-malicious-uses-of-ai-by-state-affiliated-threat-actors/",
+                      "https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy",
+                      "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/abuse-monitoring"
+                    ],
+                    "justification": "OpenAI demonstrates strong automated monitoring through content filtering, abuse pattern detection algorithms, and both AI/human review processes. Azure OpenAI specifically employs real-time content classification, abuse monitoring systems, and can escalate to manual review via authorized personnel using secure workstations."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.anthropic.com/rsp-updates",
+                      "https://www.anthropic.com/news/detecting-and-countering-malicious-uses-of-claude-march-2025",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.anthropic.com/transparency",
+                      "https://support.anthropic.com/en/articles/8106465-our-approach-to-user-safety"
+                    ],
+                    "justification": "Anthropic has implemented comprehensive monitoring systems including real-time Constitutional Classifiers, asynchronous monitoring, detection models for harmful content, and enhanced safety filters that can be temporarily applied to repeat violators. The company has also established bug bounty programs and threat intelligence partnerships for identifying universal jailbreaks."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://cloud.google.com/blog/products/identity-security/introducing-ai-protection-security-for-the-ai-era",
+                      "https://cloud.google.com/security/securing-ai",
+                      "https://saif.google/secure-ai-framework/risks",
+                      "https://cloud.google.com/blog/topics/threat-intelligence/adversarial-misuse-generative-ai"
+                    ],
+                    "justification": "Google has implemented Model Armor which guards against prompt injection, jailbreak attacks, and malicious queries, and has AI Protection capabilities integrated with Security Command Center for monitoring AI threats. However, no specific public information directly addresses their implementation of query monitoring/blocking specifically for protecting AI model weights as defined in RAND's Security Level 3."
                   },
                   "xAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://x.ai/legal/faq",
+                      "https://embracethered.com/blog/posts/2024/security-probllms-in-xai-grok/",
+                      "https://guptadeepak.com/the-comprehensive-guide-to-understanding-grok-ai-architecture-applications-and-implications/"
+                    ],
+                    "justification": "xAI mentions applying 'security testing and evaluation measures' and using 'automated content classifiers and safety tools' with limited manual review for policy violations, but lacks specific public documentation about automated/manual monitoring systems for malicious query detection."
                   },
                   "Meta": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html",
+                      "https://www.infosecurity-magazine.com/news/meta-new-advances-ai-security/",
+                      "https://thehackernews.com/2025/04/meta-launches-llamafirewall-framework.html"
+                    ],
+                    "justification": "Meta has implemented comprehensive query monitoring through LlamaFirewall (including PromptGuard 2 for real-time jailbreak detection), Agent Alignment Checks, and CodeShield, along with updated Llama Guard 4 for content safeguarding, demonstrating strong automated monitoring capabilities aligned with SL3 requirements."
                   }
                 }
               },
@@ -3713,27 +3847,42 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found about OpenAI implementing frequent compromise assessments for AI model weights security as described in RAND's Security Level 3 requirements."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.anthropic.com/rsp-updates",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy"
+                    ],
+                    "justification": "Anthropic has implemented comprehensive security monitoring including centralized log management with SIEM/SOAR platform for automated analysis and detection workflows, manual monitoring of model weight access, deception technology with honeypots, and routine safeguard assessments. However, specific details about frequency of compromise assessments are not publicly disclosed."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://blog.google/technology/safety-security/googles-ai-red-team-the-ethical-hackers-making-ai-safer/",
+                      "https://cloud.google.com/blog/transform/prompt-findings-our-ai-red-teams-first-report-qa",
+                      "https://deepmind.google/discover/blog/advancing-geminis-security-safeguards/",
+                      "https://ai.google/responsibility/safety/"
+                    ],
+                    "justification": "Google demonstrates strong compromise assessment practices through automated red teaming, 24/7 security monitoring, Bug Bounty programs, and the Frontier Safety Framework for continuous evaluation of AI models. However, specific details about frequency of assessments for model weights security are not publicly disclosed."
                   },
                   "xAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://x.ai/security"
+                    ],
+                    "justification": "xAI demonstrates some security assessment practices through bug bounty programs, continuous threat detection with Wiz, and automated vulnerability assessment with Amazon Inspector, but lacks specific public documentation on formal frequent compromise assessment procedures."
                   },
                   "Meta": {
                     "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "sources": [
+                      "https://www.techrepublic.com/article/news-meta-ai-privacy-safety-risk-assessments/",
+                      "https://www.infosecurity-magazine.com/news/meta-new-advances-ai-security/",
+                      "https://thehackernews.com/2025/04/meta-launches-llamafirewall-framework.html"
+                    ],
+                    "justification": "No specific public information found about Meta implementing frequent compromise assessments for AI model weights security. While Meta has released security tools like LlamaFirewall and Prompt Guard, there is no evidence of regular security audits or compromise assessments specifically for model weights protection."
                   }
                 }
               },
@@ -3743,27 +3892,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found directly addressing OpenAI's implementation of frequent integrity checks via comparison against baseline system configurations ('gold image') for AI model weights security."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding Anthropic's implementation of frequent integrity checks via comparison against a baseline system configuration ('gold image') for AI model weights security."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding Google's implementation of frequent integrity checks comparing AI model weights against baseline configurations as required for RAND Security Level 3."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding xAI implementing frequent integrity checks against baseline configurations for model weights security."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding Meta's implementation of frequent integrity checks via comparison against baseline system configurations for AI model weights security."
                   }
                 }
               }
@@ -3776,9 +3925,14 @@
                 "name": "Implementation of measures described by NIST SP 800-171 or equivalent",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html",
+                      "https://openai.com/index/reimagining-secure-infrastructure-for-advanced-ai/",
+                      "https://openai.com/global-affairs/openai-s-comment-to-the-ntia-on-open-model-weights",
+                      "https://www.analyticsvidhya.com/blog/2024/05/openai-security-measures/"
+                    ],
+                    "justification": "OpenAI has publicly acknowledged the importance of protecting AI model weights and proposed security measures including trusted computing, network isolation, and compliance programs, but no specific public documentation confirms implementation of NIST SP 800-171 controls or equivalent measures meeting Security Level 3 requirements."
                   },
                   "Anthropic": {
                     "score": 0,
