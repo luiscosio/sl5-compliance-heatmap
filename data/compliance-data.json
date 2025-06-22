@@ -3935,24 +3935,31 @@
                     "justification": "OpenAI has publicly acknowledged the importance of protecting AI model weights and proposed security measures including trusted computing, network isolation, and compliance programs, but no specific public documentation confirms implementation of NIST SP 800-171 controls or equivalent measures meeting Security Level 3 requirements."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.anthropic.com/news/frontier-model-security",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html"
+                    ],
+                    "justification": "Anthropic has implemented ASL-3 security standards with over 100 security controls including two-party authorization, enhanced change management, and endpoint controls. They explicitly focus on protecting model weights against sophisticated non-state actors, aligning with RAND's Security Level 3 requirements."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://www.rand.org/pubs/research_reports/RRA2849-1.html",
+                      "https://cloud.google.com/security/compliance/nist800-171"
+                    ],
+                    "justification": "Google has documented compliance with NIST SP 800-171 for Google Cloud services through third-party assessments, but no specific public information was found regarding implementation of these measures for AI model weights security as described in the RAND report."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding xAI's implementation of NIST SP 800-171 or equivalent measures for AI model weights security."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding Meta's implementation of NIST SP 800-171 or equivalent measures for AI model weights security as expected for RAND report Security Level 3."
                   }
                 }
               },
@@ -3960,29 +3967,42 @@
                 "name": "Future implementation of measures described by CMMC 2.0 Level 3",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://openai.com/global-affairs/our-approach-to-frontier-risk",
+                      "https://openai.com/enterprise-privacy",
+                      "https://web.swipeinsight.app/posts/openai-unveils-security-architecture-for-frontier-ai-model-training-7065",
+                      "https://www.analyticsvidhya.com/blog/2024/05/openai-security-measures/"
+                    ],
+                    "justification": "OpenAI has implemented several security measures aligned with RAND's Security Level 3 recommendations including access controls, encryption, secure infrastructure on Azure/Kubernetes, and SOC 2 compliance. However, no public documentation confirms full CMMC 2.0 Level 3 compliance or implementation of all 134 required controls."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://venturebeat.com/ai/why-anthropic-and-openai-are-obsessed-with-securing-llm-model-weights/",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html"
+                    ],
+                    "justification": "Anthropic has implemented ASL-3 (AI Safety Level 3) security standards including over 100 security controls, egress bandwidth controls, two-party authorization for model weight access, and protections against sophisticated non-state actors. These measures align well with RAND's Security Level 3 recommendations for protection against cybercrime syndicates and insider threats, though not yet at the SL-4 level needed for state-sponsored attacks."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding Google's implementation of CMMC 2.0 Level 3 measures specifically for AI model weights security as described in the RAND report 'Securing AI Model Weights'."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding xAI's compliance with CMMC 2.0 Level 3 or implementation of RAND report Security Level 3 measures for AI model weights protection."
                   },
                   "Meta": {
                     "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "sources": [
+                      "https://www.infosecurity-magazine.com/news/meta-new-advances-ai-security/",
+                      "https://ailabwatch.org/companies/meta",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html"
+                    ],
+                    "justification": "Meta's open-source approach to AI models (releasing model weights publicly) is fundamentally incompatible with RAND Security Level 3, which requires protecting weights against cybercrime syndicates and insider threats through centralized, access-controlled systems."
                   }
                 }
               }
@@ -4000,29 +4020,44 @@
                 "name": "Adversarial input detection",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://openai.com/research/gpt-4",
+                      "https://openai.com/research/attacking-machine-learning-with-adversarial-examples",
+                      "https://web.swipeinsight.app/posts/openai-unveils-security-architecture-for-frontier-ai-model-training-7065"
+                    ],
+                    "justification": "OpenAI implements adversarial training, defensive distillation, and moderation APIs for their models, but no specific public information was found about adversarial input detection systems specifically protecting model weights from extraction attempts."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.technologyreview.com/2025/02/03/1110849/anthropic-has-a-new-way-to-protect-large-language-models-against-jailbreaks/",
+                      "https://cyberpress.org/anthropic-report-highlights-rising-threats/",
+                      "https://www.anthropic.com/transparency/voluntary-commitments",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.anthropic.com/news/challenges-in-red-teaming-ai-systems"
+                    ],
+                    "justification": "Anthropic demonstrates strong adversarial input detection through Constitutional Classifiers, real-time monitoring, automated red teaming, and comprehensive security controls including egress bandwidth detection for model weight exfiltration. However, they acknowledge their systems are not bulletproof and continuously evolve their detection capabilities."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding Google's implementation of adversarial input detection for AI model weights security as defined in RAND's Security Level 3."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding xAI's implementation of adversarial input detection for AI model weights security as defined in RAND's Security Level 3 requirements."
                   },
                   "Meta": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.unite.ai/from-jailbreaks-to-injections-how-meta-is-strengthening-ai-security-with-llama-firewall/",
+                      "https://www.securityweek.com/meta-releases-llama-ai-open-source-protection-tools/",
+                      "https://blogs.cisco.com/security/bypassing-metas-llama-classifier-a-simple-jailbreak",
+                      "https://www.marktechpost.com/2025/05/08/meta-ai-open-sources-llamafirewall-a-security-guardrail-tool-to-help-build-secure-ai-agents/"
+                    ],
+                    "justification": "Meta has implemented multiple adversarial input detection mechanisms including LlamaFirewall framework with PromptGuard 2 for real-time detection of prompt injections and jailbreaks, Agent Alignment Checks for goal hijacking detection, and CodeShield for insecure code prevention. However, vulnerabilities have been demonstrated in their detection models."
                   }
                 }
               }
@@ -4035,29 +4070,45 @@
                 "name": "Limitations on the number of inferences using the same credentials",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://platform.openai.com/docs/guides/rate-limits",
+                      "https://cookbook.openai.com/examples/how_to_handle_rate_limits",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html"
+                    ],
+                    "justification": "OpenAI implements comprehensive rate limiting on API usage including requests per minute (RPM) and tokens per minute (TPM) limits applied to API keys/credentials, with automatic tier-based adjustments. These controls limit inference volume per credential but are primarily commercial/load management measures rather than explicit security controls for model weight protection."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://docs.anthropic.com/en/api/rate-limits",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html"
+                    ],
+                    "justification": "Anthropic has comprehensive rate limiting on API usage (RPM, ITPM, OTPM) and has implemented ASL-3 security measures with over 100 controls to protect model weights, which aligns well with RAND's SL3 requirement for rate-limited outputs to prevent weight exfiltration."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://cloud.google.com/vertex-ai/docs/quotas",
+                      "https://cloud.google.com/vertex-ai/generative-ai/docs/quotas",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html"
+                    ],
+                    "justification": "Google implements rate limits and quotas per project/credential for AI model inference (requests per minute), but public documentation does not explicitly address anti-exfiltration measures or rate limiting specifically designed to prevent model weight theft as described in RAND's Security Level 3."
                   },
                   "xAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://www.infoq.com/news/2024/11/xai-grok-api/",
+                      "https://docs.x.ai/docs/consumption-and-rate-limits",
+                      "https://apidog.com/blog/grok-3-api-rate-limits/"
+                    ],
+                    "justification": "xAI implements rate limits on API usage that restrict requests per minute based on user tiers and tracks usage per-user tied to account credentials. However, there is no specific public information about limitations on total inference counts using the same credentials."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding Meta's implementation of limitations on the number of inferences using the same credentials for AI model weights security."
                   }
                 }
               }
@@ -4075,29 +4126,48 @@
                 "name": "Very frequent software update management and compliance monitoring",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html",
+                      "https://openai.com/global-affairs/our-approach-to-frontier-risk",
+                      "https://forum.effectivealtruism.org/posts/fJycPfYuBHKoai98q/ai-companies-are-not-on-track-to-secure-model-weights",
+                      "https://www.analyticsvidhya.com/blog/2024/05/openai-security-measures/"
+                    ],
+                    "justification": "OpenAI has publicly proposed security measures including AI-specific audit and compliance programs, but there is no specific public information confirming implementation of very frequent software update management and compliance monitoring as required for RAND Security Level 3. Multiple AI labs are estimated to be only at Security Level 2-3."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.anthropic.com/rsp-updates"
+                    ],
+                    "justification": "Anthropic has implemented comprehensive ASL-3 security controls including enhanced change management protocols, software inventory management with automated scanning, regular monitoring of software components, and continuous refinement processes. The company actively monitors security through a bug bounty program, threat intelligence partnerships, and rapid response protocols for jailbreak mitigation."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://ai.google/responsibility/safety/",
+                      "https://safety.google/cybersecurity-advancements/saif/",
+                      "https://deepmind.google/discover/blog/introducing-the-frontier-safety-framework/",
+                      "https://cloud.google.com/blog/products/identity-security/introducing-ai-protection-security-for-the-ai-era",
+                      "https://blog.google/technology/safety-security/introducing-googles-secure-ai-framework/"
+                    ],
+                    "justification": "Google has established frameworks (SAIF, Frontier Safety Framework) and monitoring capabilities, but no public evidence shows implementation of very frequent software updates and compliance monitoring specifically for AI model weights security as required by RAND's SL3."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found about xAI's very frequent software update management and compliance monitoring practices related to AI model weights security."
                   },
                   "Meta": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://www.infosecurity-magazine.com/news/meta-new-advances-ai-security/",
+                      "https://www.techrepublic.com/article/news-meta-ai-privacy-safety-risk-assessments/",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html"
+                    ],
+                    "justification": "While Meta has introduced security tools like LlamaFirewall, LlamaGuard 4, and CyberSecEval 4, they are automating 90% of risk assessments with AI rather than maintaining human oversight for security updates. The RAND report's Security Level 3 requires protection against cybercrime syndicates and insider threats with comprehensive monitoring, but Meta appears to prioritize speed over rigorous security compliance monitoring."
                   }
                 }
               }
@@ -4111,28 +4181,32 @@
                 "compliance": {
                   "OpenAI": {
                     "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "sources": [
+                      "https://www.rand.org/pubs/research_reports/RRA2849-1.html",
+                      "https://web.swipeinsight.app/posts/openai-unveils-security-architecture-for-frontier-ai-model-training-7065",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html"
+                    ],
+                    "justification": "No specific public information found regarding OpenAI's implementation of 802.1x authentication for securing AI model weights. While OpenAI has published details about their security architecture including authentication frameworks and network controls, there is no explicit mention of 802.1x authentication implementation."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding Anthropic's implementation of 802.1x authentication for AI model weights security."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding Google's implementation of 802.1x authentication for AI model weights security as described in RAND's Security Level 3."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding xAI's implementation of 802.1x authentication for AI model weights security."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding Meta's implementation of 802.1x authentication for AI model weights security."
                   }
                 }
               },
@@ -4140,29 +4214,43 @@
                 "name": "Zero Trust architecture (adherence to at least the standards in the \"Advanced\" level of CISA's Zero Trust Maturity Model)",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://openai.com/index/reimagining-secure-infrastructure-for-advanced-ai/",
+                      "https://web.swipeinsight.app/posts/openai-unveils-security-architecture-for-frontier-ai-model-training-7065",
+                      "https://www.analyticsvidhya.com/blog/2024/05/openai-security-measures/"
+                    ],
+                    "justification": "OpenAI has published security measures for AI infrastructure including trusted computing for GPUs to encrypt model weights and network isolation, but no specific public documentation confirms adherence to CISA's Zero Trust Maturity Model Advanced level standards."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://www.anthropic.com/news/frontier-model-security",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.anthropic.com/rsp-updates"
+                    ],
+                    "justification": "Anthropic has implemented multi-party authorization and time-bounded access controls for model weights under ASL-3, along with enhanced security measures including two-party control systems. However, no specific public information confirms full adherence to CISA's Zero Trust Maturity Model 'Advanced' level standards."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://cloud.google.com/beyondcorp",
+                      "https://workspace.google.com/blog/identity-and-security/accelerating-zero-trust-and-digital-sovereignty-ai",
+                      "https://workspace.google.com/security/zero-trust/",
+                      "https://cloud.google.com/architecture/framework/security/implement-zero-trust",
+                      "https://cloud.google.com/blog/topics/public-sector/strengthening-federal-cybersecurity-cisa-zero-trust-and-google-workspace-exclusive-sessions-at-next-24/"
+                    ],
+                    "justification": "Google has implemented comprehensive Zero Trust principles aligned with CISA's framework including BeyondCorp, context-aware access, and AI-powered security controls. However, no specific public information was found directly addressing AI model weights security or RAND report Security Level 3 requirements."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding xAI's Zero Trust architecture implementation or compliance with CISA's Zero Trust Maturity Model standards for AI model weights security."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding Meta's compliance with CISA's Zero Trust Maturity Model 'Advanced' level standards for AI model weights security."
                   }
                 }
               }
@@ -4175,29 +4263,37 @@
                 "name": "Security-minded hardware sourcing",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://openai.com/index/reimagining-secure-infrastructure-for-advanced-ai/",
+                      "https://writings.flashbots.net/ZTEE",
+                      "https://www.analyticsvidhya.com/blog/2024/05/openai-security-measures/"
+                    ],
+                    "justification": "OpenAI has proposed implementing trusted computing for AI accelerators (GPUs) to encrypt model weights until execution and called for security-minded hardware evolution, but there's no public evidence of full implementation of hardware security modules or secure hardware sourcing practices as described in RAND's Security Level 3."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding Anthropic's security-minded hardware sourcing practices, supplier vetting, or trusted hardware procurement processes."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://cloud.google.com/blog/products/identity-security/mitigating-risk-in-the-hardware-supply-chain",
+                      "https://cloud.google.com/distributed-cloud/hosted/docs/latest/gdch/security",
+                      "https://cloud.google.com/docs/security/infrastructure/design"
+                    ],
+                    "justification": "Google demonstrates strong hardware sourcing security through custom-designed TPUs, Titan security chips, vetted component vendors, and rigorous supply chain controls. However, no specific public documentation was found detailing hardware sourcing practices specifically for AI model weights security as described in Security Level 3 of the RAND report."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding xAI's security-minded hardware sourcing practices or measures to protect AI model weights as outlined in the RAND report."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found addressing Meta's security-minded hardware sourcing practices for AI model weights protection as defined in the RAND report."
                   }
                 }
               }
@@ -4210,29 +4306,47 @@
                 "name": "Software inventory management",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://openai.com/global-affairs/our-approach-to-frontier-risk",
+                      "https://openai.com/enterprise-privacy",
+                      "https://trust.openai.com/"
+                    ],
+                    "justification": "OpenAI has SOC 2 Type 2 compliance and general security measures, but no specific public information found about software inventory management controls for AI model weights as described in the RAND report's Security Level 3 requirements."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.anthropic.com/news/frontier-model-security",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.anthropic.com/rsp-updates"
+                    ],
+                    "justification": "Anthropic has publicly committed to implementing comprehensive software inventory management as part of their ASL-3 security measures, including automated scanning and strict tracking of all software components used in development and deployment."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://cloud.google.com/use-cases/secure-ai-framework",
+                      "https://cloud.google.com/blog/products/identity-security/introducing-ai-protection-security-for-the-ai-era",
+                      "https://cloud.google.com/blog/products/identity-security/driving-secure-innovation-with-ai-google-unified-security-next25"
+                    ],
+                    "justification": "Google demonstrates AI inventory capabilities through AI Protection and SAIF framework, including automated discovery and cataloging of AI assets, models, and datasets. However, no specific public information directly addresses software inventory management for AI model weights at RAND Security Level 3 requirements."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding xAI's implementation of software inventory management controls for AI model weights security as described in RAND Security Level 3."
                   },
                   "Meta": {
                     "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "sources": [
+                      "https://www.securityweek.com/meta-releases-llama-ai-open-source-protection-tools/",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html",
+                      "https://www.infosecurity-magazine.com/news/meta-new-advances-ai-security/",
+                      "https://www.rand.org/pubs/research_reports/RRA2849-1.html",
+                      "https://www.transformernews.ai/p/metas-ai-safeguards-are-an-elaborate"
+                    ],
+                    "justification": "No specific public information found regarding Meta's implementation of software inventory management controls for AI model weights as outlined in RAND's Security Level 3 requirements. While Meta has released security tools like LlamaFirewall and Llama Guard, these address different security aspects than inventory management, and Meta's open-source approach to Llama models fundamentally conflicts with centralized weight control."
                   }
                 }
               },
@@ -4240,29 +4354,38 @@
                 "name": "Supply chain security is commensurate with the organization's security",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://openai.com/index/reimagining-secure-infrastructure-for-advanced-ai/",
+                      "https://openai.com/policies/supplier-security-measures",
+                      "https://www.analyticsvidhya.com/blog/2024/05/openai-security-measures/",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html"
+                    ],
+                    "justification": "OpenAI has published security guidelines for suppliers and acknowledges model weight security importance, but lacks specific public documentation on comprehensive supply chain security measures commensurate with Security Level 3 requirements (protection against cybercrime syndicates and insider threats) as defined in the RAND report."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.anthropic.com/news/frontier-model-security",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html"
+                    ],
+                    "justification": "Anthropic has implemented ASL-3 security standards with over 100 security controls for model weight protection, including multi-party authorization, enhanced change management protocols, and references to NIST SSDF and SLSA standards for secure development, demonstrating substantial supply chain security measures aligned with RAND SL-3 requirements."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found addressing Google's supply chain security for AI model weights being commensurate with organizational security as described in RAND's Security Level 3."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding xAI's supply chain security measures or practices related to AI model weights protection that would meet Security Level 3 requirements as defined in the RAND report."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding Meta's implementation of supply chain security controls commensurate with organizational security requirements for AI model weights as described in Security Level 3 of the RAND report."
                   }
                 }
               }
@@ -4275,29 +4398,42 @@
                 "name": "Enforcement of security policies through code rather than manual compliance",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://openai.com/policies/usage-policies",
+                      "https://www.rand.org/events/2024/07/securing-ai.html",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html"
+                    ],
+                    "justification": "OpenAI uses automated systems for policy enforcement in some areas (content moderation, usage policy violations) but lacks specific public information about automated enforcement for model weights security infrastructure as required by RAND Security Level 3."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.anthropic.com/rsp-updates"
+                    ],
+                    "justification": "Anthropic has implemented automated security controls under ASL-3 including binary authorization for endpoints, automated software scanning, egress bandwidth controls, and real-time monitoring systems that enforce security policies through code rather than manual processes."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://blog.google/technology/safety-security/introducing-googles-secure-ai-framework/",
+                      "https://cloud.google.com/use-cases/secure-ai-framework",
+                      "https://cloud.google.com/blog/products/identity-security/introducing-ai-protection-security-for-the-ai-era",
+                      "https://safety.google/cybersecurity-advancements/saif/"
+                    ],
+                    "justification": "Google shows some automated security controls through SAIF framework and Assured Workloads, but lacks specific public information about code-based policy enforcement for AI model weights security."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found about xAI's implementation of automated security policy enforcement through code for AI model weights protection."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found about Meta's implementation of automated/code-based security policy enforcement for AI model weights as described in RAND's Security Level 3."
                   }
                 }
               },
@@ -4305,29 +4441,52 @@
                 "name": "Security policy enforcement for network access across devices",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://openai.com/policies/supplier-security-measures",
+                      "https://web.swipeinsight.app/posts/openai-unveils-security-architecture-for-frontier-ai-model-training-7065",
+                      "https://trust.openai.com/",
+                      "https://www.analyticsvidhya.com/blog/2024/05/openai-security-measures/"
+                    ],
+                    "justification": "OpenAI has published details about their security architecture (June 2024) implementing multi-layered controls including network egress controls, role-based access control, and private-linked storage resources. However, no specific public information addresses comprehensive device-level network access policies matching RAND SL3 requirements."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.techrepublic.com/article/news-anthropic-ai-safety-level-3/",
+                      "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html"
+                    ],
+                    "justification": "Anthropic has implemented ASL-3 security standards including over 100 security controls, egress bandwidth controls to restrict data flow from secure environments, two-party authorization for model weight access, and enhanced endpoint controls, demonstrating strong alignment with RAND's Security Level 3 requirements for protecting against cybercrime syndicates and insider threats."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://blog.google/technology/safety-security/introducing-googles-secure-ai-framework/",
+                      "https://safety.google/cybersecurity-advancements/saif/",
+                      "https://cloud.google.com/blog/products/identity-security/introducing-ai-protection-security-for-the-ai-era",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html"
+                    ],
+                    "justification": "Google has implemented foundational AI security through SAIF framework and AI Protection capabilities, but lacks specific public documentation on network access controls across devices for AI model weights protection as required by RAND SL3."
                   },
                   "xAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://www.oracle.com/artificial-intelligence/ai-open-weights-models/",
+                      "https://x.ai/security",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html"
+                    ],
+                    "justification": "xAI has basic security infrastructure including firewalls, network access controls, and IAM, but no specific public information confirms implementation of Security Level 3 requirements for model weights protection such as centralized weight storage or device-specific access controls as outlined in the RAND report."
                   },
                   "Meta": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://www.infosecurity-magazine.com/news/meta-new-advances-ai-security/",
+                      "https://thehackernews.com/2025/04/meta-launches-llamafirewall-framework.html",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html"
+                    ],
+                    "justification": "While Meta has introduced security tools like LlamaFirewall and emphasizes open-source model security, there is limited public information specifically addressing network access control and segmentation policies for protecting AI model weights infrastructure as required by RAND Security Level 3."
                   }
                 }
               }
@@ -4345,29 +4504,42 @@
                 "name": "Employee awareness of weight interaction monitoring",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://openai.com/careers/insider-risk-investigator",
+                      "https://openai.com/global-affairs/our-approach-to-frontier-risk",
+                      "https://www.ccn.com/news/technology/openai-hiring-insider-risk-investigator-collaborating-white-house/",
+                      "https://web.swipeinsight.app/posts/openai-unveils-security-architecture-for-frontier-ai-model-training-7065"
+                    ],
+                    "justification": "OpenAI has committed to investing in insider threat safeguards, is hiring insider risk investigators, and has implemented multi-layered controls to protect model weights. However, no specific public information was found regarding employee awareness training about weight interaction monitoring."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://privacy.anthropic.com/en/articles/10458704-how-does-anthropic-protect-the-personal-data-of-claude-ai-users",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.anthropic.com/rsp-updates"
+                    ],
+                    "justification": "Anthropic has implemented access monitoring for model weights with automated detections and manual monitoring, educates employees on insider risk with a structured insider threat program, and provides annual security training. However, no specific public information confirms employee awareness of weight interaction monitoring systems."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found about Google's employee awareness programs or training related to weight interaction monitoring for AI models."
                   },
                   "xAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://x.ai/news/grok-os",
+                      "https://research.contrary.com/company/xai",
+                      "https://x.ai/security"
+                    ],
+                    "justification": "xAI has general security training mentioned on their security page, but no specific public information about employee awareness training regarding model weight interaction monitoring. While they open-sourced Grok weights, this poses additional security concerns rather than demonstrating controlled access monitoring."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding Meta's implementation of employee awareness programs or monitoring systems for AI model weight interactions as required for Security Level 3."
                   }
                 }
               },
@@ -4375,29 +4547,41 @@
                 "name": "Security training for employees (not necessarily only those with access)",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://venturebeat.com/ai/why-anthropic-and-openai-are-obsessed-with-securing-llm-model-weights/",
+                      "https://web.swipeinsight.app/posts/openai-unveils-security-architecture-for-frontier-ai-model-training-7065",
+                      "https://openai.com/security/"
+                    ],
+                    "justification": "OpenAI has published information about their security architecture including multi-party access controls and role-based authorization for model weights, and mentions that they invest in security and have dedicated research environments. However, no specific public information was found detailing their employee security training programs related to model weights protection as would be expected for Security Level 3."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://venturebeat.com/ai/why-anthropic-and-openai-are-obsessed-with-securing-llm-model-weights/",
+                      "https://www.anthropic.com/careers",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://forum.effectivealtruism.org/posts/fJycPfYuBHKoai98q/ai-companies-are-not-on-track-to-secure-model-weights"
+                    ],
+                    "justification": "Anthropic has implemented ASL-3 security standards with over 100 security controls to protect model weights and has a security team of several dozen people led by Jason Clinton. While they emphasize security as a collective responsibility and work with DEF CON to train security engineers, no specific public information was found detailing comprehensive security training programs for all employees regarding model weights protection."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding Google's security training for employees related to AI model weights security as expected for Security Level 3."
                   },
                   "xAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://startup.jobs/security-operations-lead-xai-5610530",
+                      "https://x.ai/security"
+                    ],
+                    "justification": "xAI requires annual security and privacy training for all employees covering security policies, best practices, and privacy principles. Additional training exists for data center staff who undergo comprehensive background checks and security training."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding Meta's security training for employees related to AI model weights security as expected for Security Level 3 in the RAND report."
                   }
                 }
               },
@@ -4405,29 +4589,51 @@
                 "name": "Security risk reporting program",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://openai.com/global-affairs/our-approach-to-frontier-risk",
+                      "https://www.bleepingcomputer.com/news/security/openai-now-pays-researchers-100-000-for-critical-vulnerabilities/",
+                      "https://openai.com/policies/coordinated-vulnerability-disclosure-policy",
+                      "https://bugcrowd.com/openai"
+                    ],
+                    "justification": "OpenAI has established a comprehensive bug bounty program through Bugcrowd with rewards up to $100,000 for critical vulnerabilities, provides multiple channels for vulnerability reporting including disclosure@openai.com, and actively invests in cybersecurity and insider threat safeguards to protect model weights."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.anthropic.com/voluntary-commitments",
+                      "https://www.anthropic.com/news/model-safety-bug-bounty",
+                      "https://www.anthropic.com/responsible-disclosure-policy",
+                      "https://www.anthropic.com/news/testing-our-safety-defenses-with-a-new-bug-bounty-program"
+                    ],
+                    "justification": "Anthropic has established comprehensive security risk reporting programs including a Responsible Disclosure Policy, multiple bug bounty programs through HackerOne (offering up to $25,000 for critical vulnerabilities), and dedicated channels for reporting safety issues, demonstrating strong compliance with Security Level 3 expectations for vulnerability reporting systems."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://opensource.googleblog.com/2025/01/creating-safe-secure-ai-models.html",
+                      "https://ai.google/responsibility/safety/",
+                      "https://saif.google/secure-ai-framework/risks",
+                      "https://safety.google/cybersecurity-advancements/saif/"
+                    ],
+                    "justification": "Google has established security frameworks (SAIF), bug bounty programs covering AI products, and provides guidance on vulnerability reporting for AI models, but lacks specific public documentation of a dedicated reporting program focused on AI model weights security as described in RAND's Security Level 3."
                   },
                   "xAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://securityboulevard.com/2025/05/xai-secret-leak-the-story-of-a-disclosure/",
+                      "https://x.ai/security"
+                    ],
+                    "justification": "xAI has implemented a public bug bounty program through HackerOne for vulnerability disclosure and maintains a vulnerabilities@x.ai email for security reports, demonstrating a functional security risk reporting framework, though no specific evidence was found regarding AI model weights security protocols."
                   },
                   "Meta": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://bugbounty.meta.com/scope/",
+                      "https://thehackernews.com/2025/01/metas-llama-framework-flaw-exposes-ai.html",
+                      "https://www.oligo.security/blog/cve-2024-50050-critical-vulnerability-in-meta-llama-llama-stack"
+                    ],
+                    "justification": "Meta has a general bug bounty program and recently disclosed vulnerabilities in Llama frameworks show cooperative security response, but no specific evidence found of a comprehensive security risk reporting program specifically focused on AI model weights security as outlined in RAND's Security Level 3 requirements."
                   }
                 }
               }
@@ -4440,29 +4646,37 @@
                 "name": "Insider threat program",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://openai.com/global-affairs/our-approach-to-frontier-risk",
+                      "https://openai.com/careers/security-engineer-insider-threat-detection-and-response/",
+                      "https://openai.com/careers/insider-risk-investigator"
+                    ],
+                    "justification": "OpenAI has publicly acknowledged investing in 'insider threat safeguards' and is actively hiring for insider threat roles, but lacks detailed public documentation of comprehensive insider threat program implementation that would fully meet RAND Security Level 3 requirements."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://www.anthropic.com/news/reflections-on-our-responsible-scaling-policy",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.anthropic.com/rsp-updates"
+                    ],
+                    "justification": "Anthropic has publicly disclosed establishing a structured insider threat program as part of ASL-3, including multi-party authorization for model weights access and employee education on insider risk. However, implementation details against sophisticated insiders remain limited in public documentation."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found about Google implementing insider threat programs specifically for AI model weights security as described in RAND's Security Level 3."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding xAI's insider threat program related to AI model weights security."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found about Meta implementing an insider threat program for AI model weights security as outlined in RAND's Security Level 3 requirements."
                   }
                 }
               }
@@ -4480,29 +4694,40 @@
                 "name": "Ongoing penetration testing",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://web.swipeinsight.app/posts/openai-unveils-security-architecture-for-frontier-ai-model-training-7065",
+                      "https://openai.com/security/"
+                    ],
+                    "justification": "OpenAI conducts annual third-party penetration testing for their API and has implemented red team testing for security controls. Third-party security consultancies have performed penetration tests on their infrastructure protecting model weights."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.techrepublic.com/article/news-anthropic-ai-safety-level-3/",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.anthropic.com/rsp-updates"
+                    ],
+                    "justification": "Anthropic explicitly mentions 'Red teaming and penetration testing: Partner with a diverse range of external red team and penetration testing experts' as part of their ASL-3 security controls for model weights protection, and has implemented bug bounty programs focused on stress-testing their security systems."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://deepmind.google/discover/blog/advancing-geminis-security-safeguards/",
+                      "https://safety.google/cybersecurity-advancements/saif/",
+                      "https://deepmind.google/discover/blog/taking-a-responsible-path-to-agi/"
+                    ],
+                    "justification": "Google demonstrates automated red teaming (ART) for Gemini models and has security frameworks (SAIF, Frontier Safety), but lacks specific public evidence of regular penetration testing focused on model weights protection as described in RAND's Security Level 3."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding xAI's implementation of ongoing penetration testing for AI model weights security as defined in RAND's Security Level 3."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding Meta's implementation of ongoing penetration testing focused on AI model weights security as required for RAND Security Level 3."
                   }
                 }
               },
@@ -4510,29 +4735,37 @@
                 "name": "Penetration testing of physical access and facility security",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://transparency.oecd.ai/reports/b167db92-67c8-47d8-966a-427e2ce8c008",
+                      "https://web.swipeinsight.app/posts/openai-unveils-security-architecture-for-frontier-ai-model-training-7065",
+                      "https://openai.com/security/"
+                    ],
+                    "justification": "OpenAI mentions third-party penetration testing and red teaming, but no specific public information addresses penetration testing of physical facility security. They reference 'advanced physical security' for datacenters protecting model weights but provide no details about physical penetration testing practices."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://www.cnbc.com/2025/03/31/anthropic-announces-updates-on-security-safeguards-for-its-ai-models.html",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.anthropic.com/rsp-updates"
+                    ],
+                    "justification": "Anthropic has implemented Technical Surveillance Countermeasures (TSCM) at physical spaces and mentions red teaming/penetration testing partnerships, but no specific evidence of comprehensive penetration testing of physical access controls and facility security was found in public information."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding Google's penetration testing of physical access and facility security controls for AI model weights, as would be expected for RAND Security Level 3."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding xAI's implementation of penetration testing for physical access and facility security related to AI model weights security."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found about Meta's penetration testing of physical access and facility security for AI model weights protection."
                   }
                 }
               },
@@ -4540,29 +4773,53 @@
                 "name": "Advanced red-teaming: Elite external team",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://arxiv.org/html/2503.16431v1",
+                      "https://hiddenlayer.com/innovation-hub/three-distinct-categories-of-ai-red-teaming/",
+                      "https://openai.com/index/red-teaming-network/",
+                      "https://venturebeat.com/ai/openai-red-team-innovations-new-essentials-security-leaders/"
+                    ],
+                    "justification": "OpenAI has established a comprehensive external red teaming program including the OpenAI Red Teaming Network with over 100 external experts for GPT-4, and published detailed methodologies. While they demonstrate strong external red teaming practices, there's no specific public information confirming an 'elite' team explicitly focused on model weights security as described in RAND's Security Level 3."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.anthropic.com/news/frontier-threats-red-teaming-for-ai-safety",
+                      "https://www.anthropic.com/news/strategic-warning-for-ai-risk-progress-and-insights-from-our-frontier-red-team",
+                      "https://www.rand.org/pubs/research_reports/RRA2849-1.html",
+                      "https://www.anthropic.com/news/challenges-in-red-teaming-ai-systems"
+                    ],
+                    "justification": "Anthropic demonstrates substantial compliance through documented partnerships with elite external experts including biosecurity experts, NNSA for nuclear domain, and organizations like Thorn, Institute for Strategic Dialogue, and Global Project Against Hate and Extremism for specialized red-teaming across multiple risk domains."
                   },
                   "Google": {
                     "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "sources": [
+                      "https://www.helpnetsecurity.com/2023/08/03/daniel-fabian-google-ai-red-team/",
+                      "https://www.rand.org/pubs/research_reports/RRA2849-1.html",
+                      "https://blog.google/technology/safety-security/googles-ai-red-team-the-ethical-hackers-making-ai-safer/"
+                    ],
+                    "justification": "While Google has a sophisticated internal AI Red Team that simulates various adversaries and attack scenarios, there is no specific public information about Google employing elite external red teams specifically for AI model weights security as required by RAND's Security Level 3."
                   },
                   "xAI": {
                     "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "sources": [
+                      "https://x.ai/legal/faq",
+                      "https://www.rand.org/pubs/research_reports/RRA2849-1.html",
+                      "https://news.lavx.hu/article/grok-3-jailbreak-exposes-alarming-ai-security-flaws",
+                      "https://embracethered.com/blog/posts/2024/security-probllms-in-xai-grok/"
+                    ],
+                    "justification": "No evidence found of xAI engaging elite external red teams for comprehensive security testing. Independent security assessments revealed significant vulnerabilities that xAI dismissed, indicating lack of systematic external red-teaming program meeting Security Level 3 standards."
                   },
                   "Meta": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html",
+                      "https://venturebeat.com/security/red-team-ai-now-to-build-safer-smarter-models-tomorrow/",
+                      "https://mindgard.ai/blog/what-is-ai-red-teaming",
+                      "https://www.gofully.ai/blogs/meta-red-teaming-event"
+                    ],
+                    "justification": "Meta demonstrates some red teaming practices including external partnerships (Fully AI) and automated testing (MART), but no specific evidence of elite external teams for AI model weights security as described in RAND's Security Level 3."
                   }
                 }
               },
@@ -4570,29 +4827,43 @@
                 "name": "Advanced red-teaming: Substantial funding",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://analyticsindiamag.com/openai-banks-on-red-team-to-win-the-moral-battle/",
+                      "https://openai.com/index/red-teaming-network/",
+                      "https://venturebeat.com/ai/openai-red-team-innovations-new-essentials-security-leaders/"
+                    ],
+                    "justification": "OpenAI demonstrates substantial funding commitment through compensating all Red Teaming Network participants, employing over 100 external red teamers for GPT-4, and expanding to a formal network approach. While specific budget figures aren't disclosed, the scale and breadth indicate significant financial investment."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.anthropic.com/news/frontier-threats-red-teaming-for-ai-safety",
+                      "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.anthropic.com/news/challenges-in-red-teaming-ai-systems"
+                    ],
+                    "justification": "Anthropic demonstrates substantial funding and investment in advanced red-teaming with over 150 hours of expert red-teaming, dedicated Frontier Red Team, partnerships with government agencies, and has implemented ASL-3 security standards specifically designed to protect model weights. The company raised $3.5B in funding and activated enhanced security measures for Claude Opus 4."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://council.aimresearch.co/comparing-major-companies-ai-spending-in-2024-and-the-challenge-of-productionizing-ai-solutions/",
+                      "https://cloud.google.com/blog/transform/prompt-findings-our-ai-red-teams-first-report-qa",
+                      "https://cloud.google.com/transform/how-google-does-it-red-teaming-at-scale",
+                      "https://blog.google/technology/safety-security/googles-ai-red-team-the-ethical-hackers-making-ai-safer/"
+                    ],
+                    "justification": "Google has established a dedicated AI Red Team that conducts sophisticated adversarial testing including model exfiltration and backdooring attacks. While specific red team budget figures aren't disclosed, Google's $120+ billion AI investment and emphasized commitment to red teaming indicates substantial funding for this critical security function."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding xAI's substantial funding for advanced red-teaming focused on AI model weights security as described in RAND's Security Level 3 requirements."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding Meta's substantial funding for advanced red teaming related to AI model weights security."
                   }
                 }
               },
@@ -4600,29 +4871,48 @@
                 "name": "Advanced red-teaming: Access to design and code",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://arxiv.org/html/2503.16431v1",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html",
+                      "https://openai.com/global-affairs/our-approach-to-frontier-risk",
+                      "https://www.oracle.com/artificial-intelligence/ai-open-weights-models/",
+                      "https://www.rand.org/pubs/research_reports/RRA2849-1.html",
+                      "https://openai.com/index/red-teaming-network/",
+                      "https://web.swipeinsight.app/posts/openai-unveils-security-architecture-for-frontier-ai-model-training-7065"
+                    ],
+                    "justification": "OpenAI has robust external red-teaming programs and engages over 100 external experts, but does not appear to provide red teams with direct access to model design, architecture code, or weights, instead focusing on API-based testing and system-level assessments."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://www.anthropic.com/news/frontier-threats-red-teaming-for-ai-safety",
+                      "https://www.anthropic.com/news/strategic-warning-for-ai-risk-progress-and-insights-from-our-frontier-red-team",
+                      "https://www.rand.org/pubs/research_reports/RRA2849-1.html",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.anthropic.com/news/challenges-in-red-teaming-ai-systems"
+                    ],
+                    "justification": "Anthropic has demonstrated substantial red-teaming practices including domain-specific expert red teaming, third-party partnerships with government agencies (US/UK AI Safety Institutes, NNSA), and internal frontier red teams. However, there is no specific public information confirming that external red teams have access to model design details and code as required for RAND Security Level 3."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://cloud.google.com/blog/transform/prompt-findings-our-ai-red-teams-first-report-qa",
+                      "https://www.rand.org/pubs/research_reports/RRA2849-1.html",
+                      "https://safety.google/cybersecurity-advancements/saif/",
+                      "https://blog.google/technology/safety-security/googles-ai-red-team-the-ethical-hackers-making-ai-safer/"
+                    ],
+                    "justification": "Google has established AI red-teaming practices including testing model security controls and has published reports on their AI Red Team's work. However, specific public information about advanced red-teaming with direct access to design and code for model weights security at Security Level 3 standards is limited."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found indicating xAI conducts advanced red-teaming with access to design and code as required for Security Level 3."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found directly addressing Meta's implementation of advanced red-teaming with access to design and code for model weights security as specified in the RAND report's Security Level 3 requirements."
                   }
                 }
               },
@@ -4630,29 +4920,47 @@
                 "name": "Advanced red-teaming: Testing insider threats",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://openai.com/global-affairs/our-approach-to-frontier-risk",
+                      "https://openai.com/careers/security-engineer-insider-threat-detection-and-response/",
+                      "https://web.swipeinsight.app/posts/openai-unveils-security-architecture-for-frontier-ai-model-training-7065"
+                    ],
+                    "justification": "OpenAI publicly states they are 'continuing to invest in cybersecurity and insider threat safeguards to protect proprietary and unreleased model weights' and mentions implementing insider threat programs, but provides no specific details about advanced red-teaming exercises that test insider threats scenarios."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.anthropic.com/news/reflections-on-our-responsible-scaling-policy",
+                      "https://www.anthropic.com/research/agentic-misalignment",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.anthropic.com/rsp-updates"
+                    ],
+                    "justification": "Anthropic has implemented comprehensive insider threat testing under ASL-3, including multi-party authorization, time-bounded access controls, and explicit red teaming simulations of insider threat scenarios. Their threat modeling identifies insider device compromise as the highest risk vector."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html",
+                      "https://cloud.google.com/blog/transform/prompt-findings-our-ai-red-teams-first-report-qa",
+                      "https://blog.google/technology/safety-security/googles-ai-red-team-the-ethical-hackers-making-ai-safer/",
+                      "https://mindgard.ai/blog/googles-red-team"
+                    ],
+                    "justification": "Google has established a dedicated AI Red Team that explicitly simulates malicious insiders and conducts advanced adversarial testing, demonstrating strong capabilities aligned with Security Level 3 requirements. While Google hasn't publicly detailed specific insider threat programs for model weights, their comprehensive red-teaming approach addresses insider risks as a core threat vector."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found about xAI conducting advanced red-teaming exercises specifically for testing insider threats related to AI model weights security as described in the RAND report's Security Level 3."
                   },
                   "Meta": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://ailabwatch.org/companies/meta",
+                      "https://github.com/meta-llama/PurpleLlama",
+                      "https://www.securityweek.com/meta-releases-llama-ai-open-source-protection-tools/"
+                    ],
+                    "justification": "Meta has released Purple Llama security tools including CyberSecEval for testing AI vulnerabilities, but no specific public information was found demonstrating advanced red-teaming programs that explicitly test insider threats for model weights security as required by RAND Security Level 3."
                   }
                 }
               },
@@ -4660,29 +4968,49 @@
                 "name": "Advanced red-teaming: Expanded access",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://openai.com/global-affairs/our-approach-to-frontier-risk",
+                      "https://hiddenlayer.com/innovation-hub/three-distinct-categories-of-ai-red-teaming/",
+                      "https://openai.com/index/red-teaming-network/"
+                    ],
+                    "justification": "OpenAI has established a formal Red Teaming Network with external experts and conducts internal/external red teaming for security controls. They explicitly state they do not distribute model weights outside OpenAI and Microsoft, maintaining strict API-only access for third parties."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html",
+                      "https://www.anthropic.com/news/frontier-threats-red-teaming-for-ai-safety",
+                      "https://www.anthropic.com/news/strategic-warning-for-ai-risk-progress-and-insights-from-our-frontier-red-team",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.anthropic.com/news/challenges-in-red-teaming-ai-systems"
+                    ],
+                    "justification": "Anthropic demonstrates substantial compliance through extensive red-teaming programs with external experts across multiple domains (biosecurity, cybersecurity, CBRN), partnerships with trusted third parties, and implementation of ASL-3 security standards that include advanced red-teaming measures."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html",
+                      "https://www.rand.org/pubs/research_reports/RRA2849-1.html",
+                      "https://blog.google/technology/safety-security/googles-ai-red-team-the-ethical-hackers-making-ai-safer/",
+                      "https://mindgard.ai/blog/googles-red-team"
+                    ],
+                    "justification": "While Google has robust internal AI red teaming capabilities that simulate advanced threats including insider threats, their red team is internally-facing only. They collaborate with external researchers through VRP and Project Zero, but there's no evidence of expanded third-party red team access specifically for AI model weights security as required by RAND's Security Level 3."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found about xAI's advanced red-teaming practices with expanded access or their compliance with Security Level 3 requirements for AI model weights security."
                   },
                   "Meta": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://arxiv.org/html/2410.01606v1",
+                      "https://www.rand.org/pubs/research_reports/RRA2849-1.html",
+                      "https://www.rand.org/news/press/2024/05/30.html",
+                      "https://mindgard.ai/blog/what-is-ai-red-teaming"
+                    ],
+                    "justification": "Meta demonstrates active red teaming practices including vulnerability discovery (CVE-2024-50050), published research on automated red teaming (GOAT), and contributes to industry knowledge sharing. However, no specific public information confirms implementation of expanded third-party red teaming access as required for RAND Security Level 3."
                   }
                 }
               },
@@ -4690,29 +5018,54 @@
                 "name": "Advanced red-teaming: Attention to the weights and authentication",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html",
+                      "https://openai.com/global-affairs/our-approach-to-frontier-risk",
+                      "https://openai.com/index/red-teaming-network/",
+                      "https://venturebeat.com/ai/openai-red-team-innovations-new-essentials-security-leaders/",
+                      "https://cdn.openai.com/papers/openais-approach-to-external-red-teaming.pdf"
+                    ],
+                    "justification": "OpenAI has established comprehensive red-teaming programs including external red-teaming networks with over 100 experts, but there is no specific public information confirming advanced red-teaming focused on model weights security and authentication systems as required for Security Level 3."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.anthropic.com/news/frontier-threats-red-teaming-for-ai-safety",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.anthropic.com/rsp-updates"
+                    ],
+                    "justification": "Anthropic has implemented ASL-3 security standards including multi-party authorization for model weight access, hardware authentication device requirements, and temporary access controls. Their advanced red-teaming covers model weights security through frontier threats evaluation and collaboration with government agencies."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://saif.google/secure-ai-framework/components",
+                      "https://www.saif.google/secure-ai-framework/controls",
+                      "https://blog.google/technology/safety-security/googles-ai-red-team-the-ethical-hackers-making-ai-safer/",
+                      "https://saif.google/secure-ai-framework/risks",
+                      "https://cloud.google.com/use-cases/secure-ai-framework"
+                    ],
+                    "justification": "Google demonstrates strong advanced red-teaming practices with explicit attention to model weights security through SAIF controls including 'robust access controls and integrity management for model code and weights' and 'extensive access controls to prevent unauthorized copying or reading' with authentication measures, though specific details on advanced authentication mechanisms for weights access are not publicly disclosed."
                   },
                   "xAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://blog.gitguardian.com/xai-secret-leak-disclosure/",
+                      "https://futurism.com/elon-musk-new-grok-ai-vulnerable-jailbreak-hacking",
+                      "https://x.ai/security",
+                      "https://embracethered.com/blog/posts/2024/security-probllms-in-xai-grok/"
+                    ],
+                    "justification": "While xAI has a bug bounty program and claims to implement security measures, there is no specific public evidence of advanced red-teaming focused on model weights security, and recent vulnerabilities suggest significant gaps in their security posture."
                   },
                   "Meta": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://about.fb.com/news/2024/11/open-source-ai-america-global-security/",
+                      "https://mindgard.ai/blog/what-is-ai-red-teaming",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html"
+                    ],
+                    "justification": "While Meta engages in AI red-teaming practices and has security measures for their AI systems, no specific public information was found detailing their implementation of advanced red-teaming with particular attention to model weights security and authentication controls at the level expected for Security Level 3."
                   }
                 }
               }
@@ -4725,29 +5078,50 @@
                 "name": "Keeping a risk register",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://venturebeat.com/ai/openai-announces-preparedness-framework-to-track-and-mitigate-ai-risks/",
+                      "https://openai.com/global-affairs/our-approach-to-frontier-risk",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html"
+                    ],
+                    "justification": "OpenAI demonstrates substantial risk tracking through its Preparedness Framework which monitors cybersecurity, CBRN, persuasion, and model autonomy risks with defined risk levels and scorecards. They have established processes for tracking frontier risks and protecting model weights, though no explicit mention of a formal 'risk register' as specified by RAND's Security Level 3 requirements was found."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://arxiv.org/html/2407.01557v1"
+                    ],
+                    "justification": "Anthropic demonstrates systematic risk identification and management through their Responsible Scaling Policy and AI Safety Levels framework, suggesting risk tracking mechanisms exist, but no explicit public documentation confirms maintenance of a formal risk register specifically for model weights security."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://blog.google/technology/safety-security/google-ai-saif-risk-assessment/",
+                      "https://ai.google/responsibility/safety/",
+                      "https://cloud.google.com/blog/products/identity-security/introducing-ai-protection-security-for-the-ai-era",
+                      "https://safety.google/cybersecurity-advancements/saif/"
+                    ],
+                    "justification": "Google demonstrates partial implementation through its SAIF framework which includes risk assessment tools and AI Protection capabilities for risk management, but no explicit evidence of a dedicated risk register specifically for AI model weights security was found in public documentation."
                   },
                   "xAI": {
                     "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "sources": [
+                      "https://techcrunch.com/2025/05/13/xais-promised-safety-report-is-mia/",
+                      "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024",
+                      "https://x.ai/security"
+                    ],
+                    "justification": "No specific public information found about xAI maintaining a risk register for AI model weights security. While xAI committed to publishing a safety framework at the AI Seoul Summit in May 2024, they missed their self-imposed deadline in May 2025, and their limited security documentation makes no mention of risk registers."
                   },
                   "Meta": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://about.fb.com/news/2025/02/meta-approach-frontier-ai/",
+                      "https://metr.org/faisc",
+                      "https://www.bankinfosecurity.com/meta-plans-to-restrict-high-risk-ai-models-a-27447"
+                    ],
+                    "justification": "Meta has published a Frontier AI Framework (2025) that demonstrates risk categorization and threat modeling for AI systems, but lacks specific public evidence of maintaining a comprehensive risk register focused on model weights security as detailed in the RAND report's Security Level 3 requirements."
                   }
                 }
               }
@@ -4762,27 +5136,31 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding OpenAI's implementation of honeypots for AI model weights security."
                   },
                   "Anthropic": {
                     "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "sources": [
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.anthropic.com/rsp-updates",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html"
+                    ],
+                    "justification": "No specific public information found about Anthropic implementing honeypots for AI model weights security, despite extensive documentation of their ASL-3 security measures."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found about Google's implementation of honeypots for AI model weights security as required for Security Level 3 in the RAND report."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding xAI's implementation of honeypots for AI model weights security."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found about Meta's implementation of honeypots for AI model weights security."
                   }
                 }
               }
@@ -4795,29 +5173,38 @@
                 "name": "General increased capacity (compared with SL2)",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://openai.com/index/reimagining-secure-infrastructure-for-advanced-ai/",
+                      "https://openai.com/global-affairs/our-approach-to-frontier-risk",
+                      "https://web.swipeinsight.app/posts/openai-unveils-security-architecture-for-frontier-ai-model-training-7065",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html"
+                    ],
+                    "justification": "OpenAI has implemented multi-layered defense-in-depth controls, dedicated security resources, and infrastructure built on Azure with Kubernetes orchestration, but no public information confirms they have achieved the full capacity increase from SL2 to SL3 as defined in the RAND report, which requires protection against cybercrime syndicates and insider threats."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.anthropic.com/transparency/voluntary-commitments"
+                    ],
+                    "justification": "Anthropic has implemented ASL-3 security standards with over 100 security controls targeting sophisticated non-state actors, including two-party authorization for model weight access and third-party security evaluations. However, they acknowledge ongoing improvements are needed for more sophisticated threats."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding Google's implementation of increased infrastructure capacity compared to Security Level 2 requirements for AI model weights security as defined in the RAND report."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found about xAI's security measures or compliance posture regarding AI model weights security or Security Level 3 requirements."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found directly addressing Meta's compliance with 'General increased capacity (compared with SL2)' requirements as defined in the RAND report's Security Level 3 framework."
                   }
                 }
               },
@@ -4825,29 +5212,42 @@
                 "name": "Concrete experience with APTs",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://socprime.com/blog/nation-backed-apt-attack-detection-microsoft-and-openai-warn-of-ai-exploitation-by-iranian-north-korean-chinese-and-russian-hackers/",
+                      "https://www.reuters.com/technology/cybersecurity/openais-internal-ai-details-stolen-2023-breach-nyt-reports-2024-07-05/",
+                      "https://cybersecuritynews.com/top-10-cyber-attacks-of-2024/",
+                      "https://openai.com/index/security-on-the-path-to-agi/"
+                    ],
+                    "justification": "OpenAI has demonstrated experience with APT-related threats including a 2023 internal breach, disruption of 20+ state-sponsored AI exploitation attempts, and collaboration with Microsoft on APT research. However, no public evidence shows direct APT attacks specifically targeting their model weights."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.anthropic.com/news/frontier-model-security",
+                      "https://www.anthropic.com/news/activating-asl3-protections",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html"
+                    ],
+                    "justification": "Anthropic has activated ASL-3 security measures targeting sophisticated non-state actors with over 100 security controls, implemented insider threat programs, and established threat intelligence partnerships, demonstrating practical experience defending against APT-level threats."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://cloud.google.com/blog/topics/threat-intelligence/adversarial-misuse-generative-ai",
+                      "https://arxiv.org/html/2503.11917v1",
+                      "https://deepmind.google/discover/blog/introducing-the-frontier-safety-framework/"
+                    ],
+                    "justification": "Google demonstrates substantial experience with APTs through their Threat Intelligence Group's analysis of AI-enabled attacks from 20+ countries, implementation of defense-in-depth strategies, and development of the Frontier Safety Framework which specifically addresses security against sophisticated threat actors including nation-states."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found regarding xAI's concrete experience with APTs related to AI model weights security."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found about Meta's concrete experience with APTs related to AI model weights security as expected for RAND report Security Level 3."
                   }
                 }
               },
@@ -4855,29 +5255,46 @@
                 "name": "Leveraging diverse security experience from leading organizations",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://forum.effectivealtruism.org/posts/fJycPfYuBHKoai98q/ai-companies-are-not-on-track-to-secure-model-weights",
+                      "https://www.rand.org/pubs/research_briefs/RBA2849-1.html",
+                      "https://openai.com/global-affairs/our-approach-to-frontier-risk",
+                      "https://openai.com/careers/",
+                      "https://openai.com/interview-guide/"
+                    ],
+                    "justification": "OpenAI mentions hiring from diverse backgrounds and has security leadership with experience from leading organizations (e.g., Jason Clinton from Google at Anthropic), but lacks detailed public disclosure about the diversity of security expertise specifically for model weights protection as outlined in RAND's Security Level 3 requirements."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://forum.effectivealtruism.org/posts/fJycPfYuBHKoai98q/ai-companies-are-not-on-track-to-secure-model-weights",
+                      "https://venturebeat.com/ai/why-anthropic-and-openai-are-obsessed-with-securing-llm-model-weights/",
+                      "https://www.clay.com/dossier/anthropic-executives",
+                      "https://www.anthropic.com/careers",
+                      "https://www.anthropic.com/news/activating-asl3-protections"
+                    ],
+                    "justification": "Anthropic demonstrates strong compliance by hiring Jason Clinton (with extensive Google security experience) as CISO, growing the security team from 2 part-time to dozens of people, and implementing over 100 security controls following best practices from security-conscious organizations. The company actively recruits from leading tech companies and emphasizes diverse backgrounds across disciplines."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found about Google leveraging diverse security experience from leading organizations for AI model weights security as expected for Security Level 3."
                   },
                   "xAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://boards.greenhouse.io/xai/jobs/4613280007",
+                      "https://www.benzinga.com/news/23/07/33213851/meet-team-xai-musks-latest-brainchild-boasts-heavyweight-lineup-from-deepmind-openai-google",
+                      "https://builtin.com/job/protective-intelligence-lead/2893383",
+                      "https://x.ai/careers"
+                    ],
+                    "justification": "xAI has recruited talent from major AI companies including DeepMind, OpenAI, Google, and Microsoft, and has posted security-specific roles, but there's limited public evidence specifically demonstrating diverse security expertise from leading organizations on their security team."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "No specific public information found about Meta leveraging diverse security experience from leading organizations for AI model weights security as described in Security Level 3 of the RAND report."
                   }
                 }
               }
@@ -4895,29 +5312,40 @@
                 "name": "Two independent security layers",
                 "compliance": {
                   "OpenAI": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 75,
+                    "sources": [
+                      "https://www.rand.org/pubs/research_reports/RRA2849-1.html",
+                      "https://web.swipeinsight.app/posts/openai-unveils-security-architecture-for-frontier-ai-model-training-7065"
+                    ],
+                    "justification": "OpenAI has publicly disclosed implementing a defense-in-depth approach with multiple security layers for model weights protection, including authorization controls requiring multi-party approvals, private-linked storage with authentication/authorization, egress controls, and detection systems. While they demonstrate multiple layers, it's unclear if they meet the specific 'two independent' layers criterion as defined by RAND's SL3."
                   },
                   "Anthropic": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 50,
+                    "sources": [
+                      "https://www.anthropic.com/news/frontier-model-security",
+                      "https://www.rand.org/pubs/research_reports/RRA2849-1.html",
+                      "https://www.anthropic.com/news/activating-asl3-protections"
+                    ],
+                    "justification": "Anthropic has implemented two-party authorization for model weight access and mentions defense-in-depth with multiple security layers, but lacks explicit public confirmation of two fully independent security layer implementations as defined by RAND's Security Level 3 requirements."
                   },
                   "Google": {
-                    "score": 0,
-                    "sources": [],
-                    "justification": ""
+                    "score": 25,
+                    "sources": [
+                      "https://www.rand.org/pubs/research_reports/RRA2849-1.html",
+                      "https://cloud.google.com/use-cases/secure-ai-framework",
+                      "https://safety.google/cybersecurity-advancements/saif/"
+                    ],
+                    "justification": "Google mentions a 'defense in depth approach' in their SAIF framework and implements multiple security controls, but there is no specific public evidence of two independent security layers specifically for AI model weights protection as required for Security Level 3."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -4943,27 +5371,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -4983,27 +5411,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -5013,27 +5441,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -5043,27 +5471,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -5073,27 +5501,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -5108,27 +5536,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -5143,27 +5571,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -5173,27 +5601,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -5203,27 +5631,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -5238,27 +5666,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -5273,27 +5701,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -5303,27 +5731,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -5333,27 +5761,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -5373,27 +5801,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -5408,27 +5836,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -5448,27 +5876,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -5483,27 +5911,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -5513,27 +5941,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -5548,27 +5976,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -5578,27 +6006,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -5608,27 +6036,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -5643,27 +6071,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -5673,27 +6101,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -5708,27 +6136,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -5743,27 +6171,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -5783,27 +6211,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -5813,27 +6241,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -5843,27 +6271,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -5883,27 +6311,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -5913,27 +6341,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -5943,27 +6371,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -5978,27 +6406,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -6008,27 +6436,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -6038,27 +6466,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -6073,27 +6501,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -6103,27 +6531,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -6133,27 +6561,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -6163,27 +6591,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -6203,27 +6631,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -6233,27 +6661,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -6263,27 +6691,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -6293,27 +6721,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -6339,27 +6767,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -6379,27 +6807,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -6409,27 +6837,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -6439,27 +6867,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -6474,27 +6902,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -6504,27 +6932,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -6534,27 +6962,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -6564,27 +6992,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -6599,27 +7027,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -6634,27 +7062,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -6669,27 +7097,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -6709,27 +7137,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -6749,27 +7177,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               },
@@ -6779,27 +7207,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -6819,27 +7247,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -6859,27 +7287,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -6894,27 +7322,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
@@ -6934,27 +7362,27 @@
                   "OpenAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Anthropic": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Google": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "xAI": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   },
                   "Meta": {
                     "score": 0,
                     "sources": [],
-                    "justification": ""
+                    "justification": "API key not set, skipping API call."
                   }
                 }
               }
