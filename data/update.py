@@ -10,7 +10,7 @@ import re   # For regular expressions
 # Retrieve API key from environment variable
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY") 
 
-CLAUDE_MODEL = "claude-opus-4-20250514"
+CLAUDE_MODEL = "claude-sonnet-4-20250514"
 AI_LABS = ["OpenAI", "Anthropic", "Google", "xAI", "Meta"]
 # The script will now read from and write to this file
 INPUT_OUTPUT_FILE = "data/compliance-data.json"
