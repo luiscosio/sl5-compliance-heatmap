@@ -6,7 +6,7 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
-import { useState } from "react"
+import { useState, useMemo } from "react"
 
 import complianceData from "@/data/compliance-data.json"
 
@@ -118,6 +118,39 @@ const ComplianceCell: React.FC<ComplianceCellProps> = ({ company, control }) => 
 export default function ComplianceHeatmap() {
   const data = complianceData as ComplianceData[]
 
+  const companyStats = useMemo(() => {
+    const stats: Record<string, { totalScore: number; perfectControls: number; totalControls: number }> = {}
+
+    companies.forEach((company) => {
+      let scoreSum = 0
+      let controlCount = 0
+      let perfectCount = 0
+
+      data.forEach((level) => {
+        level.categories.forEach((category) => {
+          category.subcategories.forEach((subcategory) => {
+            subcategory.controls.forEach((control) => {
+              const score = control.compliance[company].score
+              scoreSum += score
+              controlCount++
+              if (score === 100) {
+                perfectCount++
+              }
+            })
+          })
+        })
+      })
+
+      stats[company] = {
+        totalScore: scoreSum / controlCount || 0,
+        perfectControls: perfectCount,
+        totalControls: controlCount,
+      }
+    })
+
+    return stats
+  }, [data])
+
   return (
     <div className="w-full max-w-7xl mx-auto p-4">
       <Card>
@@ -125,17 +158,35 @@ export default function ComplianceHeatmap() {
           <CardTitle className="text-2xl font-bold text-center">SL5 Compliance Heatmap</CardTitle>
           <p className="text-center text-muted-foreground">
             Track Security Level 5 (SL5) compliance of major AI labs. This data is compiled from public sources, is{" "}
-            <a 
-              href="https://github.com/luiscosio/sl5" 
-              target="_blank" 
+            <a
+              href="https://github.com/luiscosio/sl5"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:text-blue-800 underline"
             >
               open-source
             </a>
-            , and updates daily using advanced Large Language Models to provide the latest insights into
-            frontier model security.
+            , and updates daily using advanced Large Language Models to provide the latest insights into frontier model
+            security.
           </p>
+          <div className="grid grid-cols-5 gap-4 mt-4">
+            {companies.map((company) => {
+              const stats = companyStats[company]
+              return (
+                <div key={company} className="flex flex-col items-center">
+                  <div
+                    className={`text-2xl font-bold ${getScoreColor(stats.totalScore)} ${getTextColor(stats.totalScore)} rounded-full w-20 h-20 flex items-center justify-center`}
+                  >
+                    {stats.totalScore.toFixed(0)}%
+                  </div>
+                  <p className="text-center font-medium text-sm mt-1">{company}</p>
+                  <p className="text-center text-muted-foreground text-xs">
+                    {stats.perfectControls}/{stats.totalControls} at 100%
+                  </p>
+                </div>
+              )
+            })}
+          </div>
         </CardHeader>
         <CardContent>
           <div className="overflow-x-auto">
@@ -228,15 +279,14 @@ export default function ComplianceHeatmap() {
           </div>
         </CardContent>
       </Card>
-      
       {/* Footer */}
       <footer className="mt-8 py-6 border-t border-gray-200 text-center text-sm text-gray-600">
         <div className="space-y-2">
           <p>
             Security controls from{" "}
-            <a 
-              href="https://www.rand.org/pubs/research_briefs/RBA2849-1.html" 
-              target="_blank" 
+            <a
+              href="https://www.rand.org/pubs/research_briefs/RBA2849-1.html"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:text-blue-800 underline"
             >
@@ -245,15 +295,15 @@ export default function ComplianceHeatmap() {
           </p>
           <p>
             Built by{" "}
-            <a 
-              href="https://x.com/luiscosio" 
-              target="_blank" 
+            <a
+              href="https://x.com/luiscosio"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:text-blue-800 underline"
             >
               @luiscosio
-            </a>
-            {" "}| From Marin ❤️
+            </a>{" "}
+            | From Marin ❤️
           </p>
         </div>
       </footer>

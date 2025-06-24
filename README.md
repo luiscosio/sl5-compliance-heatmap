@@ -38,7 +38,7 @@ The project includes a Python script (`data/update.py`) that automatically:
 
 ### Running Data Updates
 
-```bash
+\`\`\`bash
 # Install Python dependencies
 pip install -r requirements.txt
 
@@ -50,7 +50,7 @@ python data/update.py
 
 # For testing (limit number of controls processed)
 python data/update.py --limit 5
-```
+\`\`\`
 
 ## Tech Stack
 
@@ -63,7 +63,7 @@ python data/update.py --limit 5
 
 ## Development
 
-```bash
+\`\`\`bash
 # Install dependencies
 npm install
 
@@ -75,7 +75,7 @@ npm run build
 
 # Start production server
 npm start
-```
+\`\`\`
 
 ## Data Structure
 
