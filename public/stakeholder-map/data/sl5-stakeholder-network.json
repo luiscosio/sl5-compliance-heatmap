@@ -29,14 +29,15 @@
       "id": "dpr-construction",
       "name": "DPR Construction",
       "category": "contractors",
-      "description": "Largest data center contractor in the nation with 31% of overall company revenue attributed to mission critical work in 2024. Specializes in AI-driven mission-critical infrastructure with expertise in liquid cooling systems and hyperscale facilities.",
+      "description": "Self-performing general contractor specializing in technically complex mission-critical projects. Largest data center contractor in the US, consistently ranking among top five mission critical facility builders.",
       "size": 25,
       "url": "https://www.dpr.com",
       "research": [
-        "Crusoe Energy AI Data Center on Lancium Clean Campus - Abilene, Texas with 100,000 GPUs capacity",
-        "Meta Louisiana Data Center - Richland Parish, 4 million sq ft, $10 billion investment, largest Meta facility to date",
-        "Meta Mesa Data Center - Arizona, 2.5+ million sq ft",
-        "Oracle/OpenAI Stargate project facilities in Abilene, Texas - $1.1 billion total cost, 500,000 sq ft buildings"
+        "Lancium Clean Tech data center campus in Abilene, Texas (Oracle/Stargate project) - 500,000 sq ft buildings",
+        "Meta Fort Worth Data Center - 200-acre hyperscale campus with multiple phases",
+        "Meta Mesa Data Center",
+        "Multiple confidential data center projects with 5MW+ critical power",
+        "PowerHouse Data Centers ABX-1 facility - 265,000 SF building with 80 MW power"
       ],
       "sources": [
         {
@@ -45,370 +46,112 @@
         },
         {
           "text": "Source 2",
-          "url": "https://www.dpr.com/projects/crusoe-energy-ai-data-center-on-lancium-clean-campus"
-        },
-        {
-          "text": "Source 3",
-          "url": "https://www.prnewswire.com/news-releases/dpr-brings-mission-critical-expertise-to-meta-ai-data-center-in-louisiana-302330618.html"
+          "url": "https://www.dpr.com/construction/mission-critical"
         }
       ]
     },
     {
-      "id": "blue-owl-capital-(financial-partner/developer)",
-      "name": "Blue Owl Capital (Financial Partner/Developer)",
+      "id": "turner-construction",
+      "name": "Turner Construction",
       "category": "contractors",
-      "description": "Leading asset management firm with $192 billion in assets under management, focused on flexible financing solutions for AI and hyperscale data center developers. Makes strategic partnerships with construction companies.",
+      "description": "Largest general contractor in the US with $14.41bn revenue in 2020. Leading builder in diverse market segments including data centers, with 46 offices in US and active in 30 countries.",
       "size": 25,
-      "url": "https://www.blueowl.com",
+      "url": "https://www.turnerconstruction.com",
       "research": [
-        "$3.4 billion joint venture with Crusoe for AI data center campus in Texas with 100,000 GPUs",
-        "$5 billion joint venture with Chirisa Technology Parks and PowerHouse Data Centers for CoreWeave facilities",
-        "$15 billion joint venture for 1.2 GW Abilene, Texas facility"
+        "Meta Hyperion data center Louisiana - $10 billion, 4 million sq ft, largest Meta AI investment",
+        "Meta Jeffersonville, Indiana campus - $800 million investment",
+        "Multiple data center projects across North America"
       ],
       "sources": [
         {
           "text": "Source 1",
-          "url": "https://www.datacenterfrontier.com/site-selection/article/55262957/blue-owl-swoops-in-as-major-backer-of-new-high-profile-sustainable-us-data-center-construction"
+          "url": "https://www.constructiondive.com/news/meta-data-center-louisiana-turner-dpr-mortenson/734640/"
         },
         {
           "text": "Source 2",
-          "url": "https://www.datacenterdynamics.com/en/news/crusoe-signs-34bn-joint-venture-with-blue-owl"
+          "url": "https://www.turnerconstruction.com/insights/meta-to-invest-more-than-10-billion-in-louisiana-data-center-campus"
         }
       ]
     },
     {
-      "id": "crusoe-energy-systems",
-      "name": "Crusoe Energy Systems",
+      "id": "mortenson",
+      "name": "Mortenson",
       "category": "contractors",
-      "description": "Denver-based AI infrastructure company specializing in sustainable data centers with on-site renewable energy generation. Purpose-built for AI workloads with direct-to-chip liquid cooling capabilities.",
+      "description": "Minneapolis-based construction company specializing in complex construction projects including large-scale data centers and infrastructure.",
       "size": 25,
-      "url": "https://www.crusoeenergy.com",
+      "url": "https://www.mortenson.com",
       "research": [
-        "Abilene, Texas AI campus - 1.2 GW capacity, 100,000 GPUs, leased to Oracle for OpenAI workloads",
-        "Lancium Clean Campus - multi-building AI data center with renewable energy"
+        "Meta Hyperion data center Louisiana - $10 billion, 4 million sq ft (joint with Turner and DPR)",
+        "Meta Rosemont, Minnesota campus - $800 million investment"
       ],
       "sources": [
         {
           "text": "Source 1",
-          "url": "https://siliconangle.com/2024/10/15/crusoe-3-4b-joint-venture-build-ai-data-center-campus-100000-gpus/"
-        },
-        {
-          "text": "Source 2",
-          "url": "https://www.datacenterdynamics.com/en/news/crusoe-signs-34bn-joint-venture-with-blue-owl"
+          "url": "https://www.constructiondive.com/news/meta-data-center-louisiana-turner-dpr-mortenson/734640/"
         }
       ]
     },
     {
-      "id": "coreweave-(infrastructure-provider)",
-      "name": "CoreWeave (Infrastructure Provider)",
+      "id": "oracle-(self-build)",
+      "name": "Oracle (Self-build)",
       "category": "contractors",
-      "description": "AI hyperscaler and specialized GPU cloud provider with over $12 billion in funding. Operates 28+ data center facilities globally, specializing in GPU-as-a-Service for AI workloads.",
-      "size": 25,
-      "url": "https://www.coreweave.com",
-      "research": [
-        "Lancaster County, Pennsylvania - $6+ billion investment, 300 MW capacity",
-        "Ellendale, North Dakota - 250 MW campus via Applied Digital",
-        "Multiple global facilities across 28 locations by end of 2024"
-      ],
-      "sources": [
-        {
-          "text": "Source 1",
-          "url": "https://datacentremagazine.com/news/this-weeks-top-5-stories-in-the-data-centre-industry-18-july-2025"
-        },
-        {
-          "text": "Source 2",
-          "url": "https://the-decoder.com/microsoft-downshifts-on-data-centers-oracle-and-coreweave-reap-benefits"
-        }
-      ]
-    },
-    {
-      "id": "oracle-(infrastructure-partner)",
-      "name": "Oracle (Infrastructure Partner)",
-      "category": "contractors",
-      "description": "Major cloud infrastructure provider building datacenter capacity for OpenAI through the Stargate project. Working with multiple construction partners for gigawatt-scale facilities.",
+      "description": "Oracle Cloud Infrastructure building hyperscale data centers directly, partnering with traditional colocation providers and AI-first developers.",
       "size": 25,
       "url": "https://www.oracle.com",
       "research": [
-        "Stargate Phase 1 - Abilene, Texas, 1.2 GW capacity with 10+ buildings of 500,000 sq ft each",
-        "Multiple planned Stargate locations across 16 states"
+        "Stargate project with OpenAI - Initial $100B investment, potential $500B over 4 years",
+        "Abilene, Texas gigawatt-scale facility - 10 buildings of 500,000 sq ft each",
+        "Multiple data center partnerships with QTS, Digital Realty"
       ],
       "sources": [
         {
           "text": "Source 1",
-          "url": "https://www.enr.com/articles/60211-openai-oracle-softbank-vow-to-invest-500b-for-more-us-data-centers"
+          "url": "https://openai.com/index/announcing-the-stargate-project/"
         },
         {
           "text": "Source 2",
-          "url": "https://www.cnbc.com/2025/02/06/openai-looking-at-16-states-for-data-center-campuses-tied-to-stargate.html"
-        }
-      ]
-    },
-    {
-      "id": "dane-stuckey",
-      "name": "Dane Stuckey",
-      "category": "security_personnel",
-      "description": "Chief Information Security Officer (CISO) - Former CISO of Palantir Technologies, joined OpenAI in October 2024. Has over a decade of experience in digital forensics, incident response, and security program development. Served at Palantir for more than ten years, including six-plus years as CISO. Started at Palantir in 2014 on the information security team as a detection engineering and incident response lead.",
-      "size": 20,
-      "url": "Not provided for privacy reasons",
-      "research": [
-        "Leading OpenAI's security efforts to protect hundreds of millions of users",
-        "Working on compliance, trust, and security standards",
-        "Supporting development of safe AGI"
-      ],
-      "sources": [
-        {
-          "text": "Source 1",
-          "url": "https://www.securityweek.com/dane-stuckey-joins-openai-as-ciso/"
-        },
-        {
-          "text": "Source 2",
-          "url": "https://techcrunch.com/2024/10/15/former-palantir-ciso-dane-stuckey-joins-openai-to-lead-security/"
-        }
-      ]
-    },
-    {
-      "id": "matt-knight",
-      "name": "Matt Knight",
-      "category": "security_personnel",
-      "description": "Head of Security - Head of Security at OpenAI since 2020, building IT, privacy and security programs. Has background in electrical engineering and previously co-founded Agitator, a cybersecurity and radio frequency research startup. Leads security engineering and building systems for developing and deploying advanced AI. Background in hardware, software, and wireless security.",
-      "size": 20,
-      "url": "Not provided for privacy reasons",
-      "research": [
-        "Using LLMs for OpenAI's internal security program",
-        "Cybersecurity grant program",
-        "Security research collaboration with broader security community",
-        "OpenAI Safety and Security Committee member",
-        "AI-powered security automation for incident reporting and detection"
-      ],
-      "sources": [
-        {
-          "text": "Source 1",
-          "url": "https://openssf.org/podcast/2024/06/04/whats-in-the-soss-podcast-5-openais-matt-knight-and-exploring-the-intersection-of-ai-and-open-source-security/"
-        },
-        {
-          "text": "Source 2",
-          "url": "https://www.pluralsight.com/resources/blog/cybersecurity/using-openai-for-cybersecurity"
-        }
-      ]
-    },
-    {
-      "id": "paul-m.-nakasone",
-      "name": "Paul M. Nakasone",
-      "category": "security_personnel",
-      "description": "Board Member and Safety and Security Committee Member - Retired U.S. Army General and former NSA Director. Served as Commander of U.S. Cyber Command and Director of NSA/CSS since May 2018 until retirement in February 2024. Leading expert in cybersecurity, technology advancement, and global cyber defense. Appointed to OpenAI board in June 2024.",
-      "size": 20,
-      "url": "Not provided for privacy reasons",
-      "research": [
-        "Leading OpenAI's Safety and Security Committee",
-        "Established NSA's unclassified Cybersecurity Collaboration Center",
-        "Formation of NSA's Artificial Intelligence Security Center",
-        "Contributing to AI cybersecurity threat detection and response"
-      ],
-      "sources": [
-        {
-          "text": "Source 1",
-          "url": "https://openai.com/index/openai-appoints-retired-us-army-general/"
-        },
-        {
-          "text": "Source 2",
-          "url": "https://www.securityweek.com/openai-appoints-former-nsa-director-paul-nakasone-to-board-of-directors/"
-        }
-      ]
-    },
-    {
-      "id": "aleksander-madry",
-      "name": "Aleksander Madry",
-      "category": "security_personnel",
-      "description": "Head of Preparedness - Professor at MIT in the department of electrical engineering and computer science. Earned PhD in computer science from MIT. Leading figure in AI research, particularly focusing on machine learning, optimization, and algorithmic robustness. Member of OpenAI's Safety and Security Committee.",
-      "size": 20,
-      "url": "Not provided for privacy reasons",
-      "research": [
-        "Safety and Security Committee member",
-        "AI risk evaluation and preparedness frameworks",
-        "Research in algorithmic robustness and machine learning"
-      ],
-      "sources": [
-        {
-          "text": "Source 1",
-          "url": "https://analyticsindiamag.com/ai-trends/meet-the-team-spearheading-openais-safety-and-security-committee/"
-        },
-        {
-          "text": "Source 2",
-          "url": "https://openai.com/index/openai-board-forms-safety-and-security-committee/"
-        }
-      ]
-    },
-    {
-      "id": "lilian-weng",
-      "name": "Lilian Weng",
-      "category": "security_personnel",
-      "description": "Former Head of Safety Systems (departed November 2024) - Former VP of Research and Safety who departed OpenAI in November 2024 after 7 years. Previously head of OpenAI's safety systems team with over 80 scientists, researchers, and policy experts. Joined OpenAI in 2018 working on robotics team, later transitioned to applied AI research and then safety systems.",
-      "size": 20,
-      "url": "Not provided for privacy reasons",
-      "research": [
-        "Built OpenAI's Safety Systems team to over 80 experts",
-        "Developed reinforcement learning techniques",
-        "Safety and Security Committee member (until departure)",
-        "AI safety research and development"
-      ],
-      "sources": [
-        {
-          "text": "Source 1",
-          "url": "https://techcrunch.com/2024/11/08/openai-loses-another-lead-safety-researcher-lilian-weng/"
-        },
-        {
-          "text": "Source 2",
-          "url": "https://analyticsindiamag.com/ai-trends/meet-the-team-spearheading-openais-safety-and-security-committee/"
-        }
-      ]
-    },
-    {
-      "id": "john-schulman",
-      "name": "John Schulman",
-      "category": "security_personnel",
-      "description": "Head of Alignment Science (recently departed) - Co-founder and former head of alignment science at OpenAI. Prominent researcher focused on creating algorithms that allow machines to learn from interactions with their environment. Background in physics from Caltech, neuroscience at UC Berkeley, and PhD in electrical engineering and computer sciences. Recently left OpenAI to join Anthropic.",
-      "size": 20,
-      "url": "Not provided for privacy reasons",
-      "research": [
-        "Former Safety and Security Committee member",
-        "Reinforcement learning and deep learning research",
-        "AI alignment and safety algorithms",
-        "Machine learning from environmental interactions"
-      ],
-      "sources": [
-        {
-          "text": "Source 1",
-          "url": "https://analyticsindiamag.com/ai-trends/meet-the-team-spearheading-openais-safety-and-security-committee/"
-        },
-        {
-          "text": "Source 2",
-          "url": "https://techcrunch.com/2024/11/08/openai-loses-another-lead-safety-researcher-lilian-weng/"
-        }
-      ]
-    },
-    {
-      "id": "microsoft-azure",
-      "name": "Microsoft Azure",
-      "category": "cloud_infrastructure",
-      "description": "Primary cloud partner with multi-billion dollar partnership, originally exclusive but now with right of first refusal",
-      "size": 35,
-      "url": "",
-      "research": [
-        "Azure OpenAI Service",
-        "AI supercomputing systems",
-        "GPU clusters",
-        "Model hosting and inference"
-      ],
-      "sources": [
-        {
-          "text": "Source 1",
-          "url": "https://blogs.microsoft.com/blog/2023/01/23/microsoftandopenaiextendpartnership/"
-        },
-        {
-          "text": "Source 2",
-          "url": "https://blogs.microsoft.com/blog/2025/01/21/microsoft-and-openai-evolve-partnership-to-drive-the-next-phase-of-ai/"
-        }
-      ]
-    },
-    {
-      "id": "oracle",
-      "name": "Oracle",
-      "category": "cloud_infrastructure",
-      "description": "Key infrastructure partner in Stargate project, providing cloud computing expertise and managing backend architecture",
-      "size": 35,
-      "url": "",
-      "research": [
-        "Data center infrastructure",
-        "Cloud computing capacity",
-        "AI training clusters",
-        "GPU hosting"
-      ],
-      "sources": [
-        {
-          "text": "Source 1",
-          "url": "https://www.theregister.com/2025/05/27/oracle_openai_40b/"
-        },
-        {
-          "text": "Source 2",
-          "url": "https://www.bloomberg.com/news/articles/2025-07-02/oracle-openai-ink-stargate-deal-for-4-5-gigawatts-of-us-data-center-power"
+          "url": "https://semianalysis.com/2025/06/30/how-oracle-is-winning-the-ai-compute-market/"
         }
       ]
     },
     {
       "id": "coreweave",
       "name": "CoreWeave",
-      "category": "cloud_infrastructure",
-      "description": "Major cloud infrastructure provider with significant investment deal",
-      "size": 35,
-      "url": "",
+      "category": "contractors",
+      "description": "AI-first cloud provider and datacenter operator, originally from cryptomining background, specializing in GPU-based infrastructure for AI workloads.",
+      "size": 25,
+      "url": "https://www.coreweave.com",
       "research": [
-        "AI-optimized cloud infrastructure",
-        "GPU clusters",
-        "Compute capacity",
-        "Model training and inference"
+        "Partnership with OpenAI - $11.9 billion deal announced",
+        "570MW deal with Core Scientific",
+        "Multiple AI training and inference facilities"
       ],
       "sources": [
         {
           "text": "Source 1",
-          "url": "https://www.coreweave.com/news/coreweave-announces-agreement-with-openai-to-deliver-ai-infrastructure"
+          "url": "https://semianalysis.com/2024/09/04/multi-datacenter-training-openais/"
         },
         {
           "text": "Source 2",
-          "url": "https://www.datacenterdynamics.com/en/news/openai-signs-new-4bn-cloud-deal-with-coreweave/"
+          "url": "https://www.wheresyoured.at/core-incompetency/"
         }
       ]
     },
     {
-      "id": "direct-to-chip-cooling-vendors",
-      "name": "Direct-to-chip cooling vendors",
-      "category": "power_infrastructure",
-      "description": "Liquid cooling systems for high-density AI workloads",
+      "id": "qts-data-centers",
+      "name": "QTS Data Centers",
+      "category": "contractors",
+      "description": "Colocation and hyperscale data center provider working with cloud infrastructure companies on large-scale deployments.",
       "size": 25,
-      "url": "",
+      "url": "https://www.qtsdatacenters.com",
       "research": [
-        "60-120 kW power density cooling",
-        "Antifreeze coolant circulation systems"
+        "Oracle AI infrastructure partnerships",
+        "Various hyperscale colocation projects"
       ],
       "sources": [
         {
           "text": "Source 1",
-          "url": "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/ai-power-expanding-data-center-capacity-to-meet-growing-demand"
-        }
-      ]
-    },
-    {
-      "id": "nuclear-power-providers",
-      "name": "Nuclear power providers",
-      "category": "power_infrastructure",
-      "description": "Clean energy for large-scale data centers",
-      "size": 25,
-      "url": "",
-      "research": [
-        "5 GW power requirements equivalent to 5 nuclear reactors",
-        "Behind-the-meter power solutions"
-      ],
-      "sources": [
-        {
-          "text": "Source 1",
-          "url": "https://fortune.com/2024/09/27/openai-5gw-data-centers-altman-power-requirements-nuclear/"
-        }
-      ]
-    },
-    {
-      "id": "utility-power-partners",
-      "name": "Utility power partners",
-      "category": "power_infrastructure",
-      "description": "Grid-scale electricity provision",
-      "size": 25,
-      "url": "",
-      "research": [
-        "Remote locations in Indiana, Iowa, Wyoming for abundant power",
-        "Power transmission infrastructure development"
-      ],
-      "sources": [
-        {
-          "text": "Source 1",
-          "url": "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/ai-power-expanding-data-center-capacity-to-meet-growing-demand"
+          "url": "https://semianalysis.com/2025/06/30/how-oracle-is-winning-the-ai-compute-market/"
         }
       ]
     },
@@ -423,36 +166,31 @@
       "sources": []
     },
     {
-      "id": "turner-construction-company",
-      "name": "Turner Construction Company",
+      "id": "hensel-phelps",
+      "name": "Hensel Phelps",
       "category": "contractors",
-      "description": "The largest general contractor in the US with extensive datacenter construction experience. Selected to build Meta's hyperscale datacenter campus in Indiana.",
+      "description": "Colorado-based general contractor with datacenter specialization",
       "size": 25,
-      "url": "https://www.turnerconstruction.com",
+      "url": "Not provided in search results",
       "research": [
-        "Meta hyperscale datacenter campus in Jeffersonville, Indiana - part of Meta's multi-GW cluster strategy"
+        "Meta Montgomery, Alabama datacenter"
       ],
       "sources": [
         {
           "text": "Source 1",
-          "url": "https://www.grupoacs.com/press-room/news/press-releases/turner-construction-company-to-build-hyperscale-data-center-in-indiana-for-meta/"
-        },
-        {
-          "text": "Source 2",
-          "url": "https://www.turnerconstruction.com/insights/turner-construction-company-to-build-hyperscale-data-center-for-meta-in-indiana"
+          "url": "https://www.constructiondive.com/news/data-center-projects-construction-2025/738160/"
         }
       ]
     },
     {
-      "id": "amazon-(internal/multiple-contractors)",
-      "name": "Amazon (Internal/Multiple Contractors)",
+      "id": "multiple-contractors-for-amazon-project-rainier",
+      "name": "Multiple contractors for Amazon Project Rainier",
       "category": "contractors",
-      "description": "Amazon is building Project Rainier for Anthropic using multiple construction firms working simultaneously. The project spans 30 datacenters in Indiana on 1,200 acres.",
+      "description": "Amazon has tapped four separate construction firms for Project Rainier datacenter complex in Indiana for Anthropic",
       "size": 25,
-      "url": "https://aws.amazon.com",
+      "url": "Not provided in search results",
       "research": [
-        "Project Rainier - 30 datacenters in Indiana, 2.2GW power capacity, 200,000 sq ft each datacenter",
-        "Multi-site AI compute cluster across the US with hundreds of thousands of Trainium2 chips"
+        "Amazon Project Rainier Indiana - 30 datacenters at 200,000 sq ft each, 2.2 gigawatts power consumption, for Anthropic AI training"
       ],
       "sources": [
         {
@@ -462,52 +200,57 @@
         {
           "text": "Source 2",
           "url": "https://time.com/7273288/amazon-anthropic-openai-microsoft-stargate-datacenters/"
-        },
-        {
-          "text": "Source 3",
-          "url": "https://www.aboutamazon.com/news/aws/aws-project-rainier-ai-trainium-chips-compute-cluster"
         }
       ]
     },
     {
-      "id": "holder-construction",
-      "name": "Holder Construction",
+      "id": "yates-construction",
+      "name": "Yates Construction",
       "category": "contractors",
-      "description": "Major datacenter contractor consistently ranking in top 3 for datacenter construction. Experienced in hyperscale projects for major tech companies.",
+      "description": "General contractor selected by Amazon for datacenter construction",
       "size": 25,
-      "url": "https://www.holderconstruction.com",
+      "url": "Not provided in search results",
       "research": [
-        "Various hyperscale datacenter projects (specific Anthropic projects not identified)"
+        "Amazon Madison County, Mississippi datacenters - part of $10 billion project"
       ],
       "sources": [
         {
           "text": "Source 1",
-          "url": "https://www.bdcnetwork.com/home/news/55246343/top-50-data-center-construction-firms-for-2024"
-        },
-        {
-          "text": "Source 2",
-          "url": "https://cc-techgroup.com/who-builds-data-centers/"
+          "url": "https://underthehardhat.org/data-center-construction-projects-underway-in-2025/"
         }
       ]
     },
     {
-      "id": "aecom",
-      "name": "AECOM",
+      "id": "gray-construction",
+      "name": "Gray Construction",
       "category": "contractors",
-      "description": "Global infrastructure consulting firm providing comprehensive datacenter services including design, engineering, and construction management.",
+      "description": "General contractor selected by Amazon through bidding process",
       "size": 25,
-      "url": "https://www.aecom.com",
+      "url": "Not provided in search results",
       "research": [
-        "Infrastructure projects for major tech companies (specific Anthropic projects not identified)"
+        "Amazon Madison County, Mississippi datacenters - part of $10 billion project"
       ],
       "sources": [
         {
           "text": "Source 1",
-          "url": "https://datacentremagazine.com/top10/top-10-data-centre-construction-companies"
-        },
+          "url": "https://underthehardhat.org/data-center-construction-projects-underway-in-2025/"
+        }
+      ]
+    },
+    {
+      "id": "haskell-construction",
+      "name": "Haskell Construction",
+      "category": "contractors",
+      "description": "General contractor selected by Amazon through bidding process",
+      "size": 25,
+      "url": "Not provided in search results",
+      "research": [
+        "Amazon Madison County, Mississippi datacenters - part of $10 billion project"
+      ],
+      "sources": [
         {
-          "text": "Source 2",
-          "url": "https://cc-techgroup.com/who-builds-data-centers/"
+          "text": "Source 1",
+          "url": "https://underthehardhat.org/data-center-construction-projects-underway-in-2025/"
         }
       ]
     },
@@ -515,15 +258,14 @@
       "id": "jason-clinton",
       "name": "Jason Clinton",
       "category": "security_personnel",
-      "description": "Chief Information Security Officer (CISO) - Jason Clinton serves as Anthropic's CISO, responsible for overseeing the company's information security strategy and protecting digital assets. He is a key spokesperson on AI security topics, including virtual AI employees and cybersecurity challenges.",
+      "description": "Chief Information Security Officer (CISO) - Jason Clinton serves as Anthropic's Chief Information Security Officer, responsible for overseeing the company's information security strategy and ensuring the protection of its digital assets. He has extensive experience in software engineering and cybersecurity.",
       "size": 20,
-      "url": "https://www.linkedin.com/in/jason-clinton-475671159/",
+      "url": "https://www.linkedin.com/in/jason-d-clinton/",
       "research": [
-        "Leading security strategy for AI virtual employees anticipated in 2025",
-        "Testing models to ensure they can withstand cyberattacks",
-        "Monitoring safety issues around threat of abuse by malicious actors",
-        "Developing security frameworks for AI agents with corporate credentials",
-        "Speaking at Confidential Computing Summit about AI security"
+        "Leading discussions on AI virtual employee security challenges",
+        "Developing cybersecurity strategies for AI agent management",
+        "Implementing safety measures for AI systems with corporate credentials",
+        "Advocating for visibility tools and account classification systems for virtual employees"
       ],
       "sources": [
         {
@@ -536,67 +278,55 @@
         },
         {
           "text": "Source 3",
-          "url": "https://www.crunchbase.com/person/jason-clinton-d6e3"
+          "url": "https://www.axios.com/2025/04/22/ai-anthropic-virtual-employees-security"
         }
       ]
     },
     {
-      "id": "mrinank-sharma",
-      "name": "Mrinank Sharma",
+      "id": "jan-leike",
+      "name": "Jan Leike",
       "category": "security_personnel",
-      "description": "Lead, Safeguards Research Team - Mrinank Sharma leads Anthropic's Safeguards Research Team, which focuses on jailbreak robustness, automated red teaming, and developing effective monitoring techniques for model misuse and misalignment.",
+      "description": "Head of Superalignment/AI Safety - Jan Leike leads Anthropic's superalignment team focusing on AI safety and security. He joined from OpenAI where he was a lead safety researcher. His team works on scalable oversight, weak-to-strong generalization, and automated alignment research.",
       "size": 20,
-      "url": "Not found in search results",
+      "url": "Not specified in search results",
       "research": [
-        "Leading research on jailbreak robustness",
-        "Developing automated red teaming capabilities",
-        "Creating monitoring techniques for model misuse and misalignment",
-        "Working on Constitutional Classifiers",
-        "Building safety cases for AI systems"
+        "Leading superalignment research at Anthropic",
+        "Developing scalable oversight techniques for AI systems",
+        "Advancing weak-to-strong generalization methods",
+        "Automated alignment research for superintelligent AI control"
       ],
       "sources": [
         {
           "text": "Source 1",
-          "url": "https://alignment.anthropic.com/2025/introducing-safeguards-research-team/"
+          "url": "https://techcrunch.com/2024/05/28/anthropic-hires-former-openai-safety-lead-to-head-up-new-team/"
+        },
+        {
+          "text": "Source 2",
+          "url": "https://www.axios.com/2025/05/23/anthropic-ai-deception-risk"
+        },
+        {
+          "text": "Source 3",
+          "url": "https://fortune.com/2024/05/30/ai-safety-is-helping-companies-attract-ai-talent-openai-anthropic/"
         }
       ]
     },
     {
-      "id": "elizabeth-kelly",
-      "name": "Elizabeth Kelly",
+      "id": "chris-olah",
+      "name": "Chris Olah",
       "category": "security_personnel",
-      "description": "Director, Beneficial Deployments team - Elizabeth Kelly leads Anthropic's new Beneficial Deployments team, focusing on extending AI benefits to organizations focused on social good. She previously led the U.S. AI Safety Institute and formed agreements for government safety testing of AI models.",
+      "description": "Co-Founder and Head of Interpretability Team - Chris Olah is a co-founder of Anthropic who leads the lab's interpretability team. He focuses on understanding how AI systems work internally and developing methods to make them more transparent and interpretable.",
       "size": 20,
-      "url": "Not found in search results",
+      "url": "Not specified in search results",
       "research": [
-        "Leading AI for Science program providing $20,000 API credits to researchers",
-        "Formed agreements with OpenAI and Anthropic for government safety testing",
-        "Working with organizations like FutureHouse and Benchling",
-        "Democratizing access to AI tools for scientific research"
+        "Leading AI interpretability research",
+        "Developing techniques to understand neural network behavior",
+        "Advancing transparency in AI systems",
+        "Research on feature identification in AI models"
       ],
       "sources": [
         {
           "text": "Source 1",
-          "url": "https://www.fastcompany.com/91328039/anthropic-hires-a-top-biden-official-to-lead-its-new-ai-for-social-good-team-exclusive"
-        }
-      ]
-    },
-    {
-      "id": "holden-karnofsky",
-      "name": "Holden Karnofsky",
-      "category": "security_personnel",
-      "description": "Member of Technical Staff - Holden Karnofsky is an AI safety researcher and philanthropist associated with Effective Altruism. He works on Anthropic's Responsible Scaling Policy and is married to Anthropic President Daniela Amodei.",
-      "size": 20,
-      "url": "Not found in search results",
-      "research": [
-        "Working on Anthropic's Responsible Scaling Policy",
-        "Contributing to protocols for managing public and societal risk around powerful AI models",
-        "AI safety research focused on existential risks"
-      ],
-      "sources": [
-        {
-          "text": "Source 1",
-          "url": "https://fortune.com/2025/02/13/anthropic-hired-president-daniela-amodei-husband-ai-safety-responsible-scaling/"
+          "url": "https://time.com/6980000/anthropic/"
         }
       ]
     },
@@ -604,18 +334,41 @@
       "id": "richard-fontaine",
       "name": "Richard Fontaine",
       "category": "security_personnel",
-      "description": "Long-Term Benefit Trust Member - National security expert appointed to Anthropic's Long-Term Benefit Trust, bringing extensive foreign policy and national security experience to guide the company through complex AI security challenges.",
+      "description": "Long-Term Benefit Trust Member (National Security Expert) - Richard Fontaine was appointed to Anthropic's Long-Term Benefit Trust in 2025, bringing extensive national security experience to help guide the company through complex AI security challenges. The Trust has governance authority over Anthropic's board.",
       "size": 20,
-      "url": "Not found in search results",
+      "url": "Not specified in search results",
       "research": [
-        "Providing national security perspective to Anthropic's governance",
-        "Advising on global security implications of AI",
-        "Supporting democracy and global stability as part of Anthropic's mission"
+        "Providing national security guidance for AI development",
+        "Advising on AI applications for defense and security sectors",
+        "Helping navigate complex security considerations for advanced AI"
       ],
       "sources": [
         {
           "text": "Source 1",
           "url": "https://www.anthropic.com/news/national-security-expert-richard-fontaine-appointed-to-anthropic-s-long-term-benefit-trust"
+        },
+        {
+          "text": "Source 2",
+          "url": "https://techcrunch.com/2025/06/06/anthropic-appoints-a-national-security-expert-to-its-governing-trust/"
+        }
+      ]
+    },
+    {
+      "id": "jason-matheny",
+      "name": "Jason Matheny",
+      "category": "security_personnel",
+      "description": "Long-Term Benefit Trust Member - Jason Matheny serves as CEO of the RAND Corporation and is one of the initial trustees of Anthropic's Long-Term Benefit Trust. He brings expertise in AI safety, national security, and policy to the governance of Anthropic.",
+      "size": 20,
+      "url": "Not specified in search results",
+      "research": [
+        "Governance oversight through Long-Term Benefit Trust",
+        "AI safety and security policy guidance",
+        "National security considerations for AI development"
+      ],
+      "sources": [
+        {
+          "text": "Source 1",
+          "url": "https://www.anthropic.com/news/the-long-term-benefit-trust"
         }
       ]
     },
@@ -623,24 +376,28 @@
       "id": "amazon-web-services-(aws)",
       "name": "Amazon Web Services (AWS)",
       "category": "cloud_infrastructure",
-      "description": "Primary cloud and training partner with exclusive use agreement for Amazon chips",
+      "description": "Primary cloud and training partner with $8 billion total investment from Amazon",
       "size": 35,
       "url": "",
       "research": [
-        "AWS Trainium and Trainium2 chips for AI training",
-        "AWS Inferentia chips for inference",
-        "Amazon Bedrock platform for model deployment",
+        "Primary cloud infrastructure through AWS",
+        "Amazon Bedrock for model hosting and fine-tuning",
+        "AWS Trainium custom AI chips for training",
         "AWS GovCloud for government customers",
-        "AWS Secret and Top Secret Cloud Regions via SageMaker"
+        "AWS Secret and Top Secret Cloud Regions for classified workloads"
       ],
       "sources": [
         {
           "text": "Source 1",
-          "url": "https://techcrunch.com/2024/11/22/anthropic-raises-an-additional-4b-from-amazon-makes-aws-its-primary-cloud-partner/"
+          "url": "https://www.anthropic.com/news/anthropic-amazon-trainium"
         },
         {
           "text": "Source 2",
-          "url": "https://www.anthropic.com/news/anthropic-amazon-trainium"
+          "url": "https://techcrunch.com/2024/11/22/anthropic-raises-an-additional-4b-from-amazon-makes-aws-its-primary-cloud-partner/"
+        },
+        {
+          "text": "Source 3",
+          "url": "https://time.com/7273288/amazon-anthropic-openai-microsoft-stargate-datacenters/"
         }
       ]
     },
@@ -648,59 +405,518 @@
       "id": "google-cloud-platform-(gcp)",
       "name": "Google Cloud Platform (GCP)",
       "category": "cloud_infrastructure",
-      "description": "Multi-cloud partnership with $3+ billion commitment over 4 years",
+      "description": "Strategic partnership for AI computing systems with $2 billion investment from Google",
       "size": 35,
       "url": "",
       "research": [
-        "Google Cloud TPU v5e chips for inference",
-        "Custom GPU and TPU clusters",
-        "Chronicle Security Operations for cyber protection",
-        "Vertex AI platform integration"
+        "GPU and TPU clusters for training, scaling, and deployment",
+        "Vertex AI for FedRAMP High and IL2 government workloads"
       ],
       "sources": [
         {
           "text": "Source 1",
-          "url": "https://siliconangle.com/2023/11/08/google-expands-anthropic-partnership-microsoft-oracle-detail-ai-collaboration/"
+          "url": "https://www.anthropic.com/news/anthropic-partners-with-google-cloud"
         },
         {
           "text": "Source 2",
-          "url": "https://www.anthropic.com/news/anthropic-partners-with-google-cloud"
+          "url": "https://techcrunch.com/2024/11/22/anthropic-raises-an-additional-4b-from-amazon-makes-aws-its-primary-cloud-partner/"
         }
       ]
     },
     {
-      "id": "amazon-web-services",
-      "name": "Amazon Web Services",
+      "id": "aws/amazon",
+      "name": "AWS/Amazon",
       "category": "power_infrastructure",
-      "description": "Custom cooling solutions for Project Rainier",
+      "description": "Next-generation liquid cooling systems for high-power AI chips",
       "size": 25,
       "url": "",
       "research": [
-        "In-Row Heat Exchanger (IRHX) for GPU cooling",
-        "Liquid cooling infrastructure for Trainium2 clusters"
+        "Trainium3 liquid cooling deployment (1000+ watts per chip)",
+        "46% reduction in mechanical energy consumption through improved cooling",
+        "Renewable diesel backup generators to reduce emissions"
       ],
       "sources": [
         {
           "text": "Source 1",
-          "url": "https://www.cnbc.com/2025/07/09/amazon-web-services-builds-heat-exchanger-to-cool-nvidia-gpus-for-ai.html"
+          "url": "https://www.datacenterknowledge.com/data-center-chips/aws-launches-new-custom-ai-chip-to-power-ai-workloads"
+        },
+        {
+          "text": "Source 2",
+          "url": "https://www.fierce-network.com/cloud/exclusive-aws-will-follow-nvidia-high-power-ai-territory-trainium3-chip"
         }
       ]
     },
     {
-      "id": "google-cloud",
-      "name": "Google Cloud",
-      "category": "power_infrastructure",
-      "description": "TPU infrastructure and cooling",
-      "size": 25,
+      "id": "google-deepmind",
+      "name": "Google DeepMind",
+      "category": "ai_labs",
+      "description": "Major AI research lab and model developer",
+      "size": 40,
       "url": "",
+      "research": [],
+      "sources": []
+    },
+    {
+      "id": "vijay-bolina",
+      "name": "Vijay Bolina",
+      "category": "security_personnel",
+      "description": "Chief Information Security Officer and Head of Cybersecurity Research - <cite index=\"12-1,11-1\">Vijay Bolina is the Chief Information Security Officer and Head of Cybersecurity Research at Google DeepMind</cite>. <cite index=\"12-2\">He is an avid investor and advisor in cybersecurity and enterprise software</cite>. <cite index=\"14-9,14-14,14-17\">As CISO at DeepMind, Bolina leads discussions on AI security as a discipline and framework development</cite>.",
+      "size": 20,
+      "url": "Not publicly available in search results",
       "research": [
-        "Large-scale TPU and GPU clusters",
-        "Multislice technology for scaling across tens of thousands of chips"
+        "AI security framework development",
+        "ISO working group participation for AI security standards",
+        "Speaking at cybersecurity conferences including CyberThreat 2023 and RSA Conference"
       ],
       "sources": [
         {
           "text": "Source 1",
-          "url": "https://siliconangle.com/2023/11/08/google-expands-anthropic-partnership-microsoft-oracle-detail-ai-collaboration/"
+          "url": "https://www.crunchbase.com/person/vijay-bolina"
+        },
+        {
+          "text": "Source 2",
+          "url": "https://cloud.withgoogle.com/cloudsecurity/podcast/ep52-securing-ai-with-deepmind-ciso/"
+        },
+        {
+          "text": "Source 3",
+          "url": "https://www.ylventures.com/people/vijay-bolina/"
+        }
+      ]
+    },
+    {
+      "id": "anca-dragan",
+      "name": "Anca Dragan",
+      "category": "security_personnel",
+      "description": "Head of AI Safety and Alignment - <cite index=\"27-1,27-4\">Anca Dragan was named Head of AI Safety and Alignment at Google DeepMind</cite>. <cite index=\"27-2,27-5\">Google DeepMind's AI Safety and Alignment organization is responsible for developing new safeguards for Gemini models and aligning forthcoming models with human goals and values</cite>. <cite index=\"23-5,23-10,25-10\">She leads the AGI Safety & Alignment team leadership alongside Rohin Shah, Allan Dafoe, and Dave Orr, with Shane Legg as executive sponsor</cite>.",
+      "size": 20,
+      "url": "Not publicly available in search results",
+      "research": [
+        "Leading AI Safety and Alignment organization",
+        "Frontier Safety Framework development",
+        "AGI safety protocols",
+        "Value alignment research"
+      ],
+      "sources": [
+        {
+          "text": "Source 1",
+          "url": "https://eecs.berkeley.edu/news/anca-dragan-named-head-of-ai-safety-and-alignment-at-google-deepmind/"
+        },
+        {
+          "text": "Source 2",
+          "url": "https://techcrunch.com/2024/02/21/google-deepmind-forms-a-new-org-focused-on-ai-safety/"
+        }
+      ]
+    },
+    {
+      "id": "shane-legg",
+      "name": "Shane Legg",
+      "category": "security_personnel",
+      "description": "Co-Founder and Chief AGI Scientist, Executive Sponsor of AGI Safety Council - <cite index=\"21-5\">Shane Legg leads the AGI Safety Council, which works closely with the Responsibility and Safety Council to safeguard processes, systems and research against extreme risks that could arise from powerful AGI systems</cite>. <cite index=\"22-15\">The AGI Safety Council at DeepMind, led by co-founder Shane Legg, is tasked with analyzing risks and recommending safety practices</cite>.",
+      "size": 20,
+      "url": "Not publicly available in search results",
+      "research": [
+        "AGI Safety Council leadership",
+        "Risk analysis and safety practices for AGI",
+        "Extreme risk mitigation for powerful AI systems"
+      ],
+      "sources": [
+        {
+          "text": "Source 1",
+          "url": "https://deepmind.google/about/responsibility-safety/"
+        },
+        {
+          "text": "Source 2",
+          "url": "https://www.infoq.com/news/2025/04/google-deepmind-agi/"
+        }
+      ]
+    },
+    {
+      "id": "helen-king",
+      "name": "Helen King",
+      "category": "security_personnel",
+      "description": "VP, Responsibility - <cite index=\"21-4\">Helen King co-chairs the Responsibility and Safety Council (RSC), Google DeepMind's longstanding internal review group that evaluates research, projects and collaborations against AI Principles</cite>. <cite index=\"24-6\">She was involved in the leadership of the latest Frontier Safety Framework update</cite>.",
+      "size": 20,
+      "url": "Not publicly available in search results",
+      "research": [
+        "Co-chairing Responsibility and Safety Council",
+        "AI Principles evaluation",
+        "Frontier Safety Framework development"
+      ],
+      "sources": [
+        {
+          "text": "Source 1",
+          "url": "https://deepmind.google/about/responsibility-safety/"
+        },
+        {
+          "text": "Source 2",
+          "url": "https://deepmind.google/discover/blog/updating-the-frontier-safety-framework/"
+        }
+      ]
+    },
+    {
+      "id": "rohin-shah",
+      "name": "Rohin Shah",
+      "category": "security_personnel",
+      "description": "Leadership Team Member, AGI Safety & Alignment - <cite index=\"23-5,25-10\">Rohin Shah is part of the leadership team for the AGI Safety & Alignment team, working alongside Anca Dragan, Allan Dafoe, and Dave Orr</cite>. <cite index=\"24-6\">He was involved in developing the latest update to the Frontier Safety Framework</cite>.",
+      "size": 20,
+      "url": "Not publicly available in search results",
+      "research": [
+        "AGI Safety & Alignment team leadership",
+        "Frontier Safety Framework development",
+        "Technical approaches to existential risk from AI systems"
+      ],
+      "sources": [
+        {
+          "text": "Source 1",
+          "url": "https://deepmindsafetyresearch.medium.com/agi-safety-and-alignment-at-google-deepmind-a-summary-of-recent-work-8e600aca582a"
+        },
+        {
+          "text": "Source 2",
+          "url": "https://deepmind.google/discover/blog/updating-the-frontier-safety-framework/"
+        }
+      ]
+    },
+    {
+      "id": "allan-dafoe",
+      "name": "Allan Dafoe",
+      "category": "security_personnel",
+      "description": "Leadership Team Member, AGI Safety & Alignment - <cite index=\"23-5,25-10\">Allan Dafoe is part of the leadership team for the AGI Safety & Alignment team at Google DeepMind</cite>. <cite index=\"24-6\">He provided leadership for the latest Frontier Safety Framework update</cite>.",
+      "size": 20,
+      "url": "Not publicly available in search results",
+      "research": [
+        "AGI Safety & Alignment team leadership",
+        "Frontier Safety Framework development",
+        "Technical safety research"
+      ],
+      "sources": [
+        {
+          "text": "Source 1",
+          "url": "https://deepmindsafetyresearch.medium.com/agi-safety-and-alignment-at-google-deepmind-a-summary-of-recent-work-8e600aca582a"
+        },
+        {
+          "text": "Source 2",
+          "url": "https://deepmind.google/discover/blog/updating-the-frontier-safety-framework/"
+        }
+      ]
+    },
+    {
+      "id": "internal-google-systems-with-deepmind-ai-control",
+      "name": "Internal Google systems with DeepMind AI control",
+      "category": "power_infrastructure",
+      "description": "AI-powered cooling optimization and energy management",
+      "size": 25,
+      "url": "",
+      "research": [
+        "40% reduction in cooling costs through DeepMind AI",
+        "Autonomous data centre cooling systems"
+      ],
+      "sources": [
+        {
+          "text": "Source 1",
+          "url": "https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/"
+        }
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "category": "ai_labs",
+      "description": "Major AI research lab and model developer",
+      "size": 40,
+      "url": "",
+      "research": [],
+      "sources": []
+    },
+    {
+      "id": "gresham-smith",
+      "name": "Gresham Smith",
+      "category": "contractors",
+      "description": "Architecture, engineering and design firm that provides building engineering, commissioning, civil engineering, and landscape architecture services. Specializes in mechanical, electrical, plumbing and structural engineering.",
+      "size": 25,
+      "url": "https://www.greshamsmith.com/",
+      "research": [
+        "xAI Colossus Supercomputer Data Center - Transformed 785,000 sq ft former Electrolux facility into cutting-edge data center in Memphis (2024)"
+      ],
+      "sources": [
+        {
+          "text": "Source 1",
+          "url": "https://www.greshamsmith.com/projects/xai-colossus-supercomputer-data-center/"
+        }
+      ]
+    },
+    {
+      "id": "super-micro-computer",
+      "name": "Super Micro Computer",
+      "category": "contractors",
+      "description": "Fortune 500 Silicon Valley tech giant that manufactures high-efficiency servers and data centers. Built the xAI Colossus cluster with 100,000 Nvidia H100 GPUs in just 122 days.",
+      "size": 25,
+      "url": "Not provided",
+      "research": [
+        "xAI Colossus Memphis facility - 750,000 sq ft AI supercomputer with 100,000 Nvidia GPUs"
+      ],
+      "sources": [
+        {
+          "text": "Source 1",
+          "url": "https://fortune.com/2025/03/14/super-micro-ceo-charles-liang-elon-musk-xai-grok-nvidia-server-chips/"
+        }
+      ]
+    },
+    {
+      "id": "solaris-energy-infrastructure-(sei)",
+      "name": "Solaris Energy Infrastructure (SEI)",
+      "category": "contractors",
+      "description": "Houston-based power-as-a-service provider specializing in quick deployment of portable natural gas generators for data centers with immediate power demands.",
+      "size": 25,
+      "url": "Not provided",
+      "research": [
+        "xAI Memphis Colossus facility - providing 35 gas turbines with 422MW capacity"
+      ],
+      "sources": [
+        {
+          "text": "Source 1",
+          "url": "https://www.cnbc.com/2025/07/03/musks-xai-gets-permit-for-turbines-to-power-supercomputer-in-memphis.html"
+        }
+      ]
+    },
+    {
+      "id": "dan-hendrycks",
+      "name": "Dan Hendrycks",
+      "category": "security_personnel",
+      "description": "Safety Advisor - Director of the Center for AI Safety and safety advisor to xAI. PhD in Computer Science from UC Berkeley. Leading AI safety researcher focused on machine learning safety, ethics, and robustness. Author of influential papers on AI risks and safety.",
+      "size": 20,
+      "url": "https://www.linkedin.com/in/dan-hendrycks-04062395/",
+      "research": [
+        "Co-authored statement warning AI extinction risk should be global priority",
+        "Developed AI safety benchmarks including MMLU",
+        "Advised on California SB-1047 AI safety legislation",
+        "Created 'Humanity's Last Exam' benchmark for evaluating AI capabilities",
+        "Published 568-page book 'Introduction to AI Safety, Ethics, and Society'"
+      ],
+      "sources": [
+        {
+          "text": "Source 1",
+          "url": "https://fortune.com/2023/11/20/xai-organizational-structure-elon-musk-top-executives/"
+        },
+        {
+          "text": "Source 2",
+          "url": "https://en.wikipedia.org/wiki/Dan_Hendrycks"
+        },
+        {
+          "text": "Source 3",
+          "url": "https://time.com/collection/time100-ai/6309050/dan-hendrycks/"
+        }
+      ]
+    },
+    {
+      "id": "igor-babuschkin",
+      "name": "Igor Babuschkin",
+      "category": "security_personnel",
+      "description": "Co-Founder / Member of Technical Staff - Co-founder and senior technical staff member at xAI. Has extensive background in AI safety and security from previous roles at OpenAI and Google DeepMind. Physics PhD with expertise in deep learning systems and AI safety research.",
+      "size": 20,
+      "url": "https://www.linkedin.com/in/igor-babuschkin-9bb5bab6/",
+      "research": [
+        "Contributed to AlphaStar project at DeepMind",
+        "Worked on AI safety research at OpenAI",
+        "Research focus on deep reinforcement learning and AI safety",
+        "Involved in recruitment discussions around AI safety approaches at xAI"
+      ],
+      "sources": [
+        {
+          "text": "Source 1",
+          "url": "https://fortune.com/2023/11/20/xai-organizational-structure-elon-musk-top-executives/"
+        },
+        {
+          "text": "Source 2",
+          "url": "https://rocketreach.co/igor-babuschkin-email_98373725"
+        },
+        {
+          "text": "Source 3",
+          "url": "https://time.com/collection/time100-ai/6309050/dan-hendrycks/"
+        }
+      ]
+    },
+    {
+      "id": "security-operations-lead",
+      "name": "Security Operations Lead",
+      "category": "security_personnel",
+      "description": "Security Operations Lead - Leadership role overseeing on-site security operations, particularly at xAI's Memphis facility. Responsible for managing security specialists and guard force oversight for data center security.",
+      "size": 20,
+      "url": "Not available",
+      "research": [
+        "Oversight of on-site security specialist teams",
+        "Data hall equipment and personnel inspections",
+        "Security procedure audits and process improvements",
+        "Security incident documentation and response protocols"
+      ],
+      "sources": [
+        {
+          "text": "Source 1",
+          "url": "https://ninjajobs.org/job/19f210416a467bbfe1e5c427bc8dfbe1a0ee29e4fd"
+        }
+      ]
+    },
+    {
+      "id": "meta-ai",
+      "name": "Meta AI",
+      "category": "ai_labs",
+      "description": "Major AI research lab and model developer",
+      "size": 40,
+      "url": "",
+      "research": [],
+      "sources": []
+    },
+    {
+      "id": "turner-construction-company",
+      "name": "Turner Construction Company",
+      "category": "contractors",
+      "description": "New York City-based major general contractor, the largest in the country, with extensive hyperscale datacenter experience and specializations in complex technical infrastructure projects",
+      "size": 25,
+      "url": "https://www.turnerconstruction.com",
+      "research": [
+        "Meta Hyperion Data Center, Louisiana - $10 billion, 4 million sq ft, 5GW capacity by 2030",
+        "Meta Hyperscale Data Center, Jeffersonville Indiana",
+        "Leading numerous other hyperscale projects across healthcare, education, commercial, sports, aviation, pharmaceutical, retail and green building sectors"
+      ],
+      "sources": [
+        {
+          "text": "Source 1",
+          "url": "https://www.turnerconstruction.com/insights/meta-to-invest-more-than-10-billion-in-louisiana-data-center-campus"
+        },
+        {
+          "text": "Source 2",
+          "url": "https://www.grupoacs.com/press-room/news/press-releases/turner-construction-company-to-build-hyperscale-data-center-in-indiana-for-meta/"
+        }
+      ]
+    },
+    {
+      "id": "ma-mortenson-company",
+      "name": "M.A. Mortenson Company",
+      "category": "contractors",
+      "description": "Minneapolis-based construction company with strong presence in hyperscale datacenter construction in the Midwest, Southwest, and beyond, emphasizing rapid career advancement and collaboration",
+      "size": 25,
+      "url": "https://www.mortenson.com",
+      "research": [
+        "Meta Hyperion Data Center, Louisiana - $10 billion joint venture, 4 million sq ft, peak construction involving 5,000+ workers"
+      ],
+      "sources": [
+        {
+          "text": "Source 1",
+          "url": "https://www.enr.com/articles/59958-meta-picks-turner-dpr-mortenson-team-for-10b-louisiana-data-center"
+        },
+        {
+          "text": "Source 2",
+          "url": "https://www.mortenson.com/careers/data-center"
+        }
+      ]
+    },
+    {
+      "id": "guy-rosen",
+      "name": "Guy Rosen",
+      "category": "security_personnel",
+      "description": "Chief Information Security Officer (CISO) - Meta's first-ever CISO, appointed in June 2022. Israeli-born executive with over two decades of cybersecurity, software development, and product management experience. Previously led Meta's product safety and integrity efforts.",
+      "size": 20,
+      "url": "https://www.linkedin.com/in/guyro/",
+      "research": [
+        "Overseeing safety and security across Meta platforms",
+        "Combating on-platform abuse",
+        "Protecting security of products, infrastructure and company information",
+        "Leading company-wide anti-leak initiatives",
+        "Bridging security roots with scaled product experience"
+      ],
+      "sources": [
+        {
+          "text": "Source 1",
+          "url": "https://www.securitymagazine.com/articles/97791-guy-rosen-named-ciso-at-meta"
+        },
+        {
+          "text": "Source 2",
+          "url": "https://www.metacareers.com/life/introducing-our-security-team"
+        },
+        {
+          "text": "Source 3",
+          "url": "https://www.securityweek.com/ciso-conversations-talking-cybersecurity-with-linkedins-geoff-belknap-and-metas-guy-rosen/"
+        }
+      ]
+    },
+    {
+      "id": "clyde-rodriguez",
+      "name": "Clyde Rodriguez",
+      "category": "security_personnel",
+      "description": "Former VP of Security Engineering - Former Head of Information Security (CISO-equivalent role) at Meta. Currently founder of Eleva Mobility. Has extensive background in robotics, AI research, cloud infrastructure, and cybersecurity across multiple major technology companies.",
+      "size": 20,
+      "url": "https://www.linkedin.com/in/clyder/",
+      "research": [
+        "Led security engineering efforts at Meta",
+        "Developed Microsoft's first commercial 64-bit Windows operating systems",
+        "Formed and led Microsoft's Azure Networking team",
+        "Academic research collaboration programs",
+        "Bug bounty and security research initiatives"
+      ],
+      "sources": [
+        {
+          "text": "Source 1",
+          "url": "https://www.metacareers.com/life/introducing-our-security-team"
+        },
+        {
+          "text": "Source 2",
+          "url": "https://aspenpolicyacademy.org/person/clyde-rodriguez/"
+        },
+        {
+          "text": "Source 3",
+          "url": "https://csp.berkeley.edu/people/"
+        }
+      ]
+    },
+    {
+      "id": "yann-lecun",
+      "name": "Yann LeCun",
+      "category": "security_personnel",
+      "description": "VP & Chief AI Scientist - Turing Award winner and deep learning pioneer. Leads Meta's AI research efforts including safety and security considerations for AI systems. Based in New York with global responsibilities.",
+      "size": 20,
+      "url": "https://www.linkedin.com/in/yann-lecun/",
+      "research": [
+        "Leading FAIR (Fundamental AI Research) division",
+        "AI safety and security research",
+        "Development of Llama AI models",
+        "Open-source AI research initiatives",
+        "Academic-industry collaboration in AI safety"
+      ],
+      "sources": [
+        {
+          "text": "Source 1",
+          "url": "https://www.linkedin.com/in/yann-lecun/"
+        },
+        {
+          "text": "Source 2",
+          "url": "https://en.wikipedia.org/wiki/Meta_AI"
+        },
+        {
+          "text": "Source 3",
+          "url": "https://ai.meta.com/research/"
+        }
+      ]
+    },
+    {
+      "id": "robert-fergus",
+      "name": "Robert Fergus",
+      "category": "security_personnel",
+      "description": "Director and Head of FAIR (as of May 2024) - Recently appointed to lead Meta's Fundamental AI Research lab, replacing Joelle Pineau. Former Google DeepMind research director and FAIR co-founder, returning to Meta to lead AI research efforts.",
+      "size": 20,
+      "url": "Available on LinkedIn",
+      "research": [
+        "Leading FAIR's research agenda",
+        "Commitment to long-term AI research",
+        "Building human-level AI experiences",
+        "Advancing AI research and safety"
+      ],
+      "sources": [
+        {
+          "text": "Source 1",
+          "url": "https://techcrunch.com/2025/05/08/meta-taps-former-google-deepmind-director-to-lead-its-ai-research-lab/"
+        },
+        {
+          "text": "Source 2",
+          "url": "https://fortune.com/2025/04/10/meta-ai-research-lab-fair-questions-departures-future-yann-lecun-new-beginning/"
         }
       ]
     }
@@ -718,83 +934,28 @@
     },
     {
       "source": "openai",
-      "target": "blue-owl-capital-(financial-partner/developer)",
+      "target": "turner-construction",
       "strength": 4
     },
     {
       "source": "openai",
-      "target": "crusoe-energy-systems",
+      "target": "mortenson",
       "strength": 4
     },
     {
       "source": "openai",
-      "target": "coreweave-(infrastructure-provider)",
+      "target": "oracle-(self-build)",
       "strength": 4
-    },
-    {
-      "source": "openai",
-      "target": "oracle-(infrastructure-partner)",
-      "strength": 4
-    },
-    {
-      "source": "openai",
-      "target": "dane-stuckey",
-      "strength": 4
-    },
-    {
-      "source": "openai",
-      "target": "matt-knight",
-      "strength": 4
-    },
-    {
-      "source": "openai",
-      "target": "paul-m.-nakasone",
-      "strength": 4
-    },
-    {
-      "source": "openai",
-      "target": "aleksander-madry",
-      "strength": 4
-    },
-    {
-      "source": "openai",
-      "target": "lilian-weng",
-      "strength": 4
-    },
-    {
-      "source": "openai",
-      "target": "john-schulman",
-      "strength": 4
-    },
-    {
-      "source": "openai",
-      "target": "microsoft-azure",
-      "strength": 5
-    },
-    {
-      "source": "openai",
-      "target": "oracle",
-      "strength": 5
     },
     {
       "source": "openai",
       "target": "coreweave",
-      "strength": 5
+      "strength": 4
     },
     {
       "source": "openai",
-      "target": "direct-to-chip-cooling-vendors",
-      "strength": 3
-    },
-    {
-      "source": "openai",
-      "target": "nuclear-power-providers",
-      "strength": 3
-    },
-    {
-      "source": "openai",
-      "target": "utility-power-partners",
-      "strength": 3
+      "target": "qts-data-centers",
+      "strength": 4
     },
     {
       "source": "sl5-core",
@@ -803,12 +964,17 @@
     },
     {
       "source": "anthropic",
-      "target": "turner-construction-company",
+      "target": "turner-construction",
       "strength": 4
     },
     {
       "source": "anthropic",
-      "target": "amazon-(internal/multiple-contractors)",
+      "target": "mortenson",
+      "strength": 4
+    },
+    {
+      "source": "anthropic",
+      "target": "hensel-phelps",
       "strength": 4
     },
     {
@@ -818,12 +984,22 @@
     },
     {
       "source": "anthropic",
-      "target": "holder-construction",
+      "target": "multiple-contractors-for-amazon-project-rainier",
       "strength": 4
     },
     {
       "source": "anthropic",
-      "target": "aecom",
+      "target": "yates-construction",
+      "strength": 4
+    },
+    {
+      "source": "anthropic",
+      "target": "gray-construction",
+      "strength": 4
+    },
+    {
+      "source": "anthropic",
+      "target": "haskell-construction",
       "strength": 4
     },
     {
@@ -833,22 +1009,22 @@
     },
     {
       "source": "anthropic",
-      "target": "mrinank-sharma",
+      "target": "jan-leike",
       "strength": 4
     },
     {
       "source": "anthropic",
-      "target": "elizabeth-kelly",
-      "strength": 4
-    },
-    {
-      "source": "anthropic",
-      "target": "holden-karnofsky",
+      "target": "chris-olah",
       "strength": 4
     },
     {
       "source": "anthropic",
       "target": "richard-fontaine",
+      "strength": 4
+    },
+    {
+      "source": "anthropic",
+      "target": "jason-matheny",
       "strength": 4
     },
     {
@@ -863,28 +1039,161 @@
     },
     {
       "source": "anthropic",
-      "target": "amazon-web-services",
+      "target": "aws/amazon",
       "strength": 3
     },
     {
-      "source": "anthropic",
-      "target": "google-cloud",
+      "source": "sl5-core",
+      "target": "google-deepmind",
+      "strength": 5
+    },
+    {
+      "source": "google-deepmind",
+      "target": "vijay-bolina",
+      "strength": 4
+    },
+    {
+      "source": "google-deepmind",
+      "target": "anca-dragan",
+      "strength": 4
+    },
+    {
+      "source": "google-deepmind",
+      "target": "shane-legg",
+      "strength": 4
+    },
+    {
+      "source": "google-deepmind",
+      "target": "helen-king",
+      "strength": 4
+    },
+    {
+      "source": "google-deepmind",
+      "target": "rohin-shah",
+      "strength": 4
+    },
+    {
+      "source": "google-deepmind",
+      "target": "allan-dafoe",
+      "strength": 4
+    },
+    {
+      "source": "google-deepmind",
+      "target": "google-cloud-platform-(gcp)",
+      "strength": 5
+    },
+    {
+      "source": "google-deepmind",
+      "target": "internal-google-systems-with-deepmind-ai-control",
       "strength": 3
+    },
+    {
+      "source": "sl5-core",
+      "target": "xai",
+      "strength": 5
+    },
+    {
+      "source": "xai",
+      "target": "gresham-smith",
+      "strength": 4
+    },
+    {
+      "source": "xai",
+      "target": "super-micro-computer",
+      "strength": 4
+    },
+    {
+      "source": "xai",
+      "target": "dpr-construction",
+      "strength": 4
+    },
+    {
+      "source": "xai",
+      "target": "turner-construction",
+      "strength": 4
+    },
+    {
+      "source": "xai",
+      "target": "mortenson",
+      "strength": 4
+    },
+    {
+      "source": "xai",
+      "target": "solaris-energy-infrastructure-(sei)",
+      "strength": 4
+    },
+    {
+      "source": "xai",
+      "target": "dan-hendrycks",
+      "strength": 4
+    },
+    {
+      "source": "xai",
+      "target": "igor-babuschkin",
+      "strength": 4
+    },
+    {
+      "source": "xai",
+      "target": "security-operations-lead",
+      "strength": 4
+    },
+    {
+      "source": "sl5-core",
+      "target": "meta-ai",
+      "strength": 5
+    },
+    {
+      "source": "meta-ai",
+      "target": "turner-construction-company",
+      "strength": 4
+    },
+    {
+      "source": "meta-ai",
+      "target": "dpr-construction",
+      "strength": 4
+    },
+    {
+      "source": "meta-ai",
+      "target": "ma-mortenson-company",
+      "strength": 4
+    },
+    {
+      "source": "meta-ai",
+      "target": "guy-rosen",
+      "strength": 4
+    },
+    {
+      "source": "meta-ai",
+      "target": "clyde-rodriguez",
+      "strength": 4
+    },
+    {
+      "source": "meta-ai",
+      "target": "yann-lecun",
+      "strength": 4
+    },
+    {
+      "source": "meta-ai",
+      "target": "robert-fergus",
+      "strength": 4
     }
   ],
   "citation": "Data compiled from public sources via web search on 2025-07-20. Information gathered using Claude AI with web search capabilities.",
   "metadata": {
-    "generated_at": "2025-07-20T11:08:04.091096",
+    "generated_at": "2025-07-20T11:41:08.828248",
     "ai_labs_searched": [
       "OpenAI",
-      "Anthropic"
+      "Anthropic",
+      "Google DeepMind",
+      "xAI",
+      "Meta AI"
     ],
-    "total_nodes": 33,
-    "total_links": 33,
+    "total_nodes": 44,
+    "total_links": 51,
     "node_categories": [
-      "ai_labs",
       "power_infrastructure",
       "security_personnel",
+      "ai_labs",
       "cloud_infrastructure",
       "contractors",
       "core"
