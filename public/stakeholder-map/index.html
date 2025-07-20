@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SL5 Stakeholder Map</title>
+    <title>SL5 Stakeholder Map - Enhanced</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
     <style>
         body {
@@ -15,7 +15,7 @@
         }
         
         #container {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
         }
         
@@ -23,13 +23,20 @@
             text-align: center;
             color: #ffffff;
             margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 20px;
+            margin-bottom: 20px;
         }
         
         #controls {
             background: #1a1a1a;
             padding: 20px;
             border-radius: 10px;
-            margin-bottom: 20px;
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
@@ -49,7 +56,7 @@
             letter-spacing: 0.5px;
         }
         
-        select, input[type="range"] {
+        select, input[type="range"], input[type="file"] {
             background: #2a2a2a;
             color: #e0e0e0;
             border: 1px solid #444;
@@ -101,8 +108,10 @@
             pointer-events: none;
             opacity: 0;
             transition: opacity 0.2s;
-            max-width: 300px;
+            max-width: 400px;
             backdrop-filter: blur(10px);
+            max-height: 80vh;
+            overflow-y: auto;
         }
         
         #tooltip h3 {
@@ -117,14 +126,37 @@
             color: #ccc;
         }
         
+        #tooltip a {
+            color: #45b7d1;
+            text-decoration: none;
+        }
+        
+        #tooltip a:hover {
+            text-decoration: underline;
+        }
+        
+        #tooltip .sources {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #444;
+        }
+        
+        #tooltip .source-item {
+            font-size: 12px;
+            margin: 4px 0;
+        }
+        
         .legend {
-            position: absolute;
-            top: 20px;
-            right: 20px;
             background: rgba(20, 20, 20, 0.9);
             padding: 15px;
             border-radius: 8px;
             border: 1px solid #333;
+        }
+        
+        .legend h3 {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+            color: #fff;
         }
         
         .legend-item {
@@ -141,23 +173,41 @@
             margin-right: 10px;
         }
         
-        #json-input {
+        #info-panel {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            height: fit-content;
+        }
+        
+        #info-panel h3 {
+            margin-top: 0;
+            color: #fff;
+        }
+        
+        #info-panel .info-content {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        #data-source {
             margin-top: 20px;
             background: #1a1a1a;
             padding: 20px;
             border-radius: 10px;
         }
         
-        #json-textarea {
-            width: 100%;
-            min-height: 200px;
+        #data-source h3 {
+            margin-top: 0;
+        }
+        
+        .file-info {
             background: #0a0a0a;
-            color: #0f0;
-            border: 1px solid #333;
-            border-radius: 5px;
             padding: 10px;
-            font-family: 'Consolas', 'Monaco', monospace;
+            border-radius: 5px;
+            margin-top: 10px;
             font-size: 12px;
+            color: #0f0;
         }
         
         button {
@@ -169,12 +219,65 @@
             cursor: pointer;
             font-size: 14px;
             transition: all 0.3s ease;
-            margin-top: 10px;
+            margin: 5px;
         }
         
         button:hover {
             background: #1e4bb8;
             transform: translateY(-1px);
+        }
+        
+        button:disabled {
+            background: #666;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .error-message {
+            background: #ff4444;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: none;
+        }
+        
+        .success-message {
+            background: #44ff44;
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: none;
+        }
+        
+        .citation {
+            font-size: 11px;
+            color: #888;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #45b7d1;
+        }
+        
+        .spinner {
+            border: 3px solid #333;
+            border-top: 3px solid #45b7d1;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
@@ -199,360 +302,54 @@
                 <label for="force-strength">Force Strength</label>
                 <input type="range" id="force-strength" min="0" max="100" step="5" value="50">
             </div>
+            
+            <button onclick="resetView()">Reset View</button>
+            <button onclick="downloadCurrentData()">Download Current Data</button>
         </div>
         
-        <div id="graph"></div>
+        <div class="main-layout">
+            <div id="graph">
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Loading network data...</p>
+                </div>
+            </div>
+            <div id="info-panel">
+                <h3>Node Information</h3>
+                <div class="info-content">
+                    <p>Click on any node to see detailed information, including links and data sources.</p>
+                </div>
+                <div class="legend">
+                    <h3>Categories</h3>
+                    <div id="legend-content"></div>
+                </div>
+            </div>
+        </div>
+        
         <div id="tooltip"></div>
         
-        <div id="json-input">
-            <h3>Update Stakeholder Data (JSON)</h3>
-            <textarea id="json-textarea">{
-  "nodes": [
-    {
-      "id": "sl5-core",
-      "name": "SL5 Project",
-      "category": "core",
-      "description": "Security Level 5 Initiative",
-      "size": 40
-    },
-    {
-      "id": "datacenter-1",
-      "name": "Fluor Corporation",
-      "category": "contractors",
-      "description": "Major datacenter construction contractor",
-      "size": 25
-    },
-    {
-      "id": "datacenter-2",
-      "name": "Turner Construction",
-      "category": "contractors",
-      "description": "Datacenter infrastructure specialist",
-      "size": 25
-    },
-    {
-      "id": "datacenter-3",
-      "name": "DPR Construction",
-      "category": "contractors",
-      "description": "Tech datacenter builder",
-      "size": 25
-    },
-    {
-      "id": "csp-1",
-      "name": "AWS",
-      "category": "csp",
-      "description": "Amazon Web Services",
-      "size": 35
-    },
-    {
-      "id": "csp-2",
-      "name": "Microsoft Azure",
-      "category": "csp",
-      "description": "Cloud Services Provider",
-      "size": 35
-    },
-    {
-      "id": "csp-3",
-      "name": "Google Cloud",
-      "category": "csp",
-      "description": "Cloud Platform Provider",
-      "size": 35
-    },
-    {
-      "id": "hyperscaler-1",
-      "name": "Meta",
-      "category": "hyperscaler",
-      "description": "Hyperscale datacenter operator",
-      "size": 30
-    },
-    {
-      "id": "hyperscaler-2",
-      "name": "Oracle",
-      "category": "hyperscaler",
-      "description": "Cloud infrastructure provider",
-      "size": 30
-    },
-    {
-      "id": "xai",
-      "name": "xAI",
-      "category": "ai_labs",
-      "description": "Elon Musk's AI company - minimal hierarchy",
-      "size": 40
-    },
-    {
-      "id": "xai-musk",
-      "name": "Elon Musk",
-      "category": "executive",
-      "description": "CEO & Founder, xAI",
-      "size": 25
-    },
-    {
-      "id": "xai-adkins",
-      "name": "Sara Adkins",
-      "category": "executive",
-      "description": "CFO, xAI",
-      "size": 20
-    },
-    {
-      "id": "xai-babuschkin",
-      "name": "Igor Babuschkin",
-      "category": "executive",
-      "description": "Chief Engineer & Co-founder, xAI",
-      "size": 22
-    },
-    {
-      "id": "openai",
-      "name": "OpenAI",
-      "category": "ai_labs",
-      "description": "Leading AI research lab",
-      "size": 40
-    },
-    {
-      "id": "openai-altman",
-      "name": "Sam Altman",
-      "category": "executive",
-      "description": "CEO & Co-founder, OpenAI",
-      "size": 25
-    },
-    {
-      "id": "openai-brockman",
-      "name": "Greg Brockman",
-      "category": "executive",
-      "description": "President & Co-founder, OpenAI",
-      "size": 22
-    },
-    {
-      "id": "openai-lightcap",
-      "name": "Brad Lightcap",
-      "category": "executive",
-      "description": "COO, OpenAI",
-      "size": 20
-    },
-    {
-      "id": "openai-friar",
-      "name": "Sarah Friar",
-      "category": "executive",
-      "description": "CFO, OpenAI",
-      "size": 20
-    },
-    {
-      "id": "openai-taylor",
-      "name": "Bret Taylor",
-      "category": "board",
-      "description": "Chairman, OpenAI Board",
-      "size": 22
-    },
-    {
-      "id": "openai-dangelo",
-      "name": "Adam D'Angelo",
-      "category": "board",
-      "description": "Board Member, OpenAI (Quora CEO)",
-      "size": 20
-    },
-    {
-      "id": "openai-summers",
-      "name": "Larry Summers",
-      "category": "board",
-      "description": "Board Member, OpenAI",
-      "size": 20
-    },
-    {
-      "id": "deepmind",
-      "name": "Google DeepMind",
-      "category": "ai_labs",
-      "description": "Google's unified AI research division",
-      "size": 40
-    },
-    {
-      "id": "deepmind-hassabis",
-      "name": "Demis Hassabis",
-      "category": "executive",
-      "description": "CEO & Co-founder, Google DeepMind",
-      "size": 25
-    },
-    {
-      "id": "deepmind-kavukcuoglu",
-      "name": "Koray Kavukcuoglu",
-      "category": "executive",
-      "description": "CTO & Chief AI Architect, Google DeepMind",
-      "size": 22
-    },
-    {
-      "id": "deepmind-legg",
-      "name": "Shane Legg",
-      "category": "executive",
-      "description": "Chief AGI Scientist & Co-founder, Google DeepMind",
-      "size": 22
-    },
-    {
-      "id": "google-ai",
-      "name": "Google AI",
-      "category": "ai_labs",
-      "description": "Google's AI leadership structure",
-      "size": 40
-    },
-    {
-      "id": "google-pichai",
-      "name": "Sundar Pichai",
-      "category": "executive",
-      "description": "CEO, Google/Alphabet",
-      "size": 25
-    },
-    {
-      "id": "google-dean",
-      "name": "Jeff Dean",
-      "category": "executive",
-      "description": "Chief Scientist, Google Research & DeepMind",
-      "size": 22
-    },
-    {
-      "id": "google-manyika",
-      "name": "James Manyika",
-      "category": "executive",
-      "description": "SVP Research, Labs, Technology & Society, Google",
-      "size": 20
-    },
-    {
-      "id": "anthropic",
-      "name": "Anthropic",
-      "category": "ai_labs",
-      "description": "AI safety-focused research company",
-      "size": 40
-    },
-    {
-      "id": "anthropic-dario",
-      "name": "Dario Amodei",
-      "category": "executive",
-      "description": "CEO & Co-founder, Anthropic",
-      "size": 25
-    },
-    {
-      "id": "anthropic-daniela",
-      "name": "Daniela Amodei",
-      "category": "executive",
-      "description": "President & Co-founder, Anthropic",
-      "size": 22
-    },
-    {
-      "id": "anthropic-kaplan",
-      "name": "Jared Kaplan",
-      "category": "executive",
-      "description": "Chief Science Officer & Co-founder, Anthropic",
-      "size": 22
-    },
-    {
-      "id": "anthropic-clinton",
-      "name": "Jason Clinton",
-      "category": "executive",
-      "description": "CISO, Anthropic",
-      "size": 20
-    },
-    {
-      "id": "anthropic-hastings",
-      "name": "Reed Hastings",
-      "category": "board",
-      "description": "Board Member, Anthropic (Netflix Chairman)",
-      "size": 22
-    },
-    {
-      "id": "anthropic-kreps",
-      "name": "Jay Kreps",
-      "category": "board",
-      "description": "Board Member, Anthropic (Confluent CEO)",
-      "size": 20
-    },
-    {
-      "id": "anthropic-razavi",
-      "name": "Yasmin Razavi",
-      "category": "board",
-      "description": "Board Member, Anthropic (Spark Capital)",
-      "size": 20
-    },
-    {
-      "id": "power-1",
-      "name": "Schneider Electric",
-      "category": "infrastructure",
-      "description": "Power and cooling systems",
-      "size": 25
-    },
-    {
-      "id": "power-2",
-      "name": "Vertiv",
-      "category": "infrastructure",
-      "description": "Critical infrastructure",
-      "size": 25
-    },
-    {
-      "id": "chip-1",
-      "name": "NVIDIA",
-      "category": "hardware",
-      "description": "GPU manufacturer",
-      "size": 35
-    },
-    {
-      "id": "chip-2",
-      "name": "AMD",
-      "category": "hardware",
-      "description": "Chip manufacturer",
-      "size": 30
-    }
-  ],
-  "links": [
-    {"source": "sl5-core", "target": "xai", "strength": 5},
-    {"source": "sl5-core", "target": "openai", "strength": 5},
-    {"source": "sl5-core", "target": "deepmind", "strength": 5},
-    {"source": "sl5-core", "target": "google-ai", "strength": 5},
-    {"source": "sl5-core", "target": "anthropic", "strength": 5},
-    {"source": "sl5-core", "target": "datacenter-1", "strength": 3},
-    {"source": "sl5-core", "target": "datacenter-2", "strength": 3},
-    {"source": "sl5-core", "target": "datacenter-3", "strength": 3},
-    {"source": "sl5-core", "target": "csp-1", "strength": 5},
-    {"source": "sl5-core", "target": "csp-2", "strength": 5},
-    {"source": "sl5-core", "target": "csp-3", "strength": 5},
-    {"source": "sl5-core", "target": "hyperscaler-1", "strength": 4},
-    {"source": "sl5-core", "target": "hyperscaler-2", "strength": 4},
-    {"source": "xai", "target": "xai-musk", "strength": 5},
-    {"source": "xai", "target": "xai-adkins", "strength": 4},
-    {"source": "xai", "target": "xai-babuschkin", "strength": 4},
-    {"source": "openai", "target": "openai-altman", "strength": 5},
-    {"source": "openai", "target": "openai-brockman", "strength": 4},
-    {"source": "openai", "target": "openai-lightcap", "strength": 4},
-    {"source": "openai", "target": "openai-friar", "strength": 4},
-    {"source": "openai", "target": "openai-taylor", "strength": 4},
-    {"source": "openai", "target": "openai-dangelo", "strength": 3},
-    {"source": "openai", "target": "openai-summers", "strength": 3},
-    {"source": "deepmind", "target": "deepmind-hassabis", "strength": 5},
-    {"source": "deepmind", "target": "deepmind-kavukcuoglu", "strength": 4},
-    {"source": "deepmind", "target": "deepmind-legg", "strength": 4},
-    {"source": "google-ai", "target": "google-pichai", "strength": 5},
-    {"source": "google-ai", "target": "google-dean", "strength": 4},
-    {"source": "google-ai", "target": "google-manyika", "strength": 4},
-    {"source": "google-ai", "target": "deepmind", "strength": 5},
-    {"source": "deepmind", "target": "google-pichai", "strength": 4},
-    {"source": "deepmind", "target": "google-dean", "strength": 3},
-    {"source": "anthropic", "target": "anthropic-dario", "strength": 5},
-    {"source": "anthropic", "target": "anthropic-daniela", "strength": 4},
-    {"source": "anthropic", "target": "anthropic-kaplan", "strength": 4},
-    {"source": "anthropic", "target": "anthropic-clinton", "strength": 4},
-    {"source": "anthropic", "target": "anthropic-hastings", "strength": 3},
-    {"source": "anthropic", "target": "anthropic-kreps", "strength": 3},
-    {"source": "anthropic", "target": "anthropic-razavi", "strength": 3},
-    {"source": "csp-1", "target": "datacenter-1", "strength": 3},
-    {"source": "csp-2", "target": "datacenter-2", "strength": 3},
-    {"source": "csp-3", "target": "datacenter-3", "strength": 3},
-    {"source": "openai", "target": "csp-2", "strength": 4},
-    {"source": "anthropic", "target": "csp-1", "strength": 4},
-    {"source": "deepmind", "target": "csp-3", "strength": 4},
-    {"source": "xai", "target": "csp-2", "strength": 4},
-    {"source": "hyperscaler-1", "target": "power-1", "strength": 3},
-    {"source": "hyperscaler-2", "target": "power-2", "strength": 3},
-    {"source": "openai", "target": "chip-1", "strength": 5},
-    {"source": "anthropic", "target": "chip-1", "strength": 5},
-    {"source": "deepmind", "target": "chip-1", "strength": 5},
-    {"source": "xai", "target": "chip-1", "strength": 5},
-    {"source": "xai", "target": "chip-2", "strength": 4}
-  ]
-}</textarea>
-            <button onclick="updateData()">Update Visualization</button>
+        <div id="data-source">
+            <h3>Data Source Configuration</h3>
+            <div class="control-group">
+                <label for="json-url">JSON Data URL (leave empty for default)</label>
+                <input type="text" id="json-url" placeholder="data/sl5-stakeholder-network.json" style="width: 100%; margin-bottom: 10px;">
+                <button onclick="loadFromURL()">Load from URL</button>
+            </div>
+            
+            <div style="margin: 20px 0;">— OR —</div>
+            
+            <div class="control-group">
+                <label for="file-input">Upload JSON File</label>
+                <input type="file" id="file-input" accept=".json">
+            </div>
+            
+            <div id="file-info" class="file-info" style="display: none;"></div>
+            <div id="error-message" class="error-message"></div>
+            <div id="success-message" class="success-message"></div>
+        </div>
+        
+        <div class="citation">
+            <p><strong>Citation:</strong> <span id="citation-text">Data compiled from public sources including company websites, research publications, and industry reports.</span></p>
         </div>
     </div>
 
@@ -560,25 +357,34 @@
         // Configuration
         const width = 1200;
         const height = 700;
+        const DEFAULT_JSON_URL = 'data/sl5-stakeholder-network.json';
         
-        // Color scheme for categories
+        // Color scheme for categories - expanded for new categories
         const categoryColors = {
             core: '#ff6b6b',
             contractors: '#4ecdc4',
-            csp: '#45b7d1',
-            hyperscaler: '#96ceb4',
+            cloud_infrastructure: '#45b7d1',
             ai_labs: '#dda0dd',
-            infrastructure: '#f7b731',
+            power_infrastructure: '#f7b731',
             hardware: '#5f9ea0',
             executive: '#ff9f43',
-            board: '#54a0ff'
+            board: '#54a0ff',
+            security_personnel: '#ff6b9d',
+            security_contractors: '#c44569',
+            infrastructure: '#f8b500',
+            csp: '#45b7d1',
+            hyperscaler: '#96ceb4'
         };
+        
+        // Current data
+        let currentData = null;
         
         // Initialize SVG
         const svg = d3.select('#graph')
             .append('svg')
             .attr('width', width)
-            .attr('height', height);
+            .attr('height', height)
+            .style('display', 'none'); // Hidden until data loads
         
         // Add zoom behavior
         const g = svg.append('g');
@@ -598,8 +404,15 @@
         let simulation;
         
         function initializeGraph(data) {
+            // Store current data
+            currentData = data;
+            
             // Clear existing elements
             g.selectAll('*').remove();
+            
+            // Hide loading, show graph
+            document.getElementById('loading').style.display = 'none';
+            svg.style('display', 'block');
             
             // Create link elements
             const link = g.append('g')
@@ -638,18 +451,14 @@
             
             // Mouse events
             node.on('mouseover', function(event, d) {
-                tooltip.transition().duration(200).style('opacity', .9);
-                let html = `<h3>${d.name}</h3>`;
-                html += `<p><strong>Category:</strong> ${d.category}</p>`;
-                if (d.description) html += `<p><strong>Description:</strong> ${d.description}</p>`;
-                if (d.contacts) html += `<p><strong>Contacts:</strong><br>${d.contacts.join('<br>')}</p>`;
-                
-                tooltip.html(html)
-                    .style('left', (event.pageX + 10) + 'px')
-                    .style('top', (event.pageY - 28) + 'px');
+                showTooltip(event, d);
             })
             .on('mouseout', function() {
                 tooltip.transition().duration(500).style('opacity', 0);
+            })
+            .on('click', function(event, d) {
+                event.stopPropagation();
+                showNodeDetails(d);
             });
             
             // Initialize force simulation
@@ -672,8 +481,119 @@
             // Update category filter
             updateCategoryFilter(data.nodes);
             
-            // Add legend
-            addLegend();
+            // Update legend
+            updateLegend();
+            
+            // Update citation
+            if (data.citation) {
+                document.getElementById('citation-text').textContent = data.citation;
+            }
+            
+            // Show metadata if available
+            if (data.metadata) {
+                showMetadata(data.metadata);
+            }
+        }
+        
+        function showTooltip(event, d) {
+            tooltip.transition().duration(200).style('opacity', .9);
+            let html = `<h3>${d.name}</h3>`;
+            html += `<p><strong>Category:</strong> ${d.category.replace(/_/g, ' ')}</p>`;
+            if (d.description) html += `<p><strong>Description:</strong> ${d.description}</p>`;
+            if (d.url) html += `<p><strong>Website:</strong> <a href="${d.url}" target="_blank">${d.url}</a></p>`;
+            
+            if (d.research && d.research.length > 0) {
+                html += `<p><strong>Key Research:</strong></p><ul>`;
+                d.research.forEach(r => {
+                    html += `<li>${r}</li>`;
+                });
+                html += `</ul>`;
+            }
+            
+            if (d.sources && d.sources.length > 0) {
+                html += `<div class="sources"><strong>Sources:</strong>`;
+                d.sources.forEach(source => {
+                    if (typeof source === 'object' && source.url) {
+                        html += `<div class="source-item">• <a href="${source.url}" target="_blank">${source.text}</a></div>`;
+                    } else if (typeof source === 'object') {
+                        html += `<div class="source-item">• ${source.text}</div>`;
+                    } else {
+                        // Backwards compatibility for string sources
+                        html += `<div class="source-item">• ${source}</div>`;
+                    }
+                });
+                html += `</div>`;
+            }
+            
+            tooltip.html(html)
+                .style('left', (event.pageX + 10) + 'px')
+                .style('top', (event.pageY - 28) + 'px');
+        }
+        
+        function showNodeDetails(node) {
+            const infoContent = document.querySelector('#info-panel .info-content');
+            let html = `<h4>${node.name}</h4>`;
+            
+            if (node.description) {
+                html += `<p>${node.description}</p>`;
+            }
+            
+            if (node.url) {
+                html += `<p><strong>Official Website:</strong><br><a href="${node.url}" target="_blank">${node.url}</a></p>`;
+            }
+            
+            if (node.research && node.research.length > 0) {
+                html += `<p><strong>Research & Projects:</strong></p><ul>`;
+                node.research.forEach(r => {
+                    html += `<li>${r}</li>`;
+                });
+                html += `</ul>`;
+            }
+            
+            // Find connections
+            const connections = currentData.links.filter(l => 
+                l.source.id === node.id || l.target.id === node.id
+            );
+            
+            if (connections.length > 0) {
+                html += `<p><strong>Connections:</strong> ${connections.length}</p>`;
+            }
+            
+            if (node.sources && node.sources.length > 0) {
+                html += `<p><strong>Data Sources:</strong></p><ul>`;
+                node.sources.forEach(source => {
+                    if (typeof source === 'object' && source.url) {
+                        html += `<li><a href="${source.url}" target="_blank">${source.text}</a></li>`;
+                    } else if (typeof source === 'object') {
+                        html += `<li>${source.text}</li>`;
+                    } else {
+                        // Backwards compatibility for string sources
+                        html += `<li>${source}</li>`;
+                    }
+                });
+                html += `</ul>`;
+            }
+            
+            infoContent.innerHTML = html;
+        }
+        
+        function showMetadata(metadata) {
+            const fileInfo = document.getElementById('file-info');
+            let info = `<strong>Data Information:</strong><br>`;
+            if (metadata.generated_at) {
+                info += `Generated: ${new Date(metadata.generated_at).toLocaleString()}<br>`;
+            }
+            if (metadata.total_nodes) {
+                info += `Total Nodes: ${metadata.total_nodes}<br>`;
+            }
+            if (metadata.total_links) {
+                info += `Total Links: ${metadata.total_links}<br>`;
+            }
+            if (metadata.ai_labs_searched) {
+                info += `AI Labs: ${metadata.ai_labs_searched.join(', ')}<br>`;
+            }
+            fileInfo.innerHTML = info;
+            fileInfo.style.display = 'block';
         }
         
         function dragstarted(event, d) {
@@ -702,28 +622,30 @@
             categories.forEach(cat => {
                 select.append('option')
                     .attr('value', cat)
-                    .text(cat.replace('_', ' ').toUpperCase());
+                    .text(cat.replace(/_/g, ' ').toUpperCase());
             });
         }
         
-        function addLegend() {
-            const legendData = Object.entries(categoryColors).map(([key, color]) => ({
-                name: key.replace('_', ' ').toUpperCase(),
-                color: color
-            }));
+        function updateLegend() {
+            const legendContent = d3.select('#legend-content');
+            legendContent.selectAll('*').remove();
             
-            const legend = d3.select('#graph')
-                .append('div')
-                .attr('class', 'legend');
+            // Get only categories that exist in current data
+            const usedCategories = new Set(currentData.nodes.map(n => n.category));
             
-            legend.selectAll('.legend-item')
-                .data(legendData)
-                .join('div')
-                .attr('class', 'legend-item')
-                .html(d => `
-                    <div class="legend-color" style="background-color: ${d.color}"></div>
-                    <span>${d.name}</span>
-                `);
+            Object.entries(categoryColors).forEach(([key, color]) => {
+                if (usedCategories.has(key)) {
+                    const item = legendContent.append('div')
+                        .attr('class', 'legend-item');
+                    
+                    item.append('div')
+                        .attr('class', 'legend-color')
+                        .style('background-color', color);
+                    
+                    item.append('span')
+                        .text(key.replace(/_/g, ' ').toUpperCase());
+                }
+            });
         }
         
         // Event handlers
@@ -756,19 +678,127 @@
             simulation.alpha(0.3).restart();
         });
         
-        function updateData() {
-            try {
-                const jsonText = document.getElementById('json-textarea').value;
-                const data = JSON.parse(jsonText);
-                initializeGraph(data);
-            } catch (e) {
-                alert('Invalid JSON format. Please check your data.');
-                console.error(e);
-            }
+        function resetView() {
+            svg.transition().duration(750).call(
+                zoom.transform,
+                d3.zoomIdentity
+            );
+            d3.select('#zoom-level').property('value', 1);
+            d3.select('#category-filter').property('value', 'all');
+            d3.select('#category-filter').dispatch('change');
         }
         
-        // Initialize with default data
-        updateData();
+        // Load data from URL
+        function loadFromURL(url) {
+            const errorDiv = document.getElementById('error-message');
+            const successDiv = document.getElementById('success-message');
+            errorDiv.style.display = 'none';
+            successDiv.style.display = 'none';
+            
+            // Show loading
+            document.getElementById('loading').style.display = 'block';
+            svg.style('display', 'none');
+            
+            const urlToLoad = url || document.getElementById('json-url').value || DEFAULT_JSON_URL;
+            
+            fetch(urlToLoad)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Validate data structure
+                    if (!data.nodes || !Array.isArray(data.nodes)) {
+                        throw new Error('Invalid data: "nodes" array is required');
+                    }
+                    if (!data.links || !Array.isArray(data.links)) {
+                        throw new Error('Invalid data: "links" array is required');
+                    }
+                    
+                    initializeGraph(data);
+                    successDiv.textContent = `Successfully loaded data from: ${urlToLoad}`;
+                    successDiv.style.display = 'block';
+                    setTimeout(() => {
+                        successDiv.style.display = 'none';
+                    }, 3000);
+                })
+                .catch(error => {
+                    errorDiv.textContent = `Error loading data: ${error.message}`;
+                    errorDiv.style.display = 'block';
+                    document.getElementById('loading').style.display = 'none';
+                    console.error('Error loading JSON:', error);
+                });
+        }
+        
+        // Handle file upload
+        document.getElementById('file-input').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            
+            const errorDiv = document.getElementById('error-message');
+            const successDiv = document.getElementById('success-message');
+            errorDiv.style.display = 'none';
+            successDiv.style.display = 'none';
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    
+                    // Validate data structure
+                    if (!data.nodes || !Array.isArray(data.nodes)) {
+                        throw new Error('Invalid data: "nodes" array is required');
+                    }
+                    if (!data.links || !Array.isArray(data.links)) {
+                        throw new Error('Invalid data: "links" array is required');
+                    }
+                    
+                    initializeGraph(data);
+                    successDiv.textContent = `Successfully loaded file: ${file.name}`;
+                    successDiv.style.display = 'block';
+                    setTimeout(() => {
+                        successDiv.style.display = 'none';
+                    }, 3000);
+                } catch (error) {
+                    errorDiv.textContent = `Error parsing file: ${error.message}`;
+                    errorDiv.style.display = 'block';
+                    console.error('Error parsing JSON file:', error);
+                }
+            };
+            
+            reader.onerror = function() {
+                errorDiv.textContent = 'Error reading file';
+                errorDiv.style.display = 'block';
+            };
+            
+            reader.readAsText(file);
+        });
+        
+        // Download current data
+        function downloadCurrentData() {
+            if (!currentData) {
+                alert('No data loaded to download');
+                return;
+            }
+            
+            const dataStr = JSON.stringify(currentData, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'sl5-stakeholder-network.json';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+        }
+        
+        // Load default data on page load
+        window.addEventListener('load', function() {
+            loadFromURL(DEFAULT_JSON_URL);
+        });
     </script>
 </body>
 </html>

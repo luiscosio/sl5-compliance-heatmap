@@ -28,7 +28,7 @@ The system tracks compliance across five security levels:
 
 ## Automated Data Updates
 
-The project includes a Python script (`data/update.py`) that automatically:
+The project includes a Python script (`data/sl5_compliance_scraper.py`) that automatically:
 
 - Queries the Anthropic Claude API with web search capabilities
 - Evaluates each AI lab's public security posture against specific controls
@@ -46,10 +46,10 @@ pip install -r requirements.txt
 export ANTHROPIC_API_KEY=your_api_key_here
 
 # Run the update script
-python data/update.py
+python data/sl5_compliance_scraper.py
 
 # For testing (limit number of controls processed)
-python data/update.py --limit 5
+python data/sl5_compliance_scraper.py --limit 5
 \`\`\`
 
 ## Tech Stack
