@@ -16,14 +16,486 @@
       ]
     },
     {
+      "id": "meta-ai",
+      "name": "Meta AI",
+      "category": "ai_labs",
+      "description": "Major AI research lab and model developer. Parent company of Facebook, Instagram, WhatsApp with major AI research initiatives through FAIR (Facebook AI Research).",
+      "size": 40,
+      "url": "https://ai.meta.com",
+      "research": [
+        "LLaMA (Large Language Model Meta AI)",
+        "Make-A-Video: Text-to-video generation",
+        "Segment Anything Model (SAM)",
+        "CICERO: Strategic reasoning AI",
+        "RoBERTa: Robustly Optimized BERT",
+        "PyTorch: Open-source machine learning framework",
+        "Detectron2: Object detection platform",
+        "fastText: Library for text classification and representation learning"
+      ],
+      "sources": [
+        {
+          "text": "Meta AI Research",
+          "url": "https://ai.meta.com/research/"
+        },
+        {
+          "text": "Meta Leadership Page",
+          "url": "https://about.meta.com/leadership/"
+        }
+      ]
+    },
+    {
+      "id": "nat-friedman",
+      "name": "Nat Friedman",
+      "category": "executive",
+      "description": "VP, Meta Superintelligence - NFDC; CEO, Github. American executive with 18 days at Meta, formerly CEO of GitHub. Developer ecosystems expertise.",
+      "size": 25,
+      "url": "https://www.linkedin.com/in/natfriedman/",
+      "tenure": "18 days",
+      "prior_roles": [
+        "CEO, Github"
+      ],
+      "expertise": "Developer ecosystems",
+      "education": {
+        "undergrad": "BS, MIT (CS)"
+      },
+      "sources": [
+        {
+          "text": "Meta Executive Data",
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "daniel-gross",
+      "name": "Daniel Gross",
+      "category": "executive",
+      "description": "VP Product, Meta Superintelligence - Cofounder, SSI; NDFG. Israeli executive with 18 days at Meta, expertise in AI product development.",
+      "size": 25,
+      "url": "https://www.linkedin.com/in/danielgross/",
+      "tenure": "18 days",
+      "prior_roles": [
+        "Cofounder, SSI",
+        "NDFG"
+      ],
+      "expertise": "AI product development",
+      "education": {},
+      "sources": [
+        {
+          "text": "Meta Executive Data",
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "yann-lecun",
+      "name": "Yann LeCun",
+      "category": "executive",
+      "description": "VP + Chief AI Scientist, Meta - Professory, NYU. French executive with 11.6 years at Meta, deep learning pioneer.",
+      "size": 25,
+      "url": "https://yann.lecun.com/",
+      "tenure": "11.6 yrs",
+      "age": 37,
+      "prior_roles": [
+        "Professory, NYU"
+      ],
+      "expertise": "Deep learning",
+      "education": {
+        "phd": "PhD, Sorbonne UPMC",
+        "undergrad": "BS, ESIEE Paris"
+      },
+      "sources": [
+        {
+          "text": "Meta Leadership Page",
+          "url": "https://about.meta.com/leadership/"
+        },
+        {
+          "text": "Academic Profile",
+          "url": "https://scholar.google.com/citations?user=WLN3QrAAAAAJ"
+        }
+      ]
+    },
+    {
+      "id": "joel-pobar",
+      "name": "Joel Pobar",
+      "category": "executive",
+      "description": "VP, Compilers & Infra, Meta - MTS, Anthropic; Senior Engg Director, Meta. Australian executive with 10 years at Meta.",
+      "size": 25,
+      "url": "https://www.linkedin.com/in/joelpobar/",
+      "tenure": "10 yrs",
+      "age": 24,
+      "prior_roles": [
+        "MTS, Anthropic",
+        "Senior Engg Director, Meta"
+      ],
+      "expertise": "LLM compilers & infra, Developer platforms",
+      "education": {
+        "undergrad": "BS, Queensland UT (CS)"
+      },
+      "sources": [
+        {
+          "text": "Meta Engineering Blog",
+          "url": "https://engineering.fb.com/"
+        }
+      ]
+    },
+    {
+      "id": "mat-velloso",
+      "name": "Mat Velloso",
+      "category": "executive",
+      "description": "VP Product, Llama & Generative AI - Product, Microsoft. Brazilian executive with 11 days at Meta.",
+      "size": 25,
+      "url": "https://www.linkedin.com/in/matvelloso/",
+      "tenure": "11 days",
+      "age": 14,
+      "prior_roles": [
+        "Product, Microsoft"
+      ],
+      "expertise": "AI product management",
+      "education": {
+        "mba": "MS, National U (CS)",
+        "undergrad": "BS, Faculdade Casilla (Business)"
+      },
+      "sources": [
+        {
+          "text": "Meta AI Team",
+          "url": "https://ai.meta.com/"
+        }
+      ]
+    },
+    {
+      "id": "annie-hu",
+      "name": "Annie Hu",
+      "category": "executive",
+      "description": "Director of Product, Meta - VP, Product, Scale AI. American executive with 11 days at Meta.",
+      "size": 20,
+      "url": "https://www.linkedin.com/in/anniehu/",
+      "tenure": "11 days",
+      "age": 15,
+      "prior_roles": [
+        "VP, Product, Scale AI"
+      ],
+      "expertise": "AI data ops",
+      "education": {
+        "mba": "MBA, Chicago Booth",
+        "undergrad": "BS, UMaryland (Finance)"
+      },
+      "sources": [
+        {
+          "text": "Meta Product Team",
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "ruben-mayer-hirshfeld",
+      "name": "Ruben Mayer-Hirshfeld",
+      "category": "executive",
+      "description": "Director of AI Infra, Meta - SVP, Gen AI, Scale; Cofounder, Scout AI; Founder, FameGame. American executive with 2 months at Meta.",
+      "size": 20,
+      "url": "https://www.linkedin.com/in/rubenmh/",
+      "tenure": "2 mo",
+      "age": 7,
+      "prior_roles": [
+        "SVP, Gen AI, Scale",
+        "Cofounder, Scout AI",
+        "Founder, FameGame"
+      ],
+      "expertise": "Superintelligence product strategy",
+      "education": {
+        "undergrad": "MS, BS, Stanford (CS, Econ)"
+      },
+      "sources": [
+        {
+          "text": "Meta AI Infrastructure",
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "linda-gong",
+      "name": "Linda Gong",
+      "category": "executive",
+      "description": "Product Manager, Meta - Chief of Staff, Scale; Software Engg, Anrok; Quant, Two Sigma. American executive with 11 days at Meta.",
+      "size": 20,
+      "url": "https://www.linkedin.com/in/lindagong/",
+      "tenure": "11 days",
+      "age": 4,
+      "prior_roles": [
+        "Chief of Staff, Scale",
+        "Software Engg, Anrok",
+        "Quant, Two Sigma"
+      ],
+      "expertise": "AI field operations",
+      "education": {
+        "undergrad": "MS, BS, MIT (CS)"
+      },
+      "sources": [
+        {
+          "text": "Meta Product Team",
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "jon-wilfong",
+      "name": "Jon Wilfong",
+      "category": "executive",
+      "description": "Business Development, Meta - SVP Field Ops, Scale; CRO, Parallel Domain; EA, Mulesoft. American executive with 32 days at Meta.",
+      "size": 20,
+      "url": "https://www.linkedin.com/in/jonwilfong/",
+      "tenure": "32 days",
+      "age": 17,
+      "prior_roles": [
+        "SVP Field Ops, Scale",
+        "CRO, Parallel Domain",
+        "EA, Mulesoft"
+      ],
+      "expertise": "AI field operations",
+      "education": {
+        "undergrad": "BS, Texas A&M (CS)"
+      },
+      "sources": [
+        {
+          "text": "Meta Business Development",
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "summer-yue",
+      "name": "Summer Yue",
+      "category": "executive",
+      "description": "Director, Alignment, Meta - VP of Research, Scale; OpenMind. 11 days at Meta.",
+      "size": 20,
+      "url": "https://www.linkedin.com/in/summeryue/",
+      "tenure": "11 days",
+      "age": 6,
+      "prior_roles": [
+        "VP of Research, Scale",
+        "OpenMind"
+      ],
+      "expertise": "Reinforcement learning & data infra",
+      "education": {
+        "undergrad": "BS, UPenn (CS, Econ)"
+      },
+      "sources": [
+        {
+          "text": "Meta AI Research",
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "alexander-kolesnikov",
+      "name": "Alexander Kolesnikov",
+      "category": "executive",
+      "description": "Research Scientist, Meta - Staff Research Scientist, DeepMind. Russian executive with 17 days at Meta.",
+      "size": 20,
+      "url": "https://www.linkedin.com/in/alexander-kolesnikov/",
+      "tenure": "17 days",
+      "age": 9,
+      "prior_roles": [
+        "Staff Research Scientist, DeepMind"
+      ],
+      "expertise": "Self-supervised vision",
+      "education": {
+        "phd": "PhD, IST Austria",
+        "undergrad": "BS, MS, LMSU Moscow (Math)"
+      },
+      "sources": [
+        {
+          "text": "Meta AI Research",
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "allan-jabri",
+      "name": "Allan Jabri",
+      "category": "executive",
+      "description": "Research Scientist, Meta - MTS, OpenAI; Research, Meta. American executive with 2.4 years at Meta.",
+      "size": 20,
+      "url": "https://www.linkedin.com/in/allanjabri/",
+      "tenure": "2.4 yrs",
+      "age": 4,
+      "prior_roles": [
+        "MTS, OpenAI",
+        "Research, Meta"
+      ],
+      "expertise": "Visual self-supervised learning",
+      "education": {
+        "phd": "PhD, UC Berkeley",
+        "undergrad": "BS, Princeton (CS)"
+      },
+      "sources": [
+        {
+          "text": "Meta AI Research",
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "anton-bakhtin",
+      "name": "Anton Bakhtin",
+      "category": "executive",
+      "description": "Research Scientist, Meta - MTS, Anthropic; Research, Meta; Senior Engg, Google; Senior Engineer, Yandex. Russian executive with 5.3 years at Meta.",
+      "size": 20,
+      "url": "https://www.linkedin.com/in/antonbakhtin/",
+      "tenure": "5.3 yrs",
+      "age": 13,
+      "prior_roles": [
+        "MTS, Anthropic",
+        "Research, Meta",
+        "Senior Engg, Google",
+        "Senior Engineer, Yandex"
+      ],
+      "expertise": "RL & game agents",
+      "education": {
+        "undergrad": "BS, MS, LMSU Moscow (Math)"
+      },
+      "sources": [
+        {
+          "text": "Meta AI Research",
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "bowen-cheng",
+      "name": "Bowen Cheng",
+      "category": "executive",
+      "description": "Research Scientist, Meta - MTS, OpenAI; Senior Engg, Tesla. American executive with 1.2 years at Meta.",
+      "size": 20,
+      "url": "https://www.linkedin.com/in/bowencheng/",
+      "tenure": "1.2 yrs",
+      "age": 3,
+      "prior_roles": [
+        "MTS, OpenAI",
+        "Senior Engg, Tesla"
+      ],
+      "expertise": "Segmentation transformers",
+      "education": {
+        "phd": "PhD, UIUC (ECE)",
+        "undergrad": "BS, UIUC (ECE)"
+      },
+      "sources": [
+        {
+          "text": "Meta AI Research",
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "chengxu-zhuang",
+      "name": "Chengxu Zhuang",
+      "category": "executive",
+      "description": "Research Scientist, Meta - MTS, OpenAI; PostDoc, MIT. Chinese executive with 4 days at Meta.",
+      "size": 20,
+      "url": "https://www.linkedin.com/in/chengxuzhuang/",
+      "tenure": "4 days",
+      "age": 3,
+      "prior_roles": [
+        "MTS, OpenAI",
+        "PostDoc, MIT"
+      ],
+      "expertise": "Neuroscience-inspired AI",
+      "education": {
+        "phd": "PhD, Stanford (Psychology)",
+        "undergrad": "BS, Tsinghua (ECE)"
+      },
+      "sources": [
+        {
+          "text": "Meta AI Research",
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "guy-rosen",
+      "name": "Guy Rosen",
+      "category": "security_personnel",
+      "description": "Chief Information Security Officer (CISO) - Meta's first-ever CISO, appointed in June 2022. Israeli-born executive with over two decades of cybersecurity, software development, and product management experience. Previously led Meta's product safety and integrity efforts.",
+      "size": 20,
+      "url": "https://www.linkedin.com/in/guyro/",
+      "research": [
+        "Overseeing safety and security across Meta platforms",
+        "Combating on-platform abuse",
+        "Protecting security of products, infrastructure and company information",
+        "Leading company-wide anti-leak initiatives",
+        "Bridging security roots with scaled product experience"
+      ],
+      "sources": [
+        {
+          "text": "Meta Security Team",
+          "url": "https://www.metacareers.com/life/introducing-our-security-team"
+        },
+        {
+          "text": "Security Magazine",
+          "url": "https://www.securitymagazine.com/articles/97791-guy-rosen-named-ciso-at-meta"
+        }
+      ]
+    },
+    {
+      "id": "clyde-rodriguez",
+      "name": "Clyde Rodriguez",
+      "category": "security_personnel",
+      "description": "Former VP of Security Engineering - Former Head of Information Security (CISO-equivalent role) at Meta. Currently founder of Eleva Mobility. Has extensive background in robotics, AI research, cloud infrastructure, and cybersecurity across multiple major technology companies.",
+      "size": 20,
+      "url": "https://www.linkedin.com/in/clyder/",
+      "research": [
+        "Led security engineering efforts at Meta",
+        "Developed Microsoft's first commercial 64-bit Windows operating systems",
+        "Formed and led Microsoft's Azure Networking team",
+        "Academic research collaboration programs",
+        "Bug bounty and security research initiatives"
+      ],
+      "sources": [
+        {
+          "text": "Meta Security Team",
+          "url": "https://www.metacareers.com/life/introducing-our-security-team"
+        }
+      ]
+    },
+    {
+      "id": "robert-fergus",
+      "name": "Robert Fergus",
+      "category": "executive",
+      "description": "Director and Head of FAIR (as of May 2024) - Recently appointed to lead Meta's Fundamental AI Research lab, replacing Joelle Pineau. Former Google DeepMind research director and FAIR co-founder, returning to Meta to lead AI research efforts.",
+      "size": 25,
+      "url": "https://www.linkedin.com/in/robfergus/",
+      "research": [
+        "Leading FAIR's research agenda",
+        "Commitment to long-term AI research",
+        "Building human-level AI experiences",
+        "Advancing AI research and safety"
+      ],
+      "sources": [
+        {
+          "text": "TechCrunch",
+          "url": "https://techcrunch.com/2025/05/08/meta-taps-former-google-deepmind-director-to-lead-its-ai-research-lab/"
+        }
+      ]
+    },
+    {
       "id": "openai",
       "name": "OpenAI",
       "category": "ai_labs",
-      "description": "Major AI research lab and model developer",
+      "description": "Leading AI research lab creating artificial general intelligence that benefits humanity",
       "size": 40,
-      "url": "",
-      "research": [],
-      "sources": []
+      "url": "https://openai.com",
+      "research": [
+        "GPT-4: Advanced language model",
+        "DALL-E 3: Text-to-image generation",
+        "Codex: AI-powered code generation",
+        "Whisper: Speech recognition system",
+        "ChatGPT: Conversational AI interface"
+      ],
+      "sources": [
+        {
+          "text": "OpenAI Blog",
+          "url": "https://openai.com/blog"
+        }
+      ]
     },
     {
       "id": "dpr-construction",
@@ -41,11 +513,11 @@
       ],
       "sources": [
         {
-          "text": "Source 1",
+          "text": "ENR",
           "url": "https://www.enr.com/articles/60211-openai-oracle-softbank-vow-to-invest-500b-for-more-us-data-centers"
         },
         {
-          "text": "Source 2",
+          "text": "DPR Construction",
           "url": "https://www.dpr.com/construction/mission-critical"
         }
       ]
@@ -64,12 +536,8 @@
       ],
       "sources": [
         {
-          "text": "Source 1",
+          "text": "Construction Dive",
           "url": "https://www.constructiondive.com/news/meta-data-center-louisiana-turner-dpr-mortenson/734640/"
-        },
-        {
-          "text": "Source 2",
-          "url": "https://www.turnerconstruction.com/insights/meta-to-invest-more-than-10-billion-in-louisiana-data-center-campus"
         }
       ]
     },
@@ -86,7 +554,7 @@
       ],
       "sources": [
         {
-          "text": "Source 1",
+          "text": "Construction Dive",
           "url": "https://www.constructiondive.com/news/meta-data-center-louisiana-turner-dpr-mortenson/734640/"
         }
       ]
@@ -105,12 +573,8 @@
       ],
       "sources": [
         {
-          "text": "Source 1",
+          "text": "OpenAI",
           "url": "https://openai.com/index/announcing-the-stargate-project/"
-        },
-        {
-          "text": "Source 2",
-          "url": "https://semianalysis.com/2025/06/30/how-oracle-is-winning-the-ai-compute-market/"
         }
       ]
     },
@@ -128,12 +592,8 @@
       ],
       "sources": [
         {
-          "text": "Source 1",
+          "text": "SemiAnalysis",
           "url": "https://semianalysis.com/2024/09/04/multi-datacenter-training-openais/"
-        },
-        {
-          "text": "Source 2",
-          "url": "https://www.wheresyoured.at/core-incompetency/"
         }
       ]
     },
@@ -150,7 +610,7 @@
       ],
       "sources": [
         {
-          "text": "Source 1",
+          "text": "SemiAnalysis",
           "url": "https://semianalysis.com/2025/06/30/how-oracle-is-winning-the-ai-compute-market/"
         }
       ]
@@ -159,11 +619,22 @@
       "id": "anthropic",
       "name": "Anthropic",
       "category": "ai_labs",
-      "description": "Major AI research lab and model developer",
+      "description": "AI safety company building reliable, interpretable, and steerable AI systems",
       "size": 40,
-      "url": "",
-      "research": [],
-      "sources": []
+      "url": "https://anthropic.com",
+      "research": [
+        "Claude: Constitutional AI assistant",
+        "Constitutional AI: Training harmless AI systems",
+        "AI Safety research: Interpretability and alignment",
+        "Scaling laws research",
+        "Model capabilities evaluation"
+      ],
+      "sources": [
+        {
+          "text": "Anthropic Research",
+          "url": "https://anthropic.com/research"
+        }
+      ]
     },
     {
       "id": "hensel-phelps",
@@ -171,14 +642,112 @@
       "category": "contractors",
       "description": "Colorado-based general contractor with datacenter specialization",
       "size": 25,
-      "url": "Not provided in search results",
+      "url": "https://www.henselphelps.com",
       "research": [
         "Meta Montgomery, Alabama datacenter"
       ],
       "sources": [
         {
-          "text": "Source 1",
+          "text": "Construction Dive",
           "url": "https://www.constructiondive.com/news/data-center-projects-construction-2025/738160/"
+        }
+      ]
+    },
+    {
+      "id": "jason-clinton",
+      "name": "Jason Clinton",
+      "category": "security_personnel",
+      "description": "Chief Information Security Officer (CISO) - Jason Clinton serves as Anthropic's Chief Information Security Officer, responsible for overseeing the company's information security strategy and ensuring the protection of its digital assets.",
+      "size": 20,
+      "url": "https://www.linkedin.com/in/jason-d-clinton/",
+      "research": [
+        "Leading discussions on AI virtual employee security challenges",
+        "Developing cybersecurity strategies for AI agent management",
+        "Implementing safety measures for AI systems with corporate credentials",
+        "Advocating for visibility tools and account classification systems for virtual employees"
+      ],
+      "sources": [
+        {
+          "text": "Fox Business",
+          "url": "https://www.foxbusiness.com/technology/anthropic-anticipates-ai-virtual-employees-coming-next-year-security-leader-says"
+        }
+      ]
+    },
+    {
+      "id": "amazon-web-services-(aws)",
+      "name": "Amazon Web Services (AWS)",
+      "category": "cloud_infrastructure",
+      "description": "Primary cloud and training partner with $8 billion total investment from Amazon",
+      "size": 35,
+      "url": "https://aws.amazon.com",
+      "research": [
+        "Primary cloud infrastructure through AWS",
+        "Amazon Bedrock for model hosting and fine-tuning",
+        "AWS Trainium custom AI chips for training",
+        "AWS GovCloud for government customers",
+        "AWS Secret and Top Secret Cloud Regions for classified workloads"
+      ],
+      "sources": [
+        {
+          "text": "Anthropic News",
+          "url": "https://www.anthropic.com/news/anthropic-amazon-trainium"
+        }
+      ]
+    },
+    {
+      "id": "google-cloud-platform-(gcp)",
+      "name": "Google Cloud Platform (GCP)",
+      "category": "cloud_infrastructure",
+      "description": "Strategic partnership for AI computing systems with $2 billion investment from Google",
+      "size": 35,
+      "url": "https://cloud.google.com",
+      "research": [
+        "GPU and TPU clusters for training, scaling, and deployment",
+        "Vertex AI for FedRAMP High and IL2 government workloads"
+      ],
+      "sources": [
+        {
+          "text": "Anthropic News",
+          "url": "https://www.anthropic.com/news/anthropic-partners-with-google-cloud"
+        }
+      ]
+    },
+    {
+      "id": "google-deepmind",
+      "name": "Google DeepMind",
+      "category": "ai_labs",
+      "description": "Google's unified AI research division advancing AI for scientific discovery",
+      "size": 40,
+      "url": "https://deepmind.google",
+      "research": [
+        "AlphaFold: Protein structure prediction",
+        "Gemini: Multimodal AI model",
+        "AlphaGo/AlphaZero: Game-playing AI",
+        "Flamingo: Visual language model",
+        "Chinchilla: Efficient language model"
+      ],
+      "sources": [
+        {
+          "text": "DeepMind Blog",
+          "url": "https://deepmind.google/discover/blog/"
+        }
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "category": "ai_labs",
+      "description": "Elon Musk's AI company focused on understanding the universe. Developing Grok AI assistant.",
+      "size": 40,
+      "url": "https://x.ai",
+      "research": [
+        "Grok AI: Conversational AI with real-time information access",
+        "Colossus supercomputer: 100,000 Nvidia H100 GPUs"
+      ],
+      "sources": [
+        {
+          "text": "xAI Official Website",
+          "url": "https://x.ai"
         }
       ]
     },
@@ -251,34 +820,6 @@
         {
           "text": "Source 1",
           "url": "https://underthehardhat.org/data-center-construction-projects-underway-in-2025/"
-        }
-      ]
-    },
-    {
-      "id": "jason-clinton",
-      "name": "Jason Clinton",
-      "category": "security_personnel",
-      "description": "Chief Information Security Officer (CISO) - Jason Clinton serves as Anthropic's Chief Information Security Officer, responsible for overseeing the company's information security strategy and ensuring the protection of its digital assets. He has extensive experience in software engineering and cybersecurity.",
-      "size": 20,
-      "url": "https://www.linkedin.com/in/jason-d-clinton/",
-      "research": [
-        "Leading discussions on AI virtual employee security challenges",
-        "Developing cybersecurity strategies for AI agent management",
-        "Implementing safety measures for AI systems with corporate credentials",
-        "Advocating for visibility tools and account classification systems for virtual employees"
-      ],
-      "sources": [
-        {
-          "text": "Source 1",
-          "url": "https://www.foxbusiness.com/technology/anthropic-anticipates-ai-virtual-employees-coming-next-year-security-leader-says"
-        },
-        {
-          "text": "Source 2",
-          "url": "https://theorg.com/org/anthropic/org-chart/jason-clinton"
-        },
-        {
-          "text": "Source 3",
-          "url": "https://www.axios.com/2025/04/22/ai-anthropic-virtual-employees-security"
         }
       ]
     },
@@ -373,57 +914,6 @@
       ]
     },
     {
-      "id": "amazon-web-services-(aws)",
-      "name": "Amazon Web Services (AWS)",
-      "category": "cloud_infrastructure",
-      "description": "Primary cloud and training partner with $8 billion total investment from Amazon",
-      "size": 35,
-      "url": "",
-      "research": [
-        "Primary cloud infrastructure through AWS",
-        "Amazon Bedrock for model hosting and fine-tuning",
-        "AWS Trainium custom AI chips for training",
-        "AWS GovCloud for government customers",
-        "AWS Secret and Top Secret Cloud Regions for classified workloads"
-      ],
-      "sources": [
-        {
-          "text": "Source 1",
-          "url": "https://www.anthropic.com/news/anthropic-amazon-trainium"
-        },
-        {
-          "text": "Source 2",
-          "url": "https://techcrunch.com/2024/11/22/anthropic-raises-an-additional-4b-from-amazon-makes-aws-its-primary-cloud-partner/"
-        },
-        {
-          "text": "Source 3",
-          "url": "https://time.com/7273288/amazon-anthropic-openai-microsoft-stargate-datacenters/"
-        }
-      ]
-    },
-    {
-      "id": "google-cloud-platform-(gcp)",
-      "name": "Google Cloud Platform (GCP)",
-      "category": "cloud_infrastructure",
-      "description": "Strategic partnership for AI computing systems with $2 billion investment from Google",
-      "size": 35,
-      "url": "",
-      "research": [
-        "GPU and TPU clusters for training, scaling, and deployment",
-        "Vertex AI for FedRAMP High and IL2 government workloads"
-      ],
-      "sources": [
-        {
-          "text": "Source 1",
-          "url": "https://www.anthropic.com/news/anthropic-partners-with-google-cloud"
-        },
-        {
-          "text": "Source 2",
-          "url": "https://techcrunch.com/2024/11/22/anthropic-raises-an-additional-4b-from-amazon-makes-aws-its-primary-cloud-partner/"
-        }
-      ]
-    },
-    {
       "id": "aws/amazon",
       "name": "AWS/Amazon",
       "category": "power_infrastructure",
@@ -445,16 +935,6 @@
           "url": "https://www.fierce-network.com/cloud/exclusive-aws-will-follow-nvidia-high-power-ai-territory-trainium3-chip"
         }
       ]
-    },
-    {
-      "id": "google-deepmind",
-      "name": "Google DeepMind",
-      "category": "ai_labs",
-      "description": "Major AI research lab and model developer",
-      "size": 40,
-      "url": "",
-      "research": [],
-      "sources": []
     },
     {
       "id": "vijay-bolina",
@@ -618,16 +1098,6 @@
       ]
     },
     {
-      "id": "xai",
-      "name": "xAI",
-      "category": "ai_labs",
-      "description": "Major AI research lab and model developer",
-      "size": 40,
-      "url": "",
-      "research": [],
-      "sources": []
-    },
-    {
       "id": "gresham-smith",
       "name": "Gresham Smith",
       "category": "contractors",
@@ -756,16 +1226,6 @@
       ]
     },
     {
-      "id": "meta-ai",
-      "name": "Meta AI",
-      "category": "ai_labs",
-      "description": "Major AI research lab and model developer",
-      "size": 40,
-      "url": "",
-      "research": [],
-      "sources": []
-    },
-    {
       "id": "turner-construction-company",
       "name": "Turner Construction Company",
       "category": "contractors",
@@ -808,117 +1268,6 @@
           "url": "https://www.mortenson.com/careers/data-center"
         }
       ]
-    },
-    {
-      "id": "guy-rosen",
-      "name": "Guy Rosen",
-      "category": "security_personnel",
-      "description": "Chief Information Security Officer (CISO) - Meta's first-ever CISO, appointed in June 2022. Israeli-born executive with over two decades of cybersecurity, software development, and product management experience. Previously led Meta's product safety and integrity efforts.",
-      "size": 20,
-      "url": "https://www.linkedin.com/in/guyro/",
-      "research": [
-        "Overseeing safety and security across Meta platforms",
-        "Combating on-platform abuse",
-        "Protecting security of products, infrastructure and company information",
-        "Leading company-wide anti-leak initiatives",
-        "Bridging security roots with scaled product experience"
-      ],
-      "sources": [
-        {
-          "text": "Source 1",
-          "url": "https://www.securitymagazine.com/articles/97791-guy-rosen-named-ciso-at-meta"
-        },
-        {
-          "text": "Source 2",
-          "url": "https://www.metacareers.com/life/introducing-our-security-team"
-        },
-        {
-          "text": "Source 3",
-          "url": "https://www.securityweek.com/ciso-conversations-talking-cybersecurity-with-linkedins-geoff-belknap-and-metas-guy-rosen/"
-        }
-      ]
-    },
-    {
-      "id": "clyde-rodriguez",
-      "name": "Clyde Rodriguez",
-      "category": "security_personnel",
-      "description": "Former VP of Security Engineering - Former Head of Information Security (CISO-equivalent role) at Meta. Currently founder of Eleva Mobility. Has extensive background in robotics, AI research, cloud infrastructure, and cybersecurity across multiple major technology companies.",
-      "size": 20,
-      "url": "https://www.linkedin.com/in/clyder/",
-      "research": [
-        "Led security engineering efforts at Meta",
-        "Developed Microsoft's first commercial 64-bit Windows operating systems",
-        "Formed and led Microsoft's Azure Networking team",
-        "Academic research collaboration programs",
-        "Bug bounty and security research initiatives"
-      ],
-      "sources": [
-        {
-          "text": "Source 1",
-          "url": "https://www.metacareers.com/life/introducing-our-security-team"
-        },
-        {
-          "text": "Source 2",
-          "url": "https://aspenpolicyacademy.org/person/clyde-rodriguez/"
-        },
-        {
-          "text": "Source 3",
-          "url": "https://csp.berkeley.edu/people/"
-        }
-      ]
-    },
-    {
-      "id": "yann-lecun",
-      "name": "Yann LeCun",
-      "category": "security_personnel",
-      "description": "VP & Chief AI Scientist - Turing Award winner and deep learning pioneer. Leads Meta's AI research efforts including safety and security considerations for AI systems. Based in New York with global responsibilities.",
-      "size": 20,
-      "url": "https://www.linkedin.com/in/yann-lecun/",
-      "research": [
-        "Leading FAIR (Fundamental AI Research) division",
-        "AI safety and security research",
-        "Development of Llama AI models",
-        "Open-source AI research initiatives",
-        "Academic-industry collaboration in AI safety"
-      ],
-      "sources": [
-        {
-          "text": "Source 1",
-          "url": "https://www.linkedin.com/in/yann-lecun/"
-        },
-        {
-          "text": "Source 2",
-          "url": "https://en.wikipedia.org/wiki/Meta_AI"
-        },
-        {
-          "text": "Source 3",
-          "url": "https://ai.meta.com/research/"
-        }
-      ]
-    },
-    {
-      "id": "robert-fergus",
-      "name": "Robert Fergus",
-      "category": "security_personnel",
-      "description": "Director and Head of FAIR (as of May 2024) - Recently appointed to lead Meta's Fundamental AI Research lab, replacing Joelle Pineau. Former Google DeepMind research director and FAIR co-founder, returning to Meta to lead AI research efforts.",
-      "size": 20,
-      "url": "Available on LinkedIn",
-      "research": [
-        "Leading FAIR's research agenda",
-        "Commitment to long-term AI research",
-        "Building human-level AI experiences",
-        "Advancing AI research and safety"
-      ],
-      "sources": [
-        {
-          "text": "Source 1",
-          "url": "https://techcrunch.com/2025/05/08/meta-taps-former-google-deepmind-director-to-lead-its-ai-research-lab/"
-        },
-        {
-          "text": "Source 2",
-          "url": "https://fortune.com/2025/04/10/meta-ai-research-lab-fair-questions-departures-future-yann-lecun-new-beginning/"
-        }
-      ]
     }
   ],
   "links": [
@@ -945,12 +1294,12 @@
     {
       "source": "openai",
       "target": "oracle-(self-build)",
-      "strength": 4
+      "strength": 5
     },
     {
       "source": "openai",
       "target": "coreweave",
-      "strength": 4
+      "strength": 5
     },
     {
       "source": "openai",
@@ -1005,7 +1354,7 @@
     {
       "source": "anthropic",
       "target": "jason-clinton",
-      "strength": 4
+      "strength": 5
     },
     {
       "source": "anthropic",
@@ -1149,17 +1498,7 @@
     },
     {
       "source": "meta-ai",
-      "target": "dpr-construction",
-      "strength": 4
-    },
-    {
-      "source": "meta-ai",
       "target": "ma-mortenson-company",
-      "strength": 4
-    },
-    {
-      "source": "meta-ai",
-      "target": "guy-rosen",
       "strength": 4
     },
     {
@@ -1169,18 +1508,108 @@
     },
     {
       "source": "meta-ai",
+      "target": "nat-friedman",
+      "strength": 5
+    },
+    {
+      "source": "meta-ai",
+      "target": "daniel-gross",
+      "strength": 5
+    },
+    {
+      "source": "meta-ai",
       "target": "yann-lecun",
+      "strength": 5
+    },
+    {
+      "source": "meta-ai",
+      "target": "joel-pobar",
       "strength": 4
     },
     {
       "source": "meta-ai",
+      "target": "mat-velloso",
+      "strength": 4
+    },
+    {
+      "source": "meta-ai",
+      "target": "annie-hu",
+      "strength": 4
+    },
+    {
+      "source": "meta-ai",
+      "target": "ruben-mayer-hirshfeld",
+      "strength": 4
+    },
+    {
+      "source": "meta-ai",
+      "target": "linda-gong",
+      "strength": 4
+    },
+    {
+      "source": "meta-ai",
+      "target": "jon-wilfong",
+      "strength": 4
+    },
+    {
+      "source": "meta-ai",
+      "target": "summer-yue",
+      "strength": 4
+    },
+    {
+      "source": "meta-ai",
+      "target": "alexander-kolesnikov",
+      "strength": 4
+    },
+    {
+      "source": "meta-ai",
+      "target": "allan-jabri",
+      "strength": 4
+    },
+    {
+      "source": "meta-ai",
+      "target": "anton-bakhtin",
+      "strength": 4
+    },
+    {
+      "source": "meta-ai",
+      "target": "bowen-cheng",
+      "strength": 4
+    },
+    {
+      "source": "meta-ai",
+      "target": "chengxu-zhuang",
+      "strength": 4
+    },
+    {
+      "source": "meta-ai",
+      "target": "guy-rosen",
+      "strength": 5
+    },
+    {
+      "source": "meta-ai",
       "target": "robert-fergus",
+      "strength": 5
+    },
+    {
+      "source": "meta-ai",
+      "target": "turner-construction",
+      "strength": 4
+    },
+    {
+      "source": "meta-ai",
+      "target": "dpr-construction",
+      "strength": 4
+    },
+    {
+      "source": "meta-ai",
+      "target": "mortenson",
       "strength": 4
     }
   ],
-  "citation": "Data compiled from public sources via web search on 2025-07-20. Information gathered using Claude AI with web search capabilities.",
+  "citation": "Data compiled and merged from public sources including company websites, research publications, industry reports, and internal documentation. Last updated: January 2025.",
   "metadata": {
-    "generated_at": "2025-07-20T11:41:08.828248",
+    "generated_at": "2025-07-20T12:00:00.000000",
     "ai_labs_searched": [
       "OpenAI",
       "Anthropic",
@@ -1188,15 +1617,16 @@
       "xAI",
       "Meta AI"
     ],
-    "total_nodes": 44,
-    "total_links": 51,
+    "total_nodes": 58,
+    "total_links": 67,
     "node_categories": [
-      "power_infrastructure",
-      "security_personnel",
+      "core",
       "ai_labs",
-      "cloud_infrastructure",
+      "executive",
+      "security_personnel",
       "contractors",
-      "core"
+      "cloud_infrastructure",
+      "power_infrastructure"
     ]
   }
 }
